@@ -1,31 +1,33 @@
-# Custom Arvio TV playlist
+# Combined Arvio TV playlist
 
-A curated Samsung TV Plus + Pluto TV US playlist for Arvio.
+A single curated M3U containing existing Samsung/Roku/Tubi/Plex selections plus **164 explicitly approved Pluto TV US channels**. Previously rejected Pluto channels are excluded even if another upstream provider carries a same-named entry.
 
-## Playlist URL
+## Add to Arvio
 
+**Playlist (M3U):**
 https://raw.githubusercontent.com/lynseynunez/Arvio-Playlist/main/arvio.m3u
 
-Add this URL as an M3U playlist in Arvio. The playlist contains selected channels only, using Samsung when both providers carry the same channel. Each entry retains its original stream URL, logo and tvg-id.
+**Combined guide (XMLTV gzip):**
+https://raw.githubusercontent.com/lynseynunez/Arvio-Playlist/main/epg.xml.gz
+
+Set the XMLTV URL as a separate EPG source in Arvio if it does not pick up the playlist's `url-tvg` header. Refresh the playlist and guide after a successful workflow run.
 
 ## Automatic updates
 
-The GitHub Actions workflow at `.github/workflows/update.yml` runs daily at 12:23 UTC and can also be run manually: **Actions → Update Arvio M3U → Run workflow**. The workflow rebuilds `arvio.m3u` and `audit.json` from current BuddyChewChew US source files.
+The **Update Arvio M3U** GitHub Actions workflow runs daily at 12:23 UTC, and can be started manually from **Actions → Update Arvio M3U → Run workflow**. It refreshes stream URLs, rebuilds the combined M3U and XMLTV guide, and commits updated `arvio.m3u`, `epg.xml.gz`, `audit.json`, and `epg-audit.json` only after successful generation.
 
-## Edit your channels
+The dedicated `lynseynunez/pluto-tv` repository updates Pluto stream URLs every six hours. The Arvio builder reads its latest output, imports only approved Pluto names, and deduplicates channels by normalized name. Where duplicate names exist, the existing provider priority is Samsung → Pluto → Roku → Tubi → Plex.
 
-- `selections.json`: all 120 original requests, organized by category.
-- `aliases.json`: approved channel-name substitutions; currently empty. Do not add a mapping until you've confirmed the channel.
-- `alias-candidates.json`: suggested substitutions for manual review only.
-- `audit.json`: shows matched and missing selections from the last build.
-- `build.py`: generates the playlist and preserves upstream channel metadata.
+## Curation
 
-The playlist only includes verified name matches unless you explicitly add an alias. A missing channel remains listed in `audit.json`, not silently replaced.
+- `pluto-curation.json`: approved 164 Pluto source names, and 14 unresolved requests tracked separately. No automatic aliases for unresolved additions.
+- `selections.json`: your existing requested channels from other providers; unrelated selections remain eligible.
+- `aliases.json`: existing explicit aliases.
+- `audit.json`: individual matched/missing selection results.
+- `epg-audit.json`: channel-level programme coverage and source health.
+- `build.py`: merges providers and applies Pluto removals across duplicate names.
+- `merge_epg.py`: generates a compact guide for the final M3U, matching `tvg-id` to XMLTV channel IDs.
 
-## Guide data
+**Guide limitations:** Matching EPG IDs does not guarantee programme listings for every new Pluto stream. Check `epg-audit.json` after the next successful run; `without_guide` lists any uncovered channels. The build will preserve the previous guide rather than publish one if required guide feeds fail or there are fewer than 100 programmes.
 
-The playlist includes both EPG sources in its M3U header:
-- https://i.mjh.nz/SamsungTVPlus/us.xml.gz
-- https://i.mjh.nz/PlutoTV/us.xml.gz
-
-If Arvio needs an EPG configured separately, add those URLs in its EPG settings. Playback depends on third-party stream availability and any service restrictions; playlist generation alone does not guarantee every channel plays.
+**Stream limitations:** Source presence does not prove every stream plays on every device or network. Existing streams and guide remain unchanged until the first successful workflow refresh.
