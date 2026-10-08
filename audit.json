@@ -2318,5 +2318,37 @@
     "matched": "Pluto TV Icons",
     "provider": "Pluto Direct",
     "tvg_id": "64b585f84ea480000838e446"
+  },
+  {
+    "category": "IPTV-org additions",
+    "requested": "Sonic TV",
+    "status": "exact",
+    "matched": "Sonic TV (720p)",
+    "provider": "IPTV-org",
+    "tvg_id": "SonicTV.us@SD"
+  },
+  {
+    "category": "IPTV-org additions",
+    "requested": "Toonami Aftermath West",
+    "status": "exact",
+    "matched": "Toonami Aftermath West (480p)",
+    "provider": "IPTV-org",
+    "tvg_id": "ToonamiAftermath.us@West"
+  },
+  {
+    "category": "IPTV-org additions",
+    "requested": "NickOnline HD",
+    "status": "exact",
+    "matched": "NickOnline HD (720p)",
+    "provider": "IPTV-org",
+    "tvg_id": "NickOnline.br@HD"
+  },
+  {
+    "category": "IPTV-org additions",
+    "requested": "Tooncast",
+    "status": "exact",
+    "matched": "Tooncast (1080p)",
+    "provider": "IPTV-org",
+    "tvg_id": "Tooncast.us@SD"
   }
 ]

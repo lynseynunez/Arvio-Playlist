@@ -1,11 +1,11 @@
 {
-  "playlist_channels": 216,
+  "playlist_channels": 220,
   "channels_with_programmes": 216,
-  "programmes": 4128,
+  "programmes": 4140,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 387
+      "new_programmes": 399
     },
     "Pluto": {
       "status": "ok",
@@ -20,5 +20,10 @@
       "new_programmes": 160
     }
   },
-  "without_guide": []
+  "without_guide": [
+    "Sonic TV (720p)",
+    "Toonami Aftermath West (480p)",
+    "NickOnline HD (720p)",
+    "Tooncast (1080p)"
+  ]
 }
