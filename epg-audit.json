@@ -18,6 +18,26 @@
     "Plex": {
       "status": "ok",
       "new_programmes": 160
+    },
+    "IPTV-org US TVTV": {
+      "status": "unavailable",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    "IPTV-org US DirecTV": {
+      "status": "unavailable",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    "IPTV-org US TVGuide": {
+      "status": "unavailable",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    "IPTV-org Brazil": {
+      "status": "unavailable",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    "IPTV-org Canada": {
+      "status": "unavailable",
+      "reason": "HTTP Error 404: Not Found"
     }
   },
   "without_guide": [
