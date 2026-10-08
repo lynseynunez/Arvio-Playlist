@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate an Arvio M3U from selected Samsung and Pluto channels."""
+"""Generate a curated Arvio M3U from Samsung, Pluto, Plex, Roku and Tubi."""
 import json
 import re
 import unicodedata
@@ -8,8 +8,11 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent
 BASE = "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/"
-FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m3u"}
+FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m3u",
+         "Roku": BASE + "roku_all.m3u", "Tubi": BASE + "tubi_all.m3u",
+         "Plex": BASE + "plex_us.m3u"}
 EPGS = ["https://i.mjh.nz/SamsungTVPlus/us.xml.gz", "https://i.mjh.nz/PlutoTV/us.xml.gz"]
+PRIORITY = {"Samsung": 0, "Pluto": 1, "Roku": 2, "Tubi": 3, "Plex": 4}
 
 def norm(value):
     value = unicodedata.normalize("NFKD", value.casefold())
@@ -53,7 +56,7 @@ def main():
         for requested in text.split("; "):
             target = aliases.get(requested, requested)
             options = index.get(norm(target), [])
-            options.sort(key=lambda item: (item["provider"] != "Samsung", item["name"]))
+            options.sort(key=lambda item: (PRIORITY[item["provider"]], item["name"]))
             match = options[0] if options else None
             audit.append({"category": category, "requested": requested,
                           "status": ("approved-alias" if requested in aliases else "exact") if match else "missing",
