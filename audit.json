@@ -12,7 +12,7 @@
     "requested": "Boruto: Naruto Next Generations",
     "status": "exact",
     "matched": "Boruto: Naruto Next Generations",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "696997049889f8db34c936c2"
   },
   {
@@ -20,7 +20,7 @@
     "requested": "Inuyasha",
     "status": "exact",
     "matched": "Inuyasha",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "67c63b90a20c0399a381b816"
   },
   {
@@ -28,7 +28,7 @@
     "requested": "One Piece",
     "status": "exact",
     "matched": "One Piece",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f7790b3ed0c88000720b241"
   },
   {
@@ -100,7 +100,7 @@
     "requested": "Pluto TV Anime",
     "status": "exact",
     "matched": "Pluto TV Anime",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5812b7d3249444e05d09cc49"
   },
   {
@@ -108,7 +108,7 @@
     "requested": "Pluto TV Anime Movies",
     "status": "exact",
     "matched": "Pluto TV Anime Movies",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "67ed8f7e443f0671bc2b2368"
   },
   {
@@ -116,7 +116,7 @@
     "requested": "Big A Anime",
     "status": "exact",
     "matched": "Big A Anime",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6a3c5fa46276c42ac6726b27"
   },
   {
@@ -156,7 +156,7 @@
     "requested": "Pluto TV Action",
     "status": "exact",
     "matched": "Pluto TV Action",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "561d7d484dc7c8770484914a"
   },
   {
@@ -164,7 +164,7 @@
     "requested": "Pluto TV Comedy",
     "status": "exact",
     "matched": "Pluto TV Comedy",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5a4d3a00ad95e4718ae8d8db"
   },
   {
@@ -188,7 +188,7 @@
     "requested": "Pluto TV Horror",
     "status": "exact",
     "matched": "Pluto TV Horror",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "569546031a619b8f07ce6e25"
   },
   {
@@ -196,7 +196,7 @@
     "requested": "Pluto TV Thrillers",
     "status": "exact",
     "matched": "Pluto TV Thrillers",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4e69e08291147bd04a9fd7"
   },
   {
@@ -204,7 +204,7 @@
     "requested": "Pluto TV Sci-Fi",
     "status": "exact",
     "matched": "Pluto TV Sci-Fi",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4fc274694c027be6ed3eea"
   },
   {
@@ -332,7 +332,7 @@
     "requested": "Criminal Minds",
     "status": "exact",
     "matched": "Criminal Minds",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65653817c917a5000844bc30"
   },
   {
@@ -380,7 +380,7 @@
     "requested": "Nickelodeon Pluto TV",
     "status": "exact",
     "matched": "Nickelodeon Pluto TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ca673e0d0bd6c2689c94ce3"
   },
   {
@@ -388,7 +388,7 @@
     "requested": "Garfield and Friends",
     "status": "exact",
     "matched": "Garfield and Friends",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60faf9ddfcc1f200070a5932"
   },
   {
@@ -396,7 +396,7 @@
     "requested": "LEGO Kids TV",
     "status": "exact",
     "matched": "LEGO Kids TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60fb01a24795a6000762fe83"
   },
   {
@@ -404,7 +404,7 @@
     "requested": "Kids Movie Club",
     "status": "exact",
     "matched": "Kids Movie Club",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5db0ad56edc89300090d2ebb"
   },
   {
@@ -420,7 +420,7 @@
     "requested": "Forever Kids",
     "status": "exact",
     "matched": "Forever Kids",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "56171fafada51f8004c4b40f"
   },
   {
@@ -436,7 +436,7 @@
     "requested": "Nick Jr. Pluto TV",
     "status": "exact",
     "matched": "Nick Jr. Pluto TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ca6748a37b88b269472dad9"
   },
   {
@@ -444,7 +444,7 @@
     "requested": "Peppa Pig",
     "status": "exact",
     "matched": "Peppa Pig",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d14fb6c84dd37df3b4290c5"
   },
   {
@@ -484,7 +484,7 @@
     "requested": "Funny AF",
     "status": "exact",
     "matched": "Funny AF",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "580e87ff497c73ba2f321dd3"
   },
   {
@@ -628,7 +628,7 @@
     "requested": "Home Cooking by Food Network",
     "status": "exact",
     "matched": "Home Cooking by Food Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb16916523408b14bac7f8"
   },
   {
@@ -644,7 +644,7 @@
     "requested": "Gordon Ramsay's Hell's Kitchen",
     "status": "exact",
     "matched": "Gordon Ramsay's Hell's Kitchen",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4e99f4423e067bd6df6903"
   },
   {
@@ -820,7 +820,7 @@
     "requested": "The Price Is Right",
     "status": "exact",
     "matched": "The Price Is Right",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "643f035d5a0cd50008361534"
   },
   {
@@ -828,7 +828,7 @@
     "requested": "The Price Is Right: The Barker Era",
     "status": "exact",
     "matched": "The Price Is Right: The Barker Era",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f7791b8372da90007fd45e6"
   },
   {
@@ -836,7 +836,7 @@
     "requested": "Let's Make a Deal",
     "status": "exact",
     "matched": "Let's Make A Deal",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6267352efcf21c0007c76642"
   },
   {
@@ -1012,7 +1012,7 @@
     "requested": "Pluto TV Spotlight",
     "status": "exact",
     "matched": "Pluto TV Spotlight",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ba3fb9c4b078e0f37ad34e8"
   },
   {
@@ -1020,7 +1020,7 @@
     "requested": "Pluto TV Franchise Favorites",
     "status": "exact",
     "matched": "Pluto TV Franchise Favorites",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68fbf8101d26140175db8b58"
   },
   {
@@ -1028,7 +1028,7 @@
     "requested": "Pluto TV Action",
     "status": "exact",
     "matched": "Pluto TV Action",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "561d7d484dc7c8770484914a"
   },
   {
@@ -1044,7 +1044,7 @@
     "requested": "Pluto TV Comedy",
     "status": "exact",
     "matched": "Pluto TV Comedy",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5a4d3a00ad95e4718ae8d8db"
   },
   {
@@ -1052,7 +1052,7 @@
     "requested": "Pluto TV Crime Movies",
     "status": "exact",
     "matched": "Pluto TV Crime Movies",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f4d8594eb979c0007706de7"
   },
   {
@@ -1060,7 +1060,7 @@
     "requested": "Pluto TV Thrillers",
     "status": "exact",
     "matched": "Pluto TV Thrillers",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4e69e08291147bd04a9fd7"
   },
   {
@@ -1068,7 +1068,7 @@
     "requested": "Pluto TV Horror",
     "status": "exact",
     "matched": "Pluto TV Horror",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "569546031a619b8f07ce6e25"
   },
   {
@@ -1076,7 +1076,7 @@
     "requested": "Pluto TV Terror",
     "status": "exact",
     "matched": "Pluto TV Terror",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5c6dc88fcd232425a6e0f06e"
   },
   {
@@ -1084,7 +1084,7 @@
     "requested": "Pluto TV Recent Releases",
     "status": "exact",
     "matched": "Pluto TV Recent Releases",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6aa043fe0c9f5239c2c508c2"
   },
   {
@@ -1092,7 +1092,7 @@
     "requested": "00s Replay",
     "status": "exact",
     "matched": "00s Replay",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "62ba60f059624e000781c436"
   },
   {
@@ -1100,7 +1100,7 @@
     "requested": "90s Throwback",
     "status": "exact",
     "matched": "90s Throwback",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f4d86f519358a00072b978e"
   },
   {
@@ -1116,7 +1116,7 @@
     "requested": "MovieSphere by Lionsgate",
     "status": "exact",
     "matched": "MovieSphere by Lionsgate",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "645e7828e1979c00087b75b4"
   },
   {
@@ -1124,7 +1124,7 @@
     "requested": "Classic Movies Channel",
     "status": "exact",
     "matched": "Classic Movies Channel",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "561c5b0dada51f8004c4d855"
   },
   {
@@ -1132,7 +1132,7 @@
     "requested": "Pluto TV Staff Picks",
     "status": "exact",
     "matched": "Pluto TV Staff Picks",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f4d863b98b41000076cd061"
   },
   {
@@ -1140,7 +1140,7 @@
     "requested": "Flicks of Fury",
     "status": "exact",
     "matched": "Flicks of Fury",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "58e55b14ad8e9c364d55f717"
   },
   {
@@ -1148,7 +1148,7 @@
     "requested": "Pluto TV Cult Films",
     "status": "exact",
     "matched": "Pluto TV Cult Films",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5c665db3e6c01b72c4977bc2"
   },
   {
@@ -1156,7 +1156,7 @@
     "requested": "Pluto TV Halloween",
     "status": "exact",
     "matched": "Pluto TV Halloween",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6ab165fdeae99d62d7e541ff"
   },
   {
@@ -1164,7 +1164,7 @@
     "requested": "Pluto TV Adventure",
     "status": "exact",
     "matched": "Pluto TV Adventure",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "69d7ebb726eeec84158e28cb"
   },
   {
@@ -1172,7 +1172,7 @@
     "requested": "Charmed",
     "status": "exact",
     "matched": "Charmed",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6a2b0d669465b98649cd0ba1"
   },
   {
@@ -1180,7 +1180,7 @@
     "requested": "Pluto TV Sci-Fi",
     "status": "exact",
     "matched": "Pluto TV Sci-Fi",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4fc274694c027be6ed3eea"
   },
   {
@@ -1188,7 +1188,7 @@
     "requested": "Criminal Minds",
     "status": "exact",
     "matched": "Criminal Minds",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65653817c917a5000844bc30"
   },
   {
@@ -1204,7 +1204,7 @@
     "requested": "Universal Action",
     "status": "exact",
     "matched": "Universal Action",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "654933e253fc970008390114"
   },
   {
@@ -1236,7 +1236,7 @@
     "requested": "Stargate",
     "status": "exact",
     "matched": "Stargate",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "620bfa7df72827000703ddb1"
   },
   {
@@ -1252,7 +1252,7 @@
     "requested": "Narcos",
     "status": "exact",
     "matched": "Narcos",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f7274806621ff00072651ff"
   },
   {
@@ -1260,7 +1260,7 @@
     "requested": "Pluto TV Action Drama",
     "status": "exact",
     "matched": "Pluto TV Action Drama",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6a065830853a01a827f6dd65"
   },
   {
@@ -1268,7 +1268,7 @@
     "requested": "Pluto TV Crime Drama",
     "status": "exact",
     "matched": "Pluto TV Crime Drama",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f31fd1b4c510e00071c3103"
   },
   {
@@ -1276,7 +1276,7 @@
     "requested": "Feel Good Drama",
     "status": "exact",
     "matched": "Feel Good Drama",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65775af3b3801200084a3aa4"
   },
   {
@@ -1284,7 +1284,7 @@
     "requested": "Hit Sitcoms",
     "status": "exact",
     "matched": "Hit Sitcoms",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "66e0b4a3f0f17500085cc268"
   },
   {
@@ -1292,7 +1292,7 @@
     "requested": "Comedy Central Pluto TV",
     "status": "exact",
     "matched": "Comedy Central Pluto TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ca671f215a62078d2ec0abf"
   },
   {
@@ -1316,7 +1316,7 @@
     "requested": "Funny AF",
     "status": "exact",
     "matched": "Funny AF",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "580e87ff497c73ba2f321dd3"
   },
   {
@@ -1324,7 +1324,7 @@
     "requested": "Always Funny",
     "status": "exact",
     "matched": "Always Funny",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "69eaa34817801c84fca05d94"
   },
   {
@@ -1332,7 +1332,7 @@
     "requested": "Mission Impossible",
     "status": "exact",
     "matched": "Mission Impossible",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f77977bd924d80007eee60c"
   },
   {
@@ -1340,7 +1340,7 @@
     "requested": "Nick Jr. Pluto TV",
     "status": "exact",
     "matched": "Nick Jr. Pluto TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ca6748a37b88b269472dad9"
   },
   {
@@ -1348,7 +1348,7 @@
     "requested": "Dora TV",
     "status": "exact",
     "matched": "Dora TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6a70da97a4bf6cded4fdaf53"
   },
   {
@@ -1356,7 +1356,7 @@
     "requested": "Nickelodeon Pluto TV",
     "status": "exact",
     "matched": "Nickelodeon Pluto TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ca673e0d0bd6c2689c94ce3"
   },
   {
@@ -1364,7 +1364,7 @@
     "requested": "90's Kids",
     "status": "exact",
     "matched": "90's Kids",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6452c814939a590008567a3b"
   },
   {
@@ -1372,7 +1372,7 @@
     "requested": "90s Kids TV 2",
     "status": "exact",
     "matched": "90s Kids TV 2",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6452c77ed3fdde00080eb3a8"
   },
   {
@@ -1380,7 +1380,7 @@
     "requested": "iCarly TV",
     "status": "exact",
     "matched": "iCarly TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6450209d939a5900084dba1d"
   },
   {
@@ -1388,7 +1388,7 @@
     "requested": "TOTALLY TURTLES",
     "status": "exact",
     "matched": "TOTALLY TURTLES",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d0c16d686454ead733d08f8"
   },
   {
@@ -1404,7 +1404,7 @@
     "requested": "LEGO Kids TV",
     "status": "exact",
     "matched": "LEGO Kids TV",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60fb01a24795a6000762fe83"
   },
   {
@@ -1412,7 +1412,7 @@
     "requested": "Kids Movie Club",
     "status": "exact",
     "matched": "Kids Movie Club",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5db0ad56edc89300090d2ebb"
   },
   {
@@ -1428,7 +1428,7 @@
     "requested": "Forever Kids",
     "status": "exact",
     "matched": "Forever Kids",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "56171fafada51f8004c4b40f"
   },
   {
@@ -1436,7 +1436,7 @@
     "requested": "Garfield and Friends",
     "status": "exact",
     "matched": "Garfield and Friends",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60faf9ddfcc1f200070a5932"
   },
   {
@@ -1444,7 +1444,7 @@
     "requested": "Peppa Pig",
     "status": "exact",
     "matched": "Peppa Pig",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d14fb6c84dd37df3b4290c5"
   },
   {
@@ -1452,7 +1452,7 @@
     "requested": "Go Go Gadget!",
     "status": "exact",
     "matched": "Go Go Gadget!",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "667f3852efa2a10008e1e514"
   },
   {
@@ -1460,7 +1460,7 @@
     "requested": "Pluto TV Anime",
     "status": "exact",
     "matched": "Pluto TV Anime",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5812b7d3249444e05d09cc49"
   },
   {
@@ -1468,7 +1468,7 @@
     "requested": "Pluto TV Anime Movies",
     "status": "exact",
     "matched": "Pluto TV Anime Movies",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "67ed8f7e443f0671bc2b2368"
   },
   {
@@ -1476,7 +1476,7 @@
     "requested": "Ani-Monsters",
     "status": "exact",
     "matched": "Ani-Monsters",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6aaadf258cc64f2b2b7dbe3c"
   },
   {
@@ -1508,7 +1508,7 @@
     "requested": "One Piece",
     "status": "exact",
     "matched": "One Piece",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f7790b3ed0c88000720b241"
   },
   {
@@ -1524,7 +1524,7 @@
     "requested": "Boruto: Naruto Next Generations",
     "status": "exact",
     "matched": "Boruto: Naruto Next Generations",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "696997049889f8db34c936c2"
   },
   {
@@ -1532,7 +1532,7 @@
     "requested": "Inuyasha",
     "status": "exact",
     "matched": "Inuyasha",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "67c63b90a20c0399a381b816"
   },
   {
@@ -1548,7 +1548,7 @@
     "requested": "Big A Anime",
     "status": "exact",
     "matched": "Big A Anime",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6a3c5fa46276c42ac6726b27"
   },
   {
@@ -1564,7 +1564,7 @@
     "requested": "Bar Rescue",
     "status": "exact",
     "matched": "Bar Rescue",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60a3d889a5b3690008dc7fe8"
   },
   {
@@ -1572,7 +1572,7 @@
     "requested": "Storage Wars by A&E",
     "status": "exact",
     "matched": "Storage Wars by A&E",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6887aaf4e3703b7d42b71a1e"
   },
   {
@@ -1580,7 +1580,7 @@
     "requested": "Pluto TV Cars",
     "status": "exact",
     "matched": "Pluto TV Cars",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5812b3a4249444e05d09cc46"
   },
   {
@@ -1596,7 +1596,7 @@
     "requested": "Pluto TV Competition",
     "status": "exact",
     "matched": "Pluto TV Competition",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "603fde9026ecbf0007752c2c"
   },
   {
@@ -1604,7 +1604,7 @@
     "requested": "Ink Master",
     "status": "exact",
     "matched": "Ink Master",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "60807fd5db701400078219c2"
   },
   {
@@ -1612,7 +1612,7 @@
     "requested": "Gordon Ramsay's Hell's Kitchen",
     "status": "exact",
     "matched": "Gordon Ramsay's Hell's Kitchen",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5b4e99f4423e067bd6df6903"
   },
   {
@@ -1620,7 +1620,7 @@
     "requested": "Big Brother",
     "status": "exact",
     "matched": "Big Brother",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6661f11a41af6400080e90d8"
   },
   {
@@ -1652,7 +1652,7 @@
     "requested": "Pluto TV Reality",
     "status": "exact",
     "matched": "Pluto TV Reality",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d8bf0b06d2d855ee15115e3"
   },
   {
@@ -1660,7 +1660,7 @@
     "requested": "Pickers & Pawn",
     "status": "exact",
     "matched": "Pickers & Pawn",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6565413e4261ca0008215320"
   },
   {
@@ -1668,7 +1668,7 @@
     "requested": "Spike Outdoors",
     "status": "exact",
     "matched": "Spike Outdoors",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5c393cad2de254456f7ef8c2"
   },
   {
@@ -1676,7 +1676,7 @@
     "requested": "Tough Jobs",
     "status": "exact",
     "matched": "Tough Jobs",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65c69bf23ef47d0008583967"
   },
   {
@@ -1684,7 +1684,7 @@
     "requested": "Warner Bros. TV Say Yes to the Dress",
     "status": "exact",
     "matched": "Warner Bros. TV Say Yes to the Dress",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6532e8342cf13100083b404c"
   },
   {
@@ -1692,7 +1692,7 @@
     "requested": "Pluto TV True Crime",
     "status": "exact",
     "matched": "Pluto TV True Crime",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5812be1c249444e05d09cc50"
   },
   {
@@ -1700,7 +1700,7 @@
     "requested": "The First 48 by A&E",
     "status": "exact",
     "matched": "The First 48 by A&E",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6887aaade3703b7d42b64be8"
   },
   {
@@ -1732,7 +1732,7 @@
     "requested": "Cold Case Files by A&E",
     "status": "exact",
     "matched": "Cold Case Files by A&E",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5c37d6712de254456f7ec340"
   },
   {
@@ -1748,7 +1748,7 @@
     "requested": "Car Chase",
     "status": "exact",
     "matched": "Car Chase",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65244c403fd33c0008ffff31"
   },
   {
@@ -1772,7 +1772,7 @@
     "requested": "Paramount+ Picks",
     "status": "exact",
     "matched": "Paramount+ Picks",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5ff8c708653d080007361b14"
   },
   {
@@ -1820,7 +1820,7 @@
     "requested": "The Price Is Right",
     "status": "exact",
     "matched": "The Price Is Right",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "643f035d5a0cd50008361534"
   },
   {
@@ -1828,7 +1828,7 @@
     "requested": "Let's Make A Deal",
     "status": "exact",
     "matched": "Let's Make A Deal",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6267352efcf21c0007c76642"
   },
   {
@@ -1860,7 +1860,7 @@
     "requested": "Pluto TV Game Shows",
     "status": "exact",
     "matched": "Pluto TV Game Shows",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6036e7c385749f00075dbd3b"
   },
   {
@@ -1876,7 +1876,7 @@
     "requested": "Live Music",
     "status": "exact",
     "matched": "Live Music",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5873fc21cad696fb37aa9054"
   },
   {
@@ -1884,7 +1884,7 @@
     "requested": "The Price Is Right: The Barker Era",
     "status": "exact",
     "matched": "The Price Is Right: The Barker Era",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5f7791b8372da90007fd45e6"
   },
   {
@@ -1916,7 +1916,7 @@
     "requested": "Pluto TV History",
     "status": "exact",
     "matched": "Pluto TV History",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5a4d35dfa5c02e717a234f86"
   },
   {
@@ -1924,7 +1924,7 @@
     "requested": "60 Minutes",
     "status": "exact",
     "matched": "60 Minutes",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "66b646f9cd0d3100086af83c"
   },
   {
@@ -1932,7 +1932,7 @@
     "requested": "Modern Marvels by HISTORY",
     "status": "exact",
     "matched": "Modern Marvels by HISTORY",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "65775d29dfed030008cb3db2"
   },
   {
@@ -1940,7 +1940,7 @@
     "requested": "Pluto TV Science",
     "status": "exact",
     "matched": "Pluto TV Science",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "563a970aa1a1f7fe7c9daad7"
   },
   {
@@ -1948,7 +1948,7 @@
     "requested": "MythBusters",
     "status": "exact",
     "matched": "MythBusters",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "66e0b4866ad04d0008fff4d8"
   },
   {
@@ -1972,7 +1972,7 @@
     "requested": "Ultimate Builds",
     "status": "exact",
     "matched": "Ultimate Builds",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "656542ae4261ca00082154a8"
   },
   {
@@ -1996,7 +1996,7 @@
     "requested": "Warner Bros. TV Sweet Escapes",
     "status": "exact",
     "matched": "Warner Bros. TV Sweet Escapes",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6532e7fa045c3d0008514ca7"
   },
   {
@@ -2004,7 +2004,7 @@
     "requested": "Pluto TV Food",
     "status": "exact",
     "matched": "Pluto TV Food",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5877ac8cb791f4eb4a140d81"
   },
   {
@@ -2012,7 +2012,7 @@
     "requested": "Chef vs Chef by Food Network",
     "status": "exact",
     "matched": "Chef vs Chef by Food Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb16a500a2f063fdf89f8c"
   },
   {
@@ -2020,7 +2020,7 @@
     "requested": "Best of Bobby Flay by Food Network",
     "status": "exact",
     "matched": "Best of Bobby Flay by Food Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb167e00a2f063fdf7ee8f"
   },
   {
@@ -2028,7 +2028,7 @@
     "requested": "Home Cooking by Food Network",
     "status": "exact",
     "matched": "Home Cooking by Food Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb16916523408b14bac7f8"
   },
   {
@@ -2044,7 +2044,7 @@
     "requested": "No Reservations",
     "status": "exact",
     "matched": "No Reservations",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "66ff0cf663292d0008320cf8"
   },
   {
@@ -2052,7 +2052,7 @@
     "requested": "Delicious Eats by Food Network",
     "status": "exact",
     "matched": "Delicious Eats by Food Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb16ba3efb41cd971f3ce6"
   },
   {
@@ -2060,7 +2060,7 @@
     "requested": "Chip & Jo: Feels Like Home by Magnolia Network",
     "status": "exact",
     "matched": "Chip & Jo: Feels Like Home by Magnolia Network",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68bb16e7f89c82a68bcc4397"
   },
   {
@@ -2076,7 +2076,7 @@
     "requested": "Rustic Retreats",
     "status": "exact",
     "matched": "Rustic Retreats",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6565430c9d5ac4000822f508"
   },
   {
@@ -2084,7 +2084,7 @@
     "requested": "Tastemade Smokehouse",
     "status": "exact",
     "matched": "Tastemade Smokehouse",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "68509fe882d704acfc5bacd1"
   },
   {
@@ -2124,7 +2124,7 @@
     "requested": "MTV Biggest Pop",
     "status": "exact",
     "matched": "MTV Biggest Pop",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d14fd1a252d35decbc4080c"
   },
   {
@@ -2132,7 +2132,7 @@
     "requested": "MTV Spankin' New",
     "status": "exact",
     "matched": "MTV Spankin' New",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5d14fdb8ca91eedee1633117"
   },
   {
@@ -2140,7 +2140,7 @@
     "requested": "TikTok Radio",
     "status": "exact",
     "matched": "TikTok Radio",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "69445a9a78c0c45b6c9aa8b9"
   },
   {
@@ -2148,7 +2148,7 @@
     "requested": "Qello Concerts",
     "status": "exact",
     "matched": "Qello Concerts",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "696998915a0ae9e1b563f0c6"
   },
   {
@@ -2196,7 +2196,7 @@
     "requested": "MLB",
     "status": "exact",
     "matched": "MLB",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "5e66968a70f34c0007d050be"
   },
   {
@@ -2228,7 +2228,7 @@
     "requested": "DAZN Ringside",
     "status": "exact",
     "matched": "DAZN Ringside",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "649b6898f2ec0000081a9460"
   },
   {
@@ -2244,7 +2244,7 @@
     "requested": "Top Rank Classics",
     "status": "exact",
     "matched": "Top Rank Classics",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "64d160f53c785e0008df525e"
   },
   {
@@ -2260,7 +2260,7 @@
     "requested": "PFL MMA",
     "status": "exact",
     "matched": "PFL MMA",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "6334a574605f140007e233c4"
   },
   {
@@ -2308,7 +2308,7 @@
     "requested": "Pluto TV Trending Now",
     "status": "exact",
     "matched": "Pluto TV Trending Now",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "673247127d5da5000817b4d6"
   },
   {
@@ -2316,7 +2316,7 @@
     "requested": "Pluto TV Icons",
     "status": "exact",
     "matched": "Pluto TV Icons",
-    "provider": "Pluto",
+    "provider": "Pluto Direct",
     "tvg_id": "64b585f84ea480000838e446"
   }
 ]
