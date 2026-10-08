@@ -11,7 +11,8 @@ BASE = "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/p
 FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m3u",
          "Roku": BASE + "roku_all.m3u", "Tubi": BASE + "tubi_all.m3u",
          "Plex": BASE + "plex_us.m3u"}
-EPGS = ["https://i.mjh.nz/SamsungTVPlus/us.xml.gz", "https://i.mjh.nz/PlutoTV/us.xml.gz"]
+EPGS = ["https://raw.githubusercontent.com/lynseynunez/Arvio-Playlist/main/epg.xml.gz"]
+PLUTO_CURATED_FEED = "https://raw.githubusercontent.com/lynseynunez/pluto-tv/main/output/plutotv_us.m3u8"
 PRIORITY = {"Samsung": 0, "Pluto": 1, "Roku": 2, "Tubi": 3, "Plex": 4}
 
 CATEGORY_MAP = {
@@ -78,6 +79,8 @@ def parse(text, provider):
 def main():
     selections = json.loads((ROOT / "selections.json").read_text(encoding="utf-8"))
     aliases = json.loads((ROOT / "aliases.json").read_text(encoding="utf-8"))
+    curation = json.loads((ROOT / "pluto-curation.json").read_text(encoding="utf-8"))
+    approved = set(curation["keep"])
     index = {}
     counts = {}
     for provider, feed in FEEDS.items():
@@ -88,12 +91,29 @@ def main():
         if len(channels) < 50:
             raise RuntimeError(f"{provider} source appears incomplete: {len(channels)} channels")
         for channel in channels:
+            # The approved Pluto allowlist applies across providers, avoiding reintroduced removals.
             index.setdefault(norm(channel["name"]), []).append(channel)
+    request = Request(PLUTO_CURATED_FEED, headers={"User-Agent": "ArvioPlaylist/1.0"})
+    with urlopen(request, timeout=90) as response:
+        curated_source = parse(response.read().decode("utf-8-sig"), "Pluto")
+    source_names = {channel["name"] for channel in curated_source}
+    excluded_names = {norm(name) for name in source_names - approved}
+    # Drop all nonapproved Pluto names, including copies offered by other providers.
+    for name in list(index):
+        if name in excluded_names:
+            del index[name]
+    for channel in curated_source:
+        if channel["name"] in approved:
+            index.setdefault(norm(channel["name"]), []).append(channel)
+    counts["Curated Pluto"] = sum(c["name"] in approved for c in curated_source)
+    if counts["Curated Pluto"] < 100:
+        raise RuntimeError("Curated Pluto source incomplete; preserving previous playlist")
 
     output = ['#EXTM3U url-tvg="' + ",".join(EPGS) + '"']
     audit = []
     seen = set()
     published = 0
+    selections["Approved Pluto"] = "; ".join(curation["keep"])
     for category, text in selections.items():
         for requested in text.split("; "):
             target = aliases.get(requested, requested)
@@ -109,8 +129,11 @@ def main():
                 output.extend([set_group(match["extinf"], category_for(category, requested)), match["url"]])
                 seen.add(norm(match["name"]))
                 published += 1
-    if published < 60:
+    if published < 100:
         raise RuntimeError(f"Only {published} matches; refusing to replace previous playlist")
+    missing_curated = [name for name in curation["keep"] if norm(name) not in seen]
+    if missing_curated:
+        raise RuntimeError("Approved Pluto channels missing: " + "; ".join(missing_curated))
     (ROOT / "arvio.m3u").write_text("\n".join(output) + "\n", encoding="utf-8")
     (ROOT / "audit.json").write_text(json.dumps(audit, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Published {published} channels; source entries: {counts}")
