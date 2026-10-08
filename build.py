@@ -157,14 +157,8 @@ def main():
     for label, variants in entertainment_wanted.items():
         matches = [c for c in entertainment_channels
                    if any(norm(c["name"]) == norm(v) or
-                          norm(c["name"]).startswith(norm(v)) and
-                          re.match(r"^(?:\\s*\\(\\d+p\\))?$", c["name"][len(v):], re.I)
+                          re.fullmatch(re.escape(v) + r"\s*\(\d+p\)", c["name"], re.I)
                           for v in variants)]
-        # Also support resolution tags on the exact named station.
-        if not matches:
-            matches = [c for c in entertainment_channels
-                       if any(re.fullmatch(re.escape(v) + r"(?:\\s*\\(\\d+p\\))?", c["name"], re.I)
-                              for v in variants)]
         if matches:
             entertainment_found[label] = matches[0]
             print(f"Entertainment selected {label}: {matches[0]['name']}")
