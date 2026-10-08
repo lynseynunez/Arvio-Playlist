@@ -4,8 +4,8 @@
     "requested": "Naruto",
     "status": "exact",
     "matched": "Naruto",
-    "provider": "Samsung",
-    "tvg_id": "US2000014IC"
+    "provider": "Pluto Direct",
+    "tvg_id": "5da0c85bd2c9c10009370984"
   },
   {
     "category": "Anime",
@@ -52,16 +52,16 @@
     "requested": "Crunchyroll",
     "status": "exact",
     "matched": "Crunchyroll",
-    "provider": "Samsung",
-    "tvg_id": "US2000018YI"
+    "provider": "Pluto Direct",
+    "tvg_id": "65652f7fc0fc88000883537a"
   },
   {
     "category": "Anime",
     "requested": "ANIME x HIDIVE",
     "status": "exact",
     "matched": "ANIME x HIDIVE",
-    "provider": "Samsung",
-    "tvg_id": "US15000032I"
+    "provider": "Pluto Direct",
+    "tvg_id": "6793eaa4bc03978b9bc63db1"
   },
   {
     "category": "Anime",
@@ -76,8 +76,8 @@
     "requested": "Sailor Moon",
     "status": "exact",
     "matched": "Sailor Moon",
-    "provider": "Samsung",
-    "tvg_id": "US2000015Z1"
+    "provider": "Pluto Direct",
+    "tvg_id": "637e55347427a40007fac703"
   },
   {
     "category": "Anime",
@@ -123,9 +123,9 @@
     "category": "Anime",
     "requested": "It's Anime",
     "status": "exact",
-    "matched": "It’s Anime",
-    "provider": "Samsung",
-    "tvg_id": "US11000020V"
+    "matched": "It's Anime",
+    "provider": "Pluto Direct",
+    "tvg_id": "6a4fda4538f47f0af402bdb0"
   },
   {
     "category": "Anime",
@@ -212,8 +212,8 @@
     "requested": "Paramount Movie Channel",
     "status": "exact",
     "matched": "Paramount Movie Channel",
-    "provider": "Samsung",
-    "tvg_id": "USAJ26000054W"
+    "provider": "Pluto Direct",
+    "tvg_id": "5cb0cae7a461406ffe3f5213"
   },
   {
     "category": "Movies",
@@ -284,16 +284,16 @@
     "requested": "Hallmark Movies & More",
     "status": "exact",
     "matched": "Hallmark Movies & More",
-    "provider": "Samsung",
-    "tvg_id": "USBD270001633"
+    "provider": "Pluto Direct",
+    "tvg_id": "628e685ba3811100070551a8"
   },
   {
     "category": "Movies",
     "requested": "Lifetime Movie Favorites",
     "status": "exact",
     "matched": "Lifetime Movie Favorites",
-    "provider": "Samsung",
-    "tvg_id": "USBB5200019FO"
+    "provider": "Pluto Direct",
+    "tvg_id": "63335b193583440007c859fb"
   },
   {
     "category": "Movies",
@@ -316,16 +316,16 @@
     "requested": "Degrassi",
     "status": "exact",
     "matched": "Degrassi",
-    "provider": "Samsung",
-    "tvg_id": "USBD700010XU"
+    "provider": "Pluto Direct",
+    "tvg_id": "5c6eeb85c05dfc257e5a50c4"
   },
   {
     "category": "TV shows & classics",
     "requested": "Law & Order",
     "status": "exact",
     "matched": "Law & Order",
-    "provider": "Samsung",
-    "tvg_id": "US3000015O4"
+    "provider": "Pluto Direct",
+    "tvg_id": "68758038552299d2b08162e3"
   },
   {
     "category": "TV shows & classics",
@@ -340,8 +340,8 @@
     "requested": "The Walking Dead",
     "status": "approved-alias",
     "matched": "The Walking Dead Universe",
-    "provider": "Samsung",
-    "tvg_id": "USBD1200004NS"
+    "provider": "Pluto Direct",
+    "tvg_id": "62fa8176b9884200074ef5ae"
   },
   {
     "category": "TV shows & classics",
@@ -356,8 +356,8 @@
     "requested": "Pokémon",
     "status": "exact",
     "matched": "Pokémon",
-    "provider": "Samsung",
-    "tvg_id": "US5100003NU"
+    "provider": "Pluto Direct",
+    "tvg_id": "6675c7868768aa0008d7f1c7"
   },
   {
     "category": "Kids & family",
@@ -412,8 +412,8 @@
     "requested": "Kartoon Channel!",
     "status": "exact",
     "matched": "Kartoon Channel!",
-    "provider": "Samsung",
-    "tvg_id": "US2900015RO"
+    "provider": "Pluto Direct",
+    "tvg_id": "60fb040d4795a6000762fe8f"
   },
   {
     "category": "Kids & family",
@@ -507,25 +507,25 @@
     "category": "Comedy",
     "requested": "America’s Funniest Home Videos",
     "status": "exact",
-    "matched": "America’s Funniest Home Videos",
-    "provider": "Samsung",
-    "tvg_id": "US4100039PO"
+    "matched": "America's Funniest Home Videos",
+    "provider": "Pluto Direct",
+    "tvg_id": "691cf0410a78a9ce61ad2121"
   },
   {
     "category": "Comedy",
     "requested": "FailArmy",
     "status": "exact",
     "matched": "FailArmy",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3504702A"
+    "provider": "Pluto Direct",
+    "tvg_id": "554158e864526b29254ff105"
   },
   {
     "category": "Reality TV",
     "requested": "MTV Pluto TV",
     "status": "exact",
     "matched": "MTV Pluto TV",
-    "provider": "Samsung",
-    "tvg_id": "USBA3000093U"
+    "provider": "Pluto Direct",
+    "tvg_id": "5ca672f515a62078d2ec0ad2"
   },
   {
     "category": "Reality TV",
@@ -556,16 +556,16 @@
     "requested": "NFL Channel",
     "status": "exact",
     "matched": "NFL Channel",
-    "provider": "Samsung",
-    "tvg_id": "US2600007WJ"
+    "provider": "Pluto Direct",
+    "tvg_id": "5ced7d5df64be98e07ed47b6"
   },
   {
     "category": "Sports",
     "requested": "The NBA Channel",
     "status": "exact",
     "matched": "The NBA Channel",
-    "provider": "Samsung",
-    "tvg_id": "US3600003R7"
+    "provider": "Pluto Direct",
+    "tvg_id": "6792c30abc03978b9b8bb832"
   },
   {
     "category": "Sports",
@@ -580,24 +580,24 @@
     "requested": "CBS Sports HQ",
     "status": "exact",
     "matched": "CBS Sports HQ",
-    "provider": "Samsung",
-    "tvg_id": "USBB4800005VO"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e9f2c05172a0f0007db4786"
   },
   {
     "category": "Sports",
     "requested": "FOX Sports",
     "status": "exact",
     "matched": "FOX Sports",
-    "provider": "Samsung",
-    "tvg_id": "US2700001QY"
+    "provider": "Pluto Direct",
+    "tvg_id": "5a74b8e1e22a61737979c6bf"
   },
   {
     "category": "Sports",
     "requested": "NBC Sports NOW",
     "status": "exact",
     "matched": "NBC Sports NOW",
-    "provider": "Samsung",
-    "tvg_id": "USBD420002446"
+    "provider": "Pluto Direct",
+    "tvg_id": "6549306c83595c000815a696"
   },
   {
     "category": "Sports",
@@ -612,8 +612,8 @@
     "requested": "UFC",
     "status": "exact",
     "matched": "UFC",
-    "provider": "Samsung",
-    "tvg_id": "US2900017P2"
+    "provider": "Pluto Direct",
+    "tvg_id": "677d9adfa9a51b0008497fa0"
   },
   {
     "category": "Sports",
@@ -676,8 +676,8 @@
     "requested": "Tiny House Nation",
     "status": "exact",
     "matched": "Tiny House Nation",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3400020KC"
+    "provider": "Pluto Direct",
+    "tvg_id": "601a0342dcf4370007566891"
   },
   {
     "category": "Food & home",
@@ -708,16 +708,16 @@
     "requested": "Property Brothers",
     "status": "exact",
     "matched": "Property Brothers",
-    "provider": "Samsung",
-    "tvg_id": "US3300018IC"
+    "provider": "Pluto Direct",
+    "tvg_id": "698384cb7230043f21f4a3f4"
   },
   {
     "category": "Music",
     "requested": "Vevo Pop",
     "status": "exact",
     "matched": "Vevo Pop",
-    "provider": "Samsung",
-    "tvg_id": "USBC3600008WY"
+    "provider": "Pluto Direct",
+    "tvg_id": "5d93b635b43dd1a399b39eee"
   },
   {
     "category": "Music",
@@ -732,8 +732,8 @@
     "requested": "Vevo 2K",
     "status": "exact",
     "matched": "Vevo 2K",
-    "provider": "Samsung",
-    "tvg_id": "USBB4400015F5"
+    "provider": "Pluto Direct",
+    "tvg_id": "5fd7bca3e0a4ee0007a38e8c"
   },
   {
     "category": "Music",
@@ -812,8 +812,8 @@
     "requested": "Family Feud",
     "status": "exact",
     "matched": "Family Feud",
-    "provider": "Samsung",
-    "tvg_id": "US5000053YV"
+    "provider": "Pluto Direct",
+    "tvg_id": "672e4d915534bb0008c50168"
   },
   {
     "category": "Game shows",
@@ -844,16 +844,16 @@
     "requested": "Game Show Central",
     "status": "exact",
     "matched": "Game Show Central",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3400012FA"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e54187aae660e00093561d6"
   },
   {
     "category": "Game shows",
     "requested": "Deal or No Deal",
     "status": "exact",
     "matched": "Deal or No Deal",
-    "provider": "Samsung",
-    "tvg_id": "USBB4400017N3"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e9debf8c881310007d7bde1"
   },
   {
     "category": "Game shows",
@@ -868,32 +868,32 @@
     "requested": "ABC News Live",
     "status": "exact",
     "matched": "ABC News Live",
-    "provider": "Samsung",
-    "tvg_id": "USBC39000171G"
+    "provider": "Pluto Direct",
+    "tvg_id": "6508be683a0d700008c534e4"
   },
   {
     "category": "Other",
     "requested": "CBS News 24/7",
     "status": "exact",
     "matched": "CBS News 24/7",
-    "provider": "Samsung",
-    "tvg_id": "USBA370000104"
+    "provider": "Pluto Direct",
+    "tvg_id": "5a6b92f6e22a617379789618"
   },
   {
     "category": "Other",
     "requested": "NBC News NOW",
     "status": "exact",
     "matched": "NBC News NOW",
-    "provider": "Samsung",
-    "tvg_id": "USBB2200014DK"
+    "provider": "Pluto Direct",
+    "tvg_id": "5df97894467dfa00091c873c"
   },
   {
     "category": "Other",
     "requested": "LiveNOW from FOX",
     "status": "exact",
     "matched": "LiveNOW from FOX",
-    "provider": "Samsung",
-    "tvg_id": "USBA300024TN"
+    "provider": "Pluto Direct",
+    "tvg_id": "63d025db4e83e700086eaa96"
   },
   {
     "category": "Other",
@@ -1036,8 +1036,8 @@
     "requested": "Pluto TV Fantastic",
     "status": "exact",
     "matched": "Pluto TV Fantastic",
-    "provider": "Samsung",
-    "tvg_id": "USBA300017PK"
+    "provider": "Pluto Direct",
+    "tvg_id": "5b64a245a202b3337f09e51d"
   },
   {
     "category": "Approved Pluto",
@@ -1108,8 +1108,8 @@
     "requested": "Paramount Movie Channel",
     "status": "exact",
     "matched": "Paramount Movie Channel",
-    "provider": "Samsung",
-    "tvg_id": "USAJ26000054W"
+    "provider": "Pluto Direct",
+    "tvg_id": "5cb0cae7a461406ffe3f5213"
   },
   {
     "category": "Approved Pluto",
@@ -1196,8 +1196,8 @@
     "requested": "Law & Order",
     "status": "exact",
     "matched": "Law & Order",
-    "provider": "Samsung",
-    "tvg_id": "US3000015O4"
+    "provider": "Pluto Direct",
+    "tvg_id": "68758038552299d2b08162e3"
   },
   {
     "category": "Approved Pluto",
@@ -1212,24 +1212,24 @@
     "requested": "The Walking Dead Universe",
     "status": "exact",
     "matched": "The Walking Dead Universe",
-    "provider": "Samsung",
-    "tvg_id": "USBD1200004NS"
+    "provider": "Pluto Direct",
+    "tvg_id": "62fa8176b9884200074ef5ae"
   },
   {
     "category": "Approved Pluto",
     "requested": "Supernatural Drama",
     "status": "exact",
     "matched": "Supernatural Drama",
-    "provider": "Samsung",
-    "tvg_id": "USAJ26000015Y"
+    "provider": "Pluto Direct",
+    "tvg_id": "5f24662bebe0f0000767de32"
   },
   {
     "category": "Approved Pluto",
     "requested": "Degrassi",
     "status": "exact",
     "matched": "Degrassi",
-    "provider": "Samsung",
-    "tvg_id": "USBD700010XU"
+    "provider": "Pluto Direct",
+    "tvg_id": "5c6eeb85c05dfc257e5a50c4"
   },
   {
     "category": "Approved Pluto",
@@ -1244,8 +1244,8 @@
     "requested": "Universal Monsters",
     "status": "exact",
     "matched": "Universal Monsters",
-    "provider": "Samsung",
-    "tvg_id": "US1900002QK"
+    "provider": "Pluto Direct",
+    "tvg_id": "65a9b20f0c7ff50008d3a3b6"
   },
   {
     "category": "Approved Pluto",
@@ -1299,17 +1299,17 @@
     "category": "Approved Pluto",
     "requested": "America's Funniest Home Videos",
     "status": "exact",
-    "matched": "America’s Funniest Home Videos",
-    "provider": "Samsung",
-    "tvg_id": "US4100039PO"
+    "matched": "America's Funniest Home Videos",
+    "provider": "Pluto Direct",
+    "tvg_id": "691cf0410a78a9ce61ad2121"
   },
   {
     "category": "Approved Pluto",
     "requested": "FailArmy",
     "status": "exact",
     "matched": "FailArmy",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3504702A"
+    "provider": "Pluto Direct",
+    "tvg_id": "554158e864526b29254ff105"
   },
   {
     "category": "Approved Pluto",
@@ -1396,8 +1396,8 @@
     "requested": "Pokémon",
     "status": "exact",
     "matched": "Pokémon",
-    "provider": "Samsung",
-    "tvg_id": "US5100003NU"
+    "provider": "Pluto Direct",
+    "tvg_id": "6675c7868768aa0008d7f1c7"
   },
   {
     "category": "Approved Pluto",
@@ -1420,8 +1420,8 @@
     "requested": "Kartoon Channel!",
     "status": "exact",
     "matched": "Kartoon Channel!",
-    "provider": "Samsung",
-    "tvg_id": "US2900015RO"
+    "provider": "Pluto Direct",
+    "tvg_id": "60fb040d4795a6000762fe8f"
   },
   {
     "category": "Approved Pluto",
@@ -1484,24 +1484,24 @@
     "requested": "Crunchyroll",
     "status": "exact",
     "matched": "Crunchyroll",
-    "provider": "Samsung",
-    "tvg_id": "US2000018YI"
+    "provider": "Pluto Direct",
+    "tvg_id": "65652f7fc0fc88000883537a"
   },
   {
     "category": "Approved Pluto",
     "requested": "ANIME x HIDIVE",
     "status": "exact",
     "matched": "ANIME x HIDIVE",
-    "provider": "Samsung",
-    "tvg_id": "US15000032I"
+    "provider": "Pluto Direct",
+    "tvg_id": "6793eaa4bc03978b9bc63db1"
   },
   {
     "category": "Approved Pluto",
     "requested": "Sailor Moon",
     "status": "exact",
     "matched": "Sailor Moon",
-    "provider": "Samsung",
-    "tvg_id": "US2000015Z1"
+    "provider": "Pluto Direct",
+    "tvg_id": "637e55347427a40007fac703"
   },
   {
     "category": "Approved Pluto",
@@ -1516,8 +1516,8 @@
     "requested": "Naruto",
     "status": "exact",
     "matched": "Naruto",
-    "provider": "Samsung",
-    "tvg_id": "US2000014IC"
+    "provider": "Pluto Direct",
+    "tvg_id": "5da0c85bd2c9c10009370984"
   },
   {
     "category": "Approved Pluto",
@@ -1539,9 +1539,9 @@
     "category": "Approved Pluto",
     "requested": "Yu-Gi-Oh!",
     "status": "exact",
-    "matched": "Yu-Gi-Oh",
-    "provider": "Samsung",
-    "tvg_id": "US1000003G8"
+    "matched": "Yu-Gi-Oh!",
+    "provider": "Pluto Direct",
+    "tvg_id": "5f4ec10ed9636f00089b8c89"
   },
   {
     "category": "Approved Pluto",
@@ -1555,9 +1555,9 @@
     "category": "Approved Pluto",
     "requested": "It's Anime",
     "status": "exact",
-    "matched": "It’s Anime",
-    "provider": "Samsung",
-    "tvg_id": "US11000020V"
+    "matched": "It's Anime",
+    "provider": "Pluto Direct",
+    "tvg_id": "6a4fda4538f47f0af402bdb0"
   },
   {
     "category": "Approved Pluto",
@@ -1588,8 +1588,8 @@
     "requested": "Top Gear",
     "status": "exact",
     "matched": "Top Gear",
-    "provider": "Samsung",
-    "tvg_id": "USBC2400027NG"
+    "provider": "Pluto Direct",
+    "tvg_id": "636adc255bcf470007d6e0e2"
   },
   {
     "category": "Approved Pluto",
@@ -1628,24 +1628,24 @@
     "requested": "Survivor",
     "status": "exact",
     "matched": "Survivor",
-    "provider": "Samsung",
-    "tvg_id": "US3900014MX"
+    "provider": "Pluto Direct",
+    "tvg_id": "5f21e7b24744c60007c1f6fc"
   },
   {
     "category": "Approved Pluto",
     "requested": "The Amazing Race",
     "status": "exact",
     "matched": "The Amazing Race",
-    "provider": "Samsung",
-    "tvg_id": "US390001557"
+    "provider": "Pluto Direct",
+    "tvg_id": "5f21e8a6e2f12b000755afdb"
   },
   {
     "category": "Approved Pluto",
     "requested": "The Challenge",
     "status": "exact",
     "matched": "The Challenge",
-    "provider": "Samsung",
-    "tvg_id": "USBB3500001O6"
+    "provider": "Pluto Direct",
+    "tvg_id": "5d48685da7e9f476aa8a1888"
   },
   {
     "category": "Approved Pluto",
@@ -1708,24 +1708,24 @@
     "requested": "Dateline 24/7",
     "status": "exact",
     "matched": "Dateline 24/7",
-    "provider": "Samsung",
-    "tvg_id": "USBB5200007BY"
+    "provider": "Pluto Direct",
+    "tvg_id": "637413d8531e0c0007442d6d"
   },
   {
     "category": "Approved Pluto",
     "requested": "48 Hours",
     "status": "exact",
     "matched": "48 Hours",
-    "provider": "Samsung",
-    "tvg_id": "US1000005GY"
+    "provider": "Pluto Direct",
+    "tvg_id": "6176f39e709f160007ec61c3"
   },
   {
     "category": "Approved Pluto",
     "requested": "Unsolved Mysteries",
     "status": "exact",
     "matched": "Unsolved Mysteries",
-    "provider": "Samsung",
-    "tvg_id": "USBB3200018Q6"
+    "provider": "Pluto Direct",
+    "tvg_id": "5b4e96a0423e067bd6df6901"
   },
   {
     "category": "Approved Pluto",
@@ -1740,8 +1740,8 @@
     "requested": "Forensic Files",
     "status": "exact",
     "matched": "Forensic Files",
-    "provider": "Samsung",
-    "tvg_id": "USBB3200017MY"
+    "provider": "Pluto Direct",
+    "tvg_id": "5bb1af6a268cae539bcedb0a"
   },
   {
     "category": "Approved Pluto",
@@ -1756,16 +1756,16 @@
     "requested": "American Crimes",
     "status": "exact",
     "matched": "American Crimes",
-    "provider": "Samsung",
-    "tvg_id": "USBD42000250Q"
+    "provider": "Pluto Direct",
+    "tvg_id": "65492fc7056b9700088560b5"
   },
   {
     "category": "Approved Pluto",
     "requested": "Court TV",
     "status": "exact",
     "matched": "Court TV",
-    "provider": "Samsung",
-    "tvg_id": "USBA34000049Z"
+    "provider": "Pluto Direct",
+    "tvg_id": "5dae0b4841a7d0000938ddbd"
   },
   {
     "category": "Approved Pluto",
@@ -1780,40 +1780,40 @@
     "requested": "ION",
     "status": "exact",
     "matched": "ION",
-    "provider": "Samsung",
-    "tvg_id": "USBD300002TU"
+    "provider": "Pluto Direct",
+    "tvg_id": "65453f30085df200085883d8"
   },
   {
     "category": "Approved Pluto",
     "requested": "Lifetime Movie Favorites",
     "status": "exact",
     "matched": "Lifetime Movie Favorites",
-    "provider": "Samsung",
-    "tvg_id": "USBB5200019FO"
+    "provider": "Pluto Direct",
+    "tvg_id": "63335b193583440007c859fb"
   },
   {
     "category": "Approved Pluto",
     "requested": "Hallmark Movies & More",
     "status": "exact",
     "matched": "Hallmark Movies & More",
-    "provider": "Samsung",
-    "tvg_id": "USBD270001633"
+    "provider": "Pluto Direct",
+    "tvg_id": "628e685ba3811100070551a8"
   },
   {
     "category": "Approved Pluto",
     "requested": "MTV Pluto TV",
     "status": "exact",
     "matched": "MTV Pluto TV",
-    "provider": "Samsung",
-    "tvg_id": "USBA3000093U"
+    "provider": "Pluto Direct",
+    "tvg_id": "5ca672f515a62078d2ec0ad2"
   },
   {
     "category": "Approved Pluto",
     "requested": "ET",
     "status": "exact",
     "matched": "ET",
-    "provider": "Samsung",
-    "tvg_id": "USBA3700002JF"
+    "provider": "Pluto Direct",
+    "tvg_id": "5dc0c78281eddb0009a02d5e"
   },
   {
     "category": "Approved Pluto",
@@ -1836,24 +1836,24 @@
     "requested": "Family Feud",
     "status": "exact",
     "matched": "Family Feud",
-    "provider": "Samsung",
-    "tvg_id": "US5000053YV"
+    "provider": "Pluto Direct",
+    "tvg_id": "672e4d915534bb0008c50168"
   },
   {
     "category": "Approved Pluto",
     "requested": "Supermarket Sweep",
     "status": "exact",
     "matched": "Supermarket Sweep",
-    "provider": "Samsung",
-    "tvg_id": "USBC44000087O"
+    "provider": "Pluto Direct",
+    "tvg_id": "649ddbfb6f29ec000874ca9e"
   },
   {
     "category": "Approved Pluto",
     "requested": "Deal or No Deal",
     "status": "exact",
     "matched": "Deal or No Deal",
-    "provider": "Samsung",
-    "tvg_id": "USBB4400017N3"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e9debf8c881310007d7bde1"
   },
   {
     "category": "Approved Pluto",
@@ -1868,8 +1868,8 @@
     "requested": "50 Cent Action",
     "status": "exact",
     "matched": "50 Cent Action",
-    "provider": "Samsung",
-    "tvg_id": "US150000550"
+    "provider": "Pluto Direct",
+    "tvg_id": "68487fb3f212bedacf5a53e3"
   },
   {
     "category": "Approved Pluto",
@@ -1892,24 +1892,24 @@
     "requested": "Game Show Central",
     "status": "exact",
     "matched": "Game Show Central",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3400012FA"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e54187aae660e00093561d6"
   },
   {
     "category": "Approved Pluto",
     "requested": "Discovery Turbo TV",
     "status": "exact",
     "matched": "Discovery Turbo TV",
-    "provider": "Samsung",
-    "tvg_id": "USBC3600005U9"
+    "provider": "Pluto Direct",
+    "tvg_id": "6400f731d200410008f9b339"
   },
   {
     "category": "Approved Pluto",
     "requested": "POWERNATION",
     "status": "exact",
     "matched": "POWERNATION",
-    "provider": "Samsung",
-    "tvg_id": "USBD2500017XQ"
+    "provider": "Pluto Direct",
+    "tvg_id": "63b48016d9dd51000828fa37"
   },
   {
     "category": "Approved Pluto",
@@ -1956,16 +1956,16 @@
     "requested": "Property Brothers",
     "status": "exact",
     "matched": "Property Brothers",
-    "provider": "Samsung",
-    "tvg_id": "US3300018IC"
+    "provider": "Pluto Direct",
+    "tvg_id": "698384cb7230043f21f4a3f4"
   },
   {
     "category": "Approved Pluto",
     "requested": "This Old House",
     "status": "exact",
     "matched": "This Old House",
-    "provider": "Samsung",
-    "tvg_id": "USBC13000065U"
+    "provider": "Pluto Direct",
+    "tvg_id": "5d51e791b7dba3b2ae990ab2"
   },
   {
     "category": "Approved Pluto",
@@ -1980,16 +1980,16 @@
     "requested": "Tiny House Nation",
     "status": "exact",
     "matched": "Tiny House Nation",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3400020KC"
+    "provider": "Pluto Direct",
+    "tvg_id": "601a0342dcf4370007566891"
   },
   {
     "category": "Approved Pluto",
     "requested": "Home.Made.Nation",
     "status": "exact",
     "matched": "Home.Made.Nation",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3000006X5"
+    "provider": "Pluto Direct",
+    "tvg_id": "5dc1cb279c91420009db261d"
   },
   {
     "category": "Approved Pluto",
@@ -2036,8 +2036,8 @@
     "requested": "America's Test Kitchen",
     "status": "exact",
     "matched": "America's Test Kitchen",
-    "provider": "Samsung",
-    "tvg_id": "USBA3800002KI"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e84f54a82f05300080e6746"
   },
   {
     "category": "Approved Pluto",
@@ -2068,8 +2068,8 @@
     "requested": "Homeful",
     "status": "exact",
     "matched": "Homeful",
-    "provider": "Samsung",
-    "tvg_id": "USBD700022M5"
+    "provider": "Pluto Direct",
+    "tvg_id": "66df8aa7abec540008ca8cb6"
   },
   {
     "category": "Approved Pluto",
@@ -2092,32 +2092,32 @@
     "requested": "BBC Earth",
     "status": "exact",
     "matched": "BBC Earth",
-    "provider": "Samsung",
-    "tvg_id": "USBD1700001RW"
+    "provider": "Pluto Direct",
+    "tvg_id": "656535fc2c46f30008870fae"
   },
   {
     "category": "Approved Pluto",
     "requested": "The Pet Collective",
     "status": "exact",
     "matched": "The Pet Collective",
-    "provider": "Samsung",
-    "tvg_id": "USAJ3504704A"
+    "provider": "Pluto Direct",
+    "tvg_id": "5bb1ad55268cae539bcedb08"
   },
   {
     "category": "Approved Pluto",
     "requested": "Vevo Pop",
     "status": "exact",
     "matched": "Vevo Pop",
-    "provider": "Samsung",
-    "tvg_id": "USBC3600008WY"
+    "provider": "Pluto Direct",
+    "tvg_id": "5d93b635b43dd1a399b39eee"
   },
   {
     "category": "Approved Pluto",
     "requested": "Vevo 2K",
     "status": "exact",
     "matched": "Vevo 2K",
-    "provider": "Samsung",
-    "tvg_id": "USBB4400015F5"
+    "provider": "Pluto Direct",
+    "tvg_id": "5fd7bca3e0a4ee0007a38e8c"
   },
   {
     "category": "Approved Pluto",
@@ -2156,40 +2156,40 @@
     "requested": "Vevo Rock",
     "status": "exact",
     "matched": "Vevo Rock",
-    "provider": "Samsung",
-    "tvg_id": "USBD3000145P"
+    "provider": "Pluto Direct",
+    "tvg_id": "61d4b38226b8a50007fe03a6"
   },
   {
     "category": "Approved Pluto",
     "requested": "XITE Rock x Metal",
     "status": "exact",
     "matched": "XITE Rock x Metal",
-    "provider": "Samsung",
-    "tvg_id": "USBB2300004KV"
+    "provider": "Pluto Direct",
+    "tvg_id": "623a1b5188ecdc0007c9ef5a"
   },
   {
     "category": "Approved Pluto",
     "requested": "CBS Sports HQ",
     "status": "exact",
     "matched": "CBS Sports HQ",
-    "provider": "Samsung",
-    "tvg_id": "USBB4800005VO"
+    "provider": "Pluto Direct",
+    "tvg_id": "5e9f2c05172a0f0007db4786"
   },
   {
     "category": "Approved Pluto",
     "requested": "FOX Sports",
     "status": "exact",
     "matched": "FOX Sports",
-    "provider": "Samsung",
-    "tvg_id": "US2700001QY"
+    "provider": "Pluto Direct",
+    "tvg_id": "5a74b8e1e22a61737979c6bf"
   },
   {
     "category": "Approved Pluto",
     "requested": "NFL Channel",
     "status": "exact",
     "matched": "NFL Channel",
-    "provider": "Samsung",
-    "tvg_id": "US2600007WJ"
+    "provider": "Pluto Direct",
+    "tvg_id": "5ced7d5df64be98e07ed47b6"
   },
   {
     "category": "Approved Pluto",
@@ -2204,24 +2204,24 @@
     "requested": "UFC",
     "status": "exact",
     "matched": "UFC",
-    "provider": "Samsung",
-    "tvg_id": "US2900017P2"
+    "provider": "Pluto Direct",
+    "tvg_id": "677d9adfa9a51b0008497fa0"
   },
   {
     "category": "Approved Pluto",
     "requested": "NBC Sports NOW",
     "status": "exact",
     "matched": "NBC Sports NOW",
-    "provider": "Samsung",
-    "tvg_id": "USBD420002446"
+    "provider": "Pluto Direct",
+    "tvg_id": "6549306c83595c000815a696"
   },
   {
     "category": "Approved Pluto",
     "requested": "The NBA Channel",
     "status": "exact",
     "matched": "The NBA Channel",
-    "provider": "Samsung",
-    "tvg_id": "US3600003R7"
+    "provider": "Pluto Direct",
+    "tvg_id": "6792c30abc03978b9b8bb832"
   },
   {
     "category": "Approved Pluto",
@@ -2236,8 +2236,8 @@
     "requested": "Bellator MMA",
     "status": "exact",
     "matched": "Bellator MMA",
-    "provider": "Samsung",
-    "tvg_id": "US1000006HT"
+    "provider": "Pluto Direct",
+    "tvg_id": "5ebc8688f3697d00072f7cf8"
   },
   {
     "category": "Approved Pluto",
@@ -2252,8 +2252,8 @@
     "requested": "UEFA Champions League",
     "status": "exact",
     "matched": "UEFA Champions League",
-    "provider": "Samsung",
-    "tvg_id": "US1000012ML"
+    "provider": "Pluto Direct",
+    "tvg_id": "65ea8b928145cb0008509426"
   },
   {
     "category": "Approved Pluto",
@@ -2268,40 +2268,40 @@
     "requested": "TNA Wrestling",
     "status": "exact",
     "matched": "TNA Wrestling",
-    "provider": "Samsung",
-    "tvg_id": "USBB1000001XP"
+    "provider": "Pluto Direct",
+    "tvg_id": "59b722526996084038c01e1b"
   },
   {
     "category": "Approved Pluto",
     "requested": "CBS News 24/7",
     "status": "exact",
     "matched": "CBS News 24/7",
-    "provider": "Samsung",
-    "tvg_id": "USBA370000104"
+    "provider": "Pluto Direct",
+    "tvg_id": "5a6b92f6e22a617379789618"
   },
   {
     "category": "Approved Pluto",
     "requested": "NBC News NOW",
     "status": "exact",
     "matched": "NBC News NOW",
-    "provider": "Samsung",
-    "tvg_id": "USBB2200014DK"
+    "provider": "Pluto Direct",
+    "tvg_id": "5df97894467dfa00091c873c"
   },
   {
     "category": "Approved Pluto",
     "requested": "ABC News Live",
     "status": "exact",
     "matched": "ABC News Live",
-    "provider": "Samsung",
-    "tvg_id": "USBC39000171G"
+    "provider": "Pluto Direct",
+    "tvg_id": "6508be683a0d700008c534e4"
   },
   {
     "category": "Approved Pluto",
     "requested": "LiveNOW from FOX",
     "status": "exact",
     "matched": "LiveNOW from FOX",
-    "provider": "Samsung",
-    "tvg_id": "USBA300024TN"
+    "provider": "Pluto Direct",
+    "tvg_id": "63d025db4e83e700086eaa96"
   },
   {
     "category": "Approved Pluto",
