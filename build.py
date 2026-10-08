@@ -30,6 +30,9 @@ NEWS_TERMS = ("news", "weather", "accuweather", "livenow")
 SCIENCE_TERMS = ("nature", "wild life", "wildlife", "clarity 4k", "pbs nature")
 
 def category_for(category, requested):
+    if requested in ("Pluto TV Horror", "Pluto TV Thrillers", "FilmRise Horror",
+                     "The Asylum", "FreeTV Horror"):
+        return "Horror"
     if category == "Other":
         lower = requested.casefold()
         if any(term in lower for term in NEWS_TERMS):
