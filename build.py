@@ -137,6 +137,43 @@ def main():
     except Exception as exc:
         print(f"IPTV-org unavailable; preserving existing lineup: {exc}")
 
+    # Additional channels confirmed playable by the user in IPTV-org Entertainment.
+    entertainment_wanted = {
+        "A&E": ("A&E", "A and E"),
+        "E! (United States) East": ("E! (United States) East", "E! East"),
+        "Game Show Network": ("Game Show Network", "GSN"),
+        "ION Plus": ("ION Plus",),
+        "MTV (United States)": ("MTV (United States)", "MTV US"),
+        "Plex TV": ("Plex TV",),
+        "TMZ": ("TMZ",),
+        "Wipeout Xtra": ("Wipeout Xtra",),
+    }
+    entertainment_found = {}
+    request = Request("https://iptv-org.github.io/iptv/categories/entertainment.m3u",
+                      headers={"User-Agent": "ArvioPlaylist/1.0"})
+    with urlopen(request, timeout=60) as response:
+        entertainment_channels = parse(response.read().decode("utf-8-sig"), "IPTV-org Entertainment")
+    print("IPTV-org Entertainment entries:", len(entertainment_channels))
+    for label, variants in entertainment_wanted.items():
+        matches = [c for c in entertainment_channels
+                   if any(norm(c["name"]) == norm(v) or
+                          norm(c["name"]).startswith(norm(v)) and
+                          re.match(r"^(?:\\s*\\(\\d+p\\))?$", c["name"][len(v):], re.I)
+                          for v in variants)]
+        # Also support resolution tags on the exact named station.
+        if not matches:
+            matches = [c for c in entertainment_channels
+                       if any(re.fullmatch(re.escape(v) + r"(?:\\s*\\(\\d+p\\))?", c["name"], re.I)
+                              for v in variants)]
+        if matches:
+            entertainment_found[label] = matches[0]
+            print(f"Entertainment selected {label}: {matches[0]['name']}")
+        else:
+            print(f"Entertainment channel not found: {label}")
+    if len(entertainment_found) != len(entertainment_wanted):
+        raise RuntimeError("Entertainment selections incomplete; preserving previous playlist: " +
+                           ", ".join(set(entertainment_wanted) - set(entertainment_found)))
+
     output = ['#EXTM3U url-tvg="' + ",".join(EPGS) + '"']
     audit = []
     seen = set()
@@ -174,6 +211,20 @@ def main():
         audit.append({"category": "IPTV-org additions", "requested": label,
                       "status": "exact", "matched": channel["name"],
                       "provider": "IPTV-org", "tvg_id": channel["tvg_id"]})
+    for label, channel in entertainment_found.items():
+        if norm(label) in seen or norm(channel["name"]) in seen:
+            continue
+        group = ("Game Shows" if label in ("Game Show Network", "Wipeout Xtra")
+                 else "Music" if label == "MTV (United States)"
+                 else "Reality TV" if label in ("A&E", "E! (United States) East", "TMZ")
+                 else "TV Shows & Classics")
+        output.extend([set_group(channel["extinf"], group), channel["url"]])
+        seen.add(norm(label))
+        seen.add(norm(channel["name"]))
+        published += 1
+        audit.append({"category": "IPTV-org Entertainment additions", "requested": label,
+                      "status": "exact", "matched": channel["name"],
+                      "provider": "IPTV-org Entertainment", "tvg_id": channel["tvg_id"]})
     if published < 100:
         raise RuntimeError(f"Only {published} matches; refusing to replace previous playlist")
     missing_curated = [name for name in curation["keep"] if norm(name) not in seen]
