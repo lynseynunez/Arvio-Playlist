@@ -2350,5 +2350,69 @@
     "matched": "Tooncast (1080p)",
     "provider": "IPTV-org",
     "tvg_id": "Tooncast.us@SD"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "A&E",
+    "status": "exact",
+    "matched": "A&E (720p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "AE.us@East"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "E! (United States) East",
+    "status": "exact",
+    "matched": "E! (United States) East (1080p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "E.us@East"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "Game Show Network",
+    "status": "exact",
+    "matched": "Game Show Network (720p) [Not 24/7]",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "GameShowNetwork.us@East"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "ION Plus",
+    "status": "exact",
+    "matched": "ION Plus (1080p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "IONPlus.us@East"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "MTV (United States)",
+    "status": "exact",
+    "matched": "MTV (United States) (1080p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "MTV.us@East"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "Plex TV",
+    "status": "exact",
+    "matched": "PLEX TV",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "PLEXTV.cm@SD"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "TMZ",
+    "status": "exact",
+    "matched": "TMZ (720p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "TMZ.us@SD"
+  },
+  {
+    "category": "IPTV-org Entertainment additions",
+    "requested": "Wipeout Xtra",
+    "status": "exact",
+    "matched": "Wipeout Xtra (1080p)",
+    "provider": "IPTV-org Entertainment",
+    "tvg_id": "WipeoutXtra.us@SD"
   }
 ]

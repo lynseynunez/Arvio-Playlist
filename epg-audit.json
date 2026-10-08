@@ -1,5 +1,5 @@
 {
-  "playlist_channels": 220,
+  "playlist_channels": 228,
   "channels_with_programmes": 216,
   "programmes": 4140,
   "sources": {
@@ -24,6 +24,14 @@
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
-    "Tooncast (1080p)"
+    "Tooncast (1080p)",
+    "A&E (720p)",
+    "E! (United States) East (1080p)",
+    "Game Show Network (720p) [Not 24/7]",
+    "ION Plus (1080p)",
+    "MTV (United States) (1080p)",
+    "PLEX TV",
+    "TMZ (720p)",
+    "Wipeout Xtra (1080p)"
   ]
 }
