@@ -2,7 +2,7 @@ name: Update Arvio M3U
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 12 * * *'
+    - cron: '45 0,6,12,18 * * *'
 permissions:
   contents: write
 jobs:
