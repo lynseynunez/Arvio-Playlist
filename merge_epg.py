@@ -51,7 +51,8 @@ def read_source(url, wanted, channels, programmes):
                 elif elem.tag == "programme" and elem.get("channel") in wanted:
                     key = (elem.get("channel"), elem.get("start"), elem.get("stop"))
                     programmes.setdefault(key, ET.tostring(elem, encoding="utf-8"))
-                elem.clear()
+                if elem.tag in ("channel", "programme"):
+                    elem.clear()
 
 def main():
     wanted = playlist_channels()
