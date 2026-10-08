@@ -258,26 +258,26 @@
   {
     "category": "Movies",
     "requested": "The Movie Hub",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "Movie Hub",
+    "provider": "Samsung",
+    "tvg_id": "USBA3000041ZP"
   },
   {
     "category": "Movies",
     "requested": "The Movie Hub Action",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "Movie Hub Action",
+    "provider": "Samsung",
+    "tvg_id": "USBD3500032H0"
   },
   {
     "category": "Movies",
     "requested": "The Movie Hub Romance",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "Movie Hub Romance",
+    "provider": "Samsung",
+    "tvg_id": "USBD3500033U0"
   },
   {
     "category": "Movies",
@@ -338,10 +338,10 @@
   {
     "category": "TV shows & classics",
     "requested": "The Walking Dead",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "The Walking Dead Universe",
+    "provider": "Samsung",
+    "tvg_id": "USBD1200004NS"
   },
   {
     "category": "TV shows & classics",
@@ -490,10 +490,10 @@
   {
     "category": "Comedy",
     "requested": "Kevin Hart's LOL Network",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "LOL! Network",
+    "provider": "Samsung",
+    "tvg_id": "USBC1300009VM"
   },
   {
     "category": "Comedy",
@@ -570,10 +570,10 @@
   {
     "category": "Sports",
     "requested": "MLB Channel / MLB",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "MLB Channel",
+    "provider": "Samsung",
+    "tvg_id": "US1400001WV"
   },
   {
     "category": "Sports",
@@ -650,10 +650,10 @@
   {
     "category": "Food & home",
     "requested": "Gordon Ramsay's Kitchen Nightmares",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "approved-alias",
+    "matched": "Kitchen Nightmares",
+    "provider": "Samsung",
+    "tvg_id": "USBA3000042O6"
   },
   {
     "category": "Food & home",
