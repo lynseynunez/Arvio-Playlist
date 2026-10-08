@@ -13,7 +13,7 @@ FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m
          "Plex": BASE + "plex_us.m3u"}
 EPGS = ["https://raw.githubusercontent.com/lynseynunez/Arvio-Playlist/main/epg.xml.gz"]
 PLUTO_CURATED_FEED = "https://raw.githubusercontent.com/lynseynunez/pluto-tv/main/output/plutotv_us.m3u8"
-PRIORITY = {"Samsung": 0, "Pluto Direct": 1, "Pluto": 2, "Roku": 3, "Tubi": 4, "Plex": 5}
+PRIORITY = {"Pluto Direct": 0, "Samsung": 1, "Pluto": 2, "Roku": 3, "Tubi": 4, "Plex": 5}
 
 CATEGORY_MAP = {
     "Anime": "Anime & Animation",
@@ -97,6 +97,8 @@ def main():
     with urlopen(request, timeout=90) as response:
         curated_source = parse(response.read().decode("utf-8-sig"), "Pluto")
     source_names = {channel["name"] for channel in curated_source}
+    if len(source_names) < 300:
+        raise RuntimeError("Pluto source looks incomplete; preserving the previous playlist")
     excluded_names = {norm(name) for name in source_names - approved}
     # Drop all nonapproved Pluto names, including copies offered by other providers.
     for name in list(index):
@@ -108,7 +110,7 @@ def main():
             channel["provider"] = "Pluto Direct"
             index.setdefault(norm(channel["name"]), []).append(channel)
     counts["Curated Pluto"] = sum(c["name"] in approved for c in curated_source)
-    if counts["Curated Pluto"] < 100:
+    if counts["Curated Pluto"] != len(approved):
         raise RuntimeError("Curated Pluto source incomplete; preserving previous playlist")
 
     output = ['#EXTM3U url-tvg="' + ",".join(EPGS) + '"']
@@ -120,6 +122,11 @@ def main():
         for requested in text.split("; "):
             target = aliases.get(requested, requested)
             options = index.get(norm(target), [])
+            # Approved Pluto channels must retain the EXACT entry and stream URL from
+            # the independently generated Pluto playlist, never a Samsung or
+            # BuddyChewChew substitute that happens to share the same name.
+            if target in approved:
+                options = [item for item in options if item["provider"] == "Pluto Direct"]
             options.sort(key=lambda item: (PRIORITY[item["provider"]], item["name"]))
             match = options[0] if options else None
             audit.append({"category": category, "requested": requested,
