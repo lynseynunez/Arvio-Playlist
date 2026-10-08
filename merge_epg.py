@@ -37,6 +37,13 @@ def id_aliases(wanted):
         base = cid.split("@", 1)[0]
         if base not in aliases:
             aliases[base] = cid
+    # Common XMLTV providers use base IDs or names instead of region variants.
+    # Only map aliases when they identify one unique playlist channel.
+    for cid, name in wanted.items():
+        for alias in (name, re.sub(r"\\s*\\(\\d+p\\).*?$", "", name),
+                      re.sub(r"[^a-z0-9]", "", name.lower())):
+            if alias and alias not in aliases:
+                aliases[alias] = cid
     return aliases
 
 def read_source(url, wanted, channels, programmes):
