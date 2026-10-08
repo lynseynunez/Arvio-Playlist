@@ -218,34 +218,34 @@
   {
     "category": "Movies",
     "requested": "FilmRise Free Movies",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "exact",
+    "matched": "FilmRise Free Movies",
+    "provider": "Roku",
+    "tvg_id": "d6f71998860459eca1bed73db5988330"
   },
   {
     "category": "Movies",
     "requested": "FilmRise Action",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "exact",
+    "matched": "FilmRise Action",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-66ea0504c24d95b51b7cd189"
   },
   {
     "category": "Movies",
     "requested": "FilmRise Horror",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "exact",
+    "matched": "FilmRise Horror",
+    "provider": "Roku",
+    "tvg_id": "6a0629e467b5502c906136dadac290a0"
   },
   {
     "category": "Movies",
     "requested": "FilmRise Sci-Fi",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "exact",
+    "matched": "FilmRise Sci-Fi",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-6449369eb3ff17382cae580d"
   },
   {
     "category": "Movies",
@@ -958,5 +958,53 @@
     "matched": "Clarity 4K",
     "provider": "Samsung",
     "tvg_id": "USBA3800005NI"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "Anime 24/7",
+    "status": "exact",
+    "matched": "Anime 24/7",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-686452b8fbd6d9b449de2be3"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "Animation+",
+    "status": "exact",
+    "matched": "Animation+",
+    "provider": "Samsung",
+    "tvg_id": "US400002PS"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "FilmRise Comedy",
+    "status": "exact",
+    "matched": "FilmRise Comedy",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "FreeTV Horror",
+    "status": "exact",
+    "matched": "FreeTV Horror",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "Shout! Movies",
+    "status": "exact",
+    "matched": "Shout! Movies",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d"
+  },
+  {
+    "category": "Additional channels",
+    "requested": "Shout! TV",
+    "status": "exact",
+    "matched": "Shout! TV",
+    "provider": "Samsung",
+    "tvg_id": "USBD1200021JM"
   }
 ]
