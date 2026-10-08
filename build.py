@@ -14,6 +14,45 @@ FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m
 EPGS = ["https://i.mjh.nz/SamsungTVPlus/us.xml.gz", "https://i.mjh.nz/PlutoTV/us.xml.gz"]
 PRIORITY = {"Samsung": 0, "Pluto": 1, "Roku": 2, "Tubi": 3, "Plex": 4}
 
+CATEGORY_MAP = {
+    "Anime": "Anime & Animation",
+    "Movies": "Movies",
+    "TV shows & classics": "TV Shows & Classics",
+    "Kids & family": "Kids & Family",
+    "Comedy": "Comedy",
+    "Reality TV": "Reality TV",
+    "Sports": "Sports",
+    "Food & home": "Food & Home",
+    "Music": "Music",
+    "Game shows": "Game Shows",
+}
+NEWS_TERMS = ("news", "weather", "accuweather", "livenow")
+SCIENCE_TERMS = ("nature", "wild life", "wildlife", "clarity 4k", "pbs nature")
+
+def category_for(category, requested):
+    if category == "Other":
+        lower = requested.casefold()
+        if any(term in lower for term in NEWS_TERMS):
+            return "News & Weather"
+        if any(term in lower for term in SCIENCE_TERMS):
+            return "Science & Nature"
+        return "Gaming & Entertainment"
+    if category == "Additional channels":
+        if requested in ("Anime 24/7", "Animation+"):
+            return "Anime & Animation"
+        if requested in ("FilmRise Comedy",):
+            return "Comedy"
+        return "Movies"
+    return CATEGORY_MAP.get(category, "Gaming & Entertainment")
+
+def set_group(extinf, category):
+    # Keep all original upstream attributes, including tvg-id and tvg-logo.
+    safe = category.replace('"', "")
+    if re.search(r'group-title="[^"]*"', extinf):
+        return re.sub(r'group-title="[^"]*"', lambda _: f'group-title="{safe}"', extinf, count=1)
+    return extinf.replace("#EXTINF:", f'#EXTINF: group-title="{safe}" ', 1)
+
+
 def norm(value):
     value = unicodedata.normalize("NFKD", value.casefold())
     return "".join(c for c in value if c.isascii() and c.isalnum())
@@ -64,7 +103,7 @@ def main():
                           "provider": match["provider"] if match else None,
                           "tvg_id": match["tvg_id"] if match else None})
             if match and norm(match["name"]) not in seen:
-                output.extend([match["extinf"], match["url"]])
+                output.extend([set_group(match["extinf"], category_for(category, requested)), match["url"]])
                 seen.add(norm(match["name"]))
                 published += 1
     if published < 60:
