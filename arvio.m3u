@@ -55,6 +55,12 @@ https://jmp2.uk/plu-5b4fc274694c027be6ed3eea.m3u8
 https://jmp2.uk/stvp-USAJ26000054W
 #EXTINF:-1 channel-id="USAJ17000014C" tvg-id="USAJ17000014C" tvg-chno="3070" tvg-name="The Asylum" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAJ17000014C_20260421T141813SQUARE.png" group-title="Sci-Fi & Horror",The Asylum
 https://jmp2.uk/stvp-USAJ17000014C
+#EXTINF:-1 channel-id="USBA3000041ZP" tvg-id="USBA3000041ZP" tvg-chno="1200" tvg-name="Movie Hub" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA3000041ZP_20261002T181902SQUARE.png" group-title="Movies",Movie Hub
+https://jmp2.uk/stvp-USBA3000041ZP
+#EXTINF:-1 channel-id="USBD3500032H0" tvg-id="USBD3500032H0" tvg-chno="1001" tvg-name="Movie Hub Action" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3500032H0_20261002T182005SQUARE.png" group-title="Movies",Movie Hub Action
+https://jmp2.uk/stvp-USBD3500032H0
+#EXTINF:-1 channel-id="USBD3500033U0" tvg-id="USBD3500033U0" tvg-chno="1206" tvg-name="Movie Hub Romance" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3500033U0_20260915T035223SQUARE.png" group-title="Movies",Movie Hub Romance
+https://jmp2.uk/stvp-USBD3500033U0
 #EXTINF:-1 channel-id="USBD270001633" tvg-id="USBD270001633" tvg-chno="1220" tvg-name="Hallmark Movies & More" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD270001633_20261002T181949SQUARE.png" group-title="Movies",Hallmark Movies & More
 https://jmp2.uk/stvp-USBD270001633
 #EXTINF:-1 channel-id="USBB5200019FO" tvg-id="USBB5200019FO" tvg-chno="1225" tvg-name="Lifetime Movie Favorites" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB5200019FO_20261001T230758SQUARE.png" group-title="Movies",Lifetime Movie Favorites
@@ -67,6 +73,8 @@ https://jmp2.uk/stvp-USBD700010XU
 https://jmp2.uk/stvp-US3000015O4
 #EXTINF:-1 channel-id="65653817c917a5000844bc30" tvg-id="65653817c917a5000844bc30" tvg-chno="990" tvg-name="Criminal Minds" tvg-logo="https://images.pluto.tv/channels/65653817c917a5000844bc30/colorLogoPNG.png" group-title="Drama",Criminal Minds
 https://jmp2.uk/plu-65653817c917a5000844bc30.m3u8
+#EXTINF:-1 channel-id="USBD1200004NS" tvg-id="USBD1200004NS" tvg-chno="3015" tvg-name="The Walking Dead Universe" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD1200004NS_20261001T230824SQUARE.png" group-title="Sci-Fi & Horror",The Walking Dead Universe
+https://jmp2.uk/stvp-USBD1200004NS
 #EXTINF:-1 channel-id="5ce4475cd43850831ca91ce7" tvg-id="5ce4475cd43850831ca91ce7" tvg-chno="870" tvg-name="Doctor Who Classic" tvg-logo="https://images.pluto.tv/channels/5ce4475cd43850831ca91ce7/colorLogoPNG.png" group-title="Sci-Fi",Doctor Who Classic
 https://jmp2.uk/plu-5ce4475cd43850831ca91ce7.m3u8
 #EXTINF:-1 channel-id="US5100003NU" tvg-id="US5100003NU" tvg-chno="3648" tvg-name="Pokémon" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US5100003NU_20260421T141802SQUARE.png" group-title="Kids",Pokémon
@@ -99,6 +107,8 @@ https://jmp2.uk/stvp-USBD350002338
 https://jmp2.uk/stvp-US17000208H
 #EXTINF:-1 channel-id="580e87ff497c73ba2f321dd3" tvg-id="580e87ff497c73ba2f321dd3" tvg-chno="330" tvg-name="Funny AF" tvg-logo="https://images.pluto.tv/channels/580e87ff497c73ba2f321dd3/colorLogoPNG.png" group-title="Comedy",Funny AF
 https://jmp2.uk/plu-580e87ff497c73ba2f321dd3.m3u8
+#EXTINF:-1 channel-id="USBC1300009VM" tvg-id="USBC1300009VM" tvg-chno="2630" tvg-name="LOL! Network" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBC1300009VM_20260407T042308SQUARE.png" group-title="Comedy",LOL! Network
+https://jmp2.uk/stvp-USBC1300009VM
 #EXTINF:-1 channel-id="US4100038R9" tvg-id="US4100038R9" tvg-chno="2621" tvg-name="AFV with Alfonso Ribeiro" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US4100038R9_20260421T143031SQUARE.png" group-title="Comedy",AFV with Alfonso Ribeiro
 https://jmp2.uk/stvp-US4100038R9
 #EXTINF:-1 channel-id="US4100039PO" tvg-id="US4100039PO" tvg-chno="2683" tvg-name="America’s Funniest Home Videos" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US4100039PO_20251125T030910SQUARE.png" group-title="Comedy",America’s Funniest Home Videos
@@ -117,6 +127,8 @@ https://jmp2.uk/stvp-US4700030X8
 https://jmp2.uk/stvp-US2600007WJ
 #EXTINF:-1 channel-id="US3600003R7" tvg-id="US3600003R7" tvg-chno="2317" tvg-name="The NBA Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US3600003R7_20260421T143309SQUARE.png" group-title="Sports & Outdoors",The NBA Channel
 https://jmp2.uk/stvp-US3600003R7
+#EXTINF:-1 channel-id="US1400001WV" tvg-id="US1400001WV" tvg-chno="2315" tvg-name="MLB Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US1400001WV_20261001T230804SQUARE.png" group-title="Sports & Outdoors",MLB Channel
+https://jmp2.uk/stvp-US1400001WV
 #EXTINF:-1 channel-id="USBB4800005VO" tvg-id="USBB4800005VO" tvg-chno="2330" tvg-name="CBS Sports HQ" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB4800005VO_20260922T055647SQUARE.png" group-title="Sports & Outdoors",CBS Sports HQ
 https://jmp2.uk/stvp-USBB4800005VO
 #EXTINF:-1 channel-id="US2700001QY" tvg-id="US2700001QY" tvg-chno="2334" tvg-name="FOX Sports" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US2700001QY_20260421T143236SQUARE.png" group-title="Sports & Outdoors",FOX Sports
@@ -135,6 +147,8 @@ https://jmp2.uk/plu-68bb16916523408b14bac7f8.m3u8
 https://jmp2.uk/stvp-USBD7000189R
 #EXTINF:-1 channel-id="5b4e99f4423e067bd6df6903" tvg-id="5b4e99f4423e067bd6df6903" tvg-chno="1900" tvg-name="Gordon Ramsay's Hell's Kitchen" tvg-logo="https://images.pluto.tv/channels/5b4e99f4423e067bd6df6903/colorLogoPNG.png" group-title="Competition Reality",Gordon Ramsay's Hell's Kitchen
 https://jmp2.uk/plu-5b4e99f4423e067bd6df6903.m3u8
+#EXTINF:-1 channel-id="USBA3000042O6" tvg-id="USBA3000042O6" tvg-chno="1905" tvg-name="Kitchen Nightmares" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA3000042O6_20260804T045733SQUARE.png" group-title="Reality TV",Kitchen Nightmares
+https://jmp2.uk/stvp-USBA3000042O6
 #EXTINF:-1 channel-id="USBC44000226R" tvg-id="USBC44000226R" tvg-chno="2112" tvg-name="Bon Appétit" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBC44000226R_20240625T011313SQUARE.png" group-title="Home & Food",Bon Appétit
 https://jmp2.uk/stvp-USBC44000226R
 #EXTINF:-1 channel-id="USAK3508724A" tvg-id="USAK3508724A" tvg-chno="2114" tvg-name="Gusto TV" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAK3508724A_20250325T014839SQUARE.png" group-title="Home & Food",Gusto TV
