@@ -91,12 +91,37 @@ def main():
                     out.write(xml + bytes((10,)))
                 out.write(b'</tv>' + bytes((10,)))
         covered = {cid for (cid,) in db.execute("SELECT DISTINCT id FROM programmes")}
+        # Diagnose missing matches against real XMLTV channel IDs and display names.
+        missing = {cid: name for cid, name in wanted.items() if cid not in covered}
+        candidates = {}
+        def clean(value):
+            value = re.sub(r"\\s*\\[.*?\\]", "", value)
+            value = re.sub(r"\\s*\\(\\d+p\\)", "", value)
+            return re.sub(r"[^a-z0-9]", "", value.lower())
+        guide_index = []
+        for cid, xml in db.execute("SELECT id, xml FROM channels"):
+            node = ET.fromstring(xml)
+            names = [n.text or "" for n in node.findall("display-name")]
+            guide_index.append((cid, names))
+        for cid, name in missing.items():
+            desired = clean(name)
+            base_id = clean(cid.split("@")[0])
+            found = []
+            for guide_id, names in guide_index:
+                matched = (clean(guide_id) == base_id or
+                           clean(guide_id.split("@")[0]) == base_id or
+                           any(clean(n) == desired for n in names))
+                if matched:
+                    found.append({"id": guide_id, "names": names[:3],
+                                  "has_programmes": guide_id in covered})
+            candidates[name] = found[:30]
         audit = {
             "playlist_channels": len(wanted),
             "channels_with_programmes": sum(cid in covered for cid in wanted),
             "programmes": programmes,
             "total_guide_channels": db.execute("SELECT COUNT(*) FROM channels").fetchone()[0],
             "sources": source_status,
+            "missing_channel_candidates": candidates,
             "without_guide": [name for cid, name in wanted.items() if cid not in covered],
         }
         (ROOT / "epg-audit.json").write_text(json.dumps(audit, indent=2) + chr(10), encoding="utf-8")
