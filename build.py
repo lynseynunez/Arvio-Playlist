@@ -13,7 +13,7 @@ FEEDS = {"Samsung": BASE + "samsungtvplus_us.m3u", "Pluto": BASE + "plutotv_us.m
          "Plex": BASE + "plex_us.m3u"}
 EPGS = ["https://raw.githubusercontent.com/lynseynunez/Arvio-Playlist/main/epg.xml.gz"]
 PLUTO_CURATED_FEED = "https://raw.githubusercontent.com/lynseynunez/pluto-tv/main/output/plutotv_us.m3u8"
-PRIORITY = {"Samsung": 0, "Pluto": 1, "Roku": 2, "Tubi": 3, "Plex": 4}
+PRIORITY = {"Samsung": 0, "Pluto Direct": 1, "Pluto": 2, "Roku": 3, "Tubi": 4, "Plex": 5}
 
 CATEGORY_MAP = {
     "Anime": "Anime & Animation",
@@ -104,6 +104,8 @@ def main():
             del index[name]
     for channel in curated_source:
         if channel["name"] in approved:
+            # Prefer direct, freshly generated Pluto URLs over third-party Pluto redirects.
+            channel["provider"] = "Pluto Direct"
             index.setdefault(norm(channel["name"]), []).append(channel)
     counts["Curated Pluto"] = sum(c["name"] in approved for c in curated_source)
     if counts["Curated Pluto"] < 100:
