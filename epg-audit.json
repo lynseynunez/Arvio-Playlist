@@ -1,15 +1,15 @@
 {
   "playlist_channels": 216,
   "channels_with_programmes": 216,
-  "programmes": 4119,
+  "programmes": 4128,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 393
+      "new_programmes": 387
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 3483
+      "new_programmes": 3498
     },
     "Roku": {
       "status": "ok",
