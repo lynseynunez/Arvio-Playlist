@@ -19,25 +19,17 @@
       "status": "ok",
       "new_programmes": 160
     },
-    "IPTV-org US TVTV": {
+    "EPGShare US": {
       "status": "unavailable",
       "reason": "HTTP Error 404: Not Found"
     },
-    "IPTV-org US DirecTV": {
-      "status": "unavailable",
-      "reason": "HTTP Error 404: Not Found"
+    "EPGShare US Alt": {
+      "status": "ok",
+      "new_programmes": 0
     },
-    "IPTV-org US TVGuide": {
-      "status": "unavailable",
-      "reason": "HTTP Error 404: Not Found"
-    },
-    "IPTV-org Brazil": {
-      "status": "unavailable",
-      "reason": "HTTP Error 404: Not Found"
-    },
-    "IPTV-org Canada": {
-      "status": "unavailable",
-      "reason": "HTTP Error 404: Not Found"
+    "EPGShare Brazil": {
+      "status": "ok",
+      "new_programmes": 0
     }
   },
   "without_guide": [
