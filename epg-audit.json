@@ -1,0 +1,24 @@
+{
+  "playlist_channels": 117,
+  "channels_with_programmes": 117,
+  "programmes": 1626,
+  "sources": {
+    "Samsung": {
+      "status": "ok",
+      "new_programmes": 728
+    },
+    "Pluto": {
+      "status": "ok",
+      "new_programmes": 655
+    },
+    "Roku": {
+      "status": "ok",
+      "new_programmes": 83
+    },
+    "Plex": {
+      "status": "ok",
+      "new_programmes": 160
+    }
+  },
+  "without_guide": []
+}
