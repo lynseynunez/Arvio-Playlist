@@ -141,7 +141,7 @@ def main():
     entertainment_wanted = {
         "A&E": ("A&E", "A and E"),
         "E! (United States) East": ("E! (United States) East", "E! East"),
-        "Game Show Network": ("Game Show Network", "GSN"),
+        "Game Show Network": ("Game Show Network", "GSN", "GameShowNetwork"),
         "ION Plus": ("ION Plus",),
         "MTV (United States)": ("MTV (United States)", "MTV US"),
         "Plex TV": ("Plex TV",),
@@ -159,6 +159,10 @@ def main():
                    if any(norm(c["name"]) == norm(v) or
                           re.fullmatch(re.escape(v) + r"\s*\(\d+p\)", c["name"], re.I)
                           for v in variants)]
+        if not matches and label == "Game Show Network":
+            matches = [c for c in entertainment_channels
+                       if "gameshownetwork" in norm(c["name"]) or
+                          norm(c["name"]).startswith("gsn")]
         if matches:
             entertainment_found[label] = matches[0]
             print(f"Entertainment selected {label}: {matches[0]['name']}")
