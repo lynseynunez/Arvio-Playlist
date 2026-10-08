@@ -126,10 +126,12 @@ def main():
                           headers={"User-Agent": "ArvioPlaylist/1.0"})
         with urlopen(request, timeout=45) as response:
             extra_channels = parse(response.read().decode("utf-8-sig"), "IPTV-org")
+        print("IPTV-org entries:", len(extra_channels))
         for label, variants in wanted.items():
-            matches = [c for c in extra_channels if norm(c["name"]) in {norm(v) for v in variants}]
+            matches = [c for c in extra_channels if any(norm(c["name"]).startswith(norm(v)) for v in variants)]
             if matches:
                 extra_found[label] = matches[0]
+                print(f"IPTV-org selected {label}: {matches[0]['name']}")
             else:
                 print(f"IPTV-org channel not found: {label}")
     except Exception as exc:
