@@ -15,6 +15,11 @@ SOURCES = [
     ("Pluto", "https://i.mjh.nz/PlutoTV/us.xml.gz", True),
     ("Roku", "https://i.mjh.nz/Roku/all.xml.gz", False),
     ("Plex", "https://i.mjh.nz/Plex/us.xml.gz", False),
+    ("IPTV-org US TVTV", "https://iptv-org.github.io/epg/guides/us/tvtv.us.epg.xml", False),
+    ("IPTV-org US DirecTV", "https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml", False),
+    ("IPTV-org US TVGuide", "https://iptv-org.github.io/epg/guides/us/tvguide.com.epg.xml", False),
+    ("IPTV-org Brazil", "https://iptv-org.github.io/epg/guides/br/mi.tv.epg.xml", False),
+    ("IPTV-org Canada", "https://iptv-org.github.io/epg/guides/ca/tvtv.us.epg.xml", False),
 ]
 
 def playlist_channels():
@@ -27,7 +32,16 @@ def playlist_channels():
             result[match.group(1)] = line.rsplit(",", 1)[-1].strip()
     return result
 
+def id_aliases(wanted):
+    aliases = {cid: cid for cid in wanted}
+    for cid in wanted:
+        base = cid.split("@", 1)[0]
+        if base not in aliases:
+            aliases[base] = cid
+    return aliases
+
 def read_source(url, wanted, channels, programmes):
+    aliases = id_aliases(wanted)
     req = Request(url, headers={"User-Agent": "ArvioPlaylistEPG/1.0"})
     with urlopen(req, timeout=90) as response:
         with tempfile.TemporaryFile() as tmp:
@@ -46,11 +60,17 @@ def read_source(url, wanted, channels, programmes):
                 stream = tmp
             # Only retain selected IDs and matching programmes.
             for event, elem in ET.iterparse(stream, events=("end",)):
-                if elem.tag == "channel" and elem.get("id") in wanted:
-                    channels.setdefault(elem.get("id"), ET.tostring(elem, encoding="utf-8"))
-                elif elem.tag == "programme" and elem.get("channel") in wanted:
-                    key = (elem.get("channel"), elem.get("start"), elem.get("stop"))
-                    programmes.setdefault(key, ET.tostring(elem, encoding="utf-8"))
+                if elem.tag == "channel" and elem.get("id") in aliases:
+                    target = aliases[elem.get("id")]
+                    if target not in channels:
+                        elem.set("id", target)
+                        channels[target] = ET.tostring(elem, encoding="utf-8")
+                elif elem.tag == "programme" and elem.get("channel") in aliases:
+                    target = aliases[elem.get("channel")]
+                    key = (target, elem.get("start"), elem.get("stop"))
+                    if key not in programmes:
+                        elem.set("channel", target)
+                        programmes[key] = ET.tostring(elem, encoding="utf-8")
                 if elem.tag in ("channel", "programme"):
                     elem.clear()
 
