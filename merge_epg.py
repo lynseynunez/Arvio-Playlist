@@ -15,11 +15,10 @@ SOURCES = [
     ("Pluto", "https://i.mjh.nz/PlutoTV/us.xml.gz", True),
     ("Roku", "https://i.mjh.nz/Roku/all.xml.gz", False),
     ("Plex", "https://i.mjh.nz/Plex/us.xml.gz", False),
-    ("IPTV-org US TVTV", "https://iptv-org.github.io/epg/guides/us/tvtv.us.epg.xml", False),
-    ("IPTV-org US DirecTV", "https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml", False),
-    ("IPTV-org US TVGuide", "https://iptv-org.github.io/epg/guides/us/tvguide.com.epg.xml", False),
-    ("IPTV-org Brazil", "https://iptv-org.github.io/epg/guides/br/mi.tv.epg.xml", False),
-    ("IPTV-org Canada", "https://iptv-org.github.io/epg/guides/ca/tvtv.us.epg.xml", False),
+    # Independent XMLTV feeds; availability and actual channel coverage are audited.
+    ("EPGShare US", "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz", False),
+    ("EPGShare US Alt", "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz", False),
+    ("EPGShare Brazil", "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz", False),
 ]
 
 def playlist_channels():
