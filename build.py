@@ -113,6 +113,28 @@ def main():
     if counts["Curated Pluto"] != len(approved):
         raise RuntimeError("Curated Pluto source incomplete; preserving previous playlist")
 
+    # Import only the independently tested IPTV-org channels; leave Pluto intact.
+    wanted = {
+        "Sonic TV": ("sonic tv",),
+        "Toonami Aftermath West": ("toonami aftermath west",),
+        "NickOnline HD": ("nickonline hd", "nickonline"),
+        "Tooncast": ("tooncast",),
+    }
+    extra_found = {}
+    try:
+        request = Request("https://iptv-org.github.io/iptv/categories/animation.m3u",
+                          headers={"User-Agent": "ArvioPlaylist/1.0"})
+        with urlopen(request, timeout=45) as response:
+            extra_channels = parse(response.read().decode("utf-8-sig"), "IPTV-org")
+        for label, variants in wanted.items():
+            matches = [c for c in extra_channels if norm(c["name"]) in {norm(v) for v in variants}]
+            if matches:
+                extra_found[label] = matches[0]
+            else:
+                print(f"IPTV-org channel not found: {label}")
+    except Exception as exc:
+        print(f"IPTV-org unavailable; preserving existing lineup: {exc}")
+
     output = ['#EXTM3U url-tvg="' + ",".join(EPGS) + '"']
     audit = []
     seen = set()
@@ -138,6 +160,18 @@ def main():
                 output.extend([set_group(match["extinf"], category_for(category, requested)), match["url"]])
                 seen.add(norm(match["name"]))
                 published += 1
+    # Naruto Shippuden is excluded until the 403 is resolved.
+    # Nickelodeon Pluto TV already exists, so don't create a duplicate.
+    for label, channel in extra_found.items():
+        if norm(label) in seen:
+            continue
+        group = "Anime & Animation" if label in ("Sonic TV", "Toonami Aftermath West") else "Kids & Family"
+        output.extend([set_group(channel["extinf"], group), channel["url"]])
+        seen.add(norm(label))
+        published += 1
+        audit.append({"category": "IPTV-org additions", "requested": label,
+                      "status": "exact", "matched": channel["name"],
+                      "provider": "IPTV-org", "tvg_id": channel["tvg_id"]})
     if published < 100:
         raise RuntimeError(f"Only {published} matches; refusing to replace previous playlist")
     missing_curated = [name for name in curation["keep"] if norm(name) not in seen]
