@@ -1,24 +1,24 @@
 {
   "playlist_channels": 228,
-  "channels_with_programmes": 212,
-  "programmes": 195572,
-  "total_guide_channels": 3470,
+  "channels_with_programmes": 215,
+  "programmes": 196076,
+  "total_guide_channels": 3466,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5051
+      "new_programmes": 5054
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8824
+      "new_programmes": 8761
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 66075
+      "new_programmes": 65306
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 12454
+      "new_programmes": 17807
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -26,42 +26,15 @@
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 23599
+      "new_programmes": 19579
     }
   },
   "missing_channel_candidates": {
-    "FilmRise Sci-Fi": [
-      {
-        "id": "6a1610bebdf296985fd95603-6449369eb3ff17382cae580d",
-        "names": [
-          "FilmRise Sci-Fi"
-        ],
-        "has_programmes": false
-      }
-    ],
-    "FilmRise Comedy": [
-      {
-        "id": "6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a",
-        "names": [
-          "FilmRise Comedy"
-        ],
-        "has_programmes": false
-      }
-    ],
     "FreeTV Horror": [
       {
         "id": "6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3",
         "names": [
           "FreeTV Horror"
-        ],
-        "has_programmes": false
-      }
-    ],
-    "Shout! Movies": [
-      {
-        "id": "6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d",
-        "names": [
-          "Shout! Movies"
         ],
         "has_programmes": false
       }
@@ -80,10 +53,7 @@
     "Wipeout Xtra (1080p)": []
   },
   "without_guide": [
-    "FilmRise Sci-Fi",
-    "FilmRise Comedy",
     "FreeTV Horror",
-    "Shout! Movies",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
