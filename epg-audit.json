@@ -1,28 +1,28 @@
 {
   "playlist_channels": 228,
   "channels_with_programmes": 215,
-  "programmes": 196076,
+  "programmes": 228093,
   "total_guide_channels": 3466,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5054
+      "new_programmes": 4944
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8761
+      "new_programmes": 8753
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65306
+      "new_programmes": 65317
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 17807
+      "new_programmes": 50349
     },
     "EPGShare US Alt": {
       "status": "ok",
-      "new_programmes": 79569
+      "new_programmes": 79151
     },
     "EPGShare Brazil": {
       "status": "ok",
@@ -30,13 +30,13 @@
     }
   },
   "missing_channel_candidates": {
-    "FreeTV Horror": [
+    "FilmRise Horror": [
       {
-        "id": "6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3",
+        "id": "6a1610bebdf296985fd95603-66ea09a39502c5778b828d43",
         "names": [
-          "FreeTV Horror"
+          "FilmRise Horror"
         ],
-        "has_programmes": false
+        "has_programmes": true
       }
     ],
     "Sonic TV (720p)": [],
@@ -53,7 +53,7 @@
     "Wipeout Xtra (1080p)": []
   },
   "without_guide": [
-    "FreeTV Horror",
+    "FilmRise Horror",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
