@@ -1,35 +1,89 @@
 {
   "playlist_channels": 228,
-  "channels_with_programmes": 216,
-  "programmes": 212013,
-  "total_guide_channels": 3467,
+  "channels_with_programmes": 212,
+  "programmes": 195572,
+  "total_guide_channels": 3470,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5062
+      "new_programmes": 5051
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8794
+      "new_programmes": 8824
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65988
+      "new_programmes": 66075
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 28141
+      "new_programmes": 12454
     },
     "EPGShare US Alt": {
       "status": "ok",
-      "new_programmes": 80429
+      "new_programmes": 79569
     },
     "EPGShare Brazil": {
       "status": "ok",
       "new_programmes": 23599
     }
   },
+  "missing_channel_candidates": {
+    "FilmRise Sci-Fi": [
+      {
+        "id": "6a1610bebdf296985fd95603-6449369eb3ff17382cae580d",
+        "names": [
+          "FilmRise Sci-Fi"
+        ],
+        "has_programmes": false
+      }
+    ],
+    "FilmRise Comedy": [
+      {
+        "id": "6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a",
+        "names": [
+          "FilmRise Comedy"
+        ],
+        "has_programmes": false
+      }
+    ],
+    "FreeTV Horror": [
+      {
+        "id": "6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3",
+        "names": [
+          "FreeTV Horror"
+        ],
+        "has_programmes": false
+      }
+    ],
+    "Shout! Movies": [
+      {
+        "id": "6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d",
+        "names": [
+          "Shout! Movies"
+        ],
+        "has_programmes": false
+      }
+    ],
+    "Sonic TV (720p)": [],
+    "Toonami Aftermath West (480p)": [],
+    "NickOnline HD (720p)": [],
+    "Tooncast (1080p)": [],
+    "A&E (720p)": [],
+    "E! (United States) East (1080p)": [],
+    "Game Show Network (720p) [Not 24/7]": [],
+    "ION Plus (1080p)": [],
+    "MTV (United States) (1080p)": [],
+    "PLEX TV": [],
+    "TMZ (720p)": [],
+    "Wipeout Xtra (1080p)": []
+  },
   "without_guide": [
+    "FilmRise Sci-Fi",
+    "FilmRise Comedy",
+    "FreeTV Horror",
+    "Shout! Movies",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
