@@ -1,24 +1,24 @@
 {
   "playlist_channels": 228,
-  "channels_with_programmes": 215,
-  "programmes": 228093,
-  "total_guide_channels": 3466,
+  "channels_with_programmes": 216,
+  "programmes": 222175,
+  "total_guide_channels": 3469,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4944
+      "new_programmes": 5045
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8753
+      "new_programmes": 8780
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65317
+      "new_programmes": 65801
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 50349
+      "new_programmes": 43819
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -30,15 +30,6 @@
     }
   },
   "missing_channel_candidates": {
-    "FilmRise Horror": [
-      {
-        "id": "6a1610bebdf296985fd95603-66ea09a39502c5778b828d43",
-        "names": [
-          "FilmRise Horror"
-        ],
-        "has_programmes": true
-      }
-    ],
     "Sonic TV (720p)": [],
     "Toonami Aftermath West (480p)": [],
     "NickOnline HD (720p)": [],
@@ -53,7 +44,6 @@
     "Wipeout Xtra (1080p)": []
   },
   "without_guide": [
-    "FilmRise Horror",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
