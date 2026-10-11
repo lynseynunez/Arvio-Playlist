@@ -11,10 +11,12 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "popularity.desc",
+            "sortBy": "primary_release_date.desc",
             "filters": {
               "year": 2026,
-              "voteCountGte": 5
+              "voteCountGte": 5,
+              "primaryReleaseDateLte": "2026-10-11",
+              "primaryReleaseDateGte": "2026-07-01"
             }
           }
         ]
@@ -27,10 +29,12 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
-            "sortBy": "popularity.desc",
+            "sortBy": "first_air_date.desc",
             "filters": {
               "year": 2026,
-              "voteCountGte": 5
+              "voteCountGte": 5,
+              "firstAirDateLte": "2026-10-11",
+              "firstAirDateGte": "2026-07-01"
             }
           }
         ]
@@ -45,7 +49,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "16"
+              "withGenres": "16",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -66,7 +71,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "16"
+              "withGenres": "16",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -82,7 +88,8 @@
             "sortBy": "vote_average.desc",
             "filters": {
               "withGenres": "16",
-              "voteCountGte": 100
+              "voteCountGte": 100,
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -97,7 +104,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "16"
+              "withGenres": "16",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -116,10 +124,12 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "popularity.desc",
+            "sortBy": "primary_release_date.desc",
             "filters": {
               "year": 2026,
-              "voteCountGte": 5
+              "voteCountGte": 5,
+              "primaryReleaseDateLte": "2026-10-11",
+              "primaryReleaseDateGte": "2026-07-01"
             }
           }
         ]
@@ -133,7 +143,9 @@
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
-            "filters": {}
+            "filters": {
+              "primaryReleaseDateLte": "2026-10-11"
+            }
           }
         ]
       },
@@ -147,7 +159,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "28"
+              "withGenres": "28",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -162,7 +175,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "14"
+              "withGenres": "14",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -177,7 +191,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "878"
+              "withGenres": "878",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -197,7 +212,9 @@
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
             "sortBy": "popularity.desc",
-            "filters": {}
+            "filters": {
+              "firstAirDateLte": "2026-10-11"
+            }
           }
         ]
       },
@@ -211,7 +228,8 @@
             "mediaType": "TV",
             "sortBy": "vote_average.desc",
             "filters": {
-              "voteCountGte": 100
+              "voteCountGte": 100,
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -226,7 +244,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "80"
+              "withGenres": "80",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -241,7 +260,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "9648"
+              "withGenres": "9648",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -256,7 +276,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "10765"
+              "withGenres": "10765",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -277,7 +298,8 @@
             "mediaType": "MOVIE",
             "sortBy": "vote_average.desc",
             "filters": {
-              "voteCountGte": 100
+              "voteCountGte": 100,
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -292,7 +314,8 @@
             "mediaType": "TV",
             "sortBy": "vote_average.desc",
             "filters": {
-              "voteCountGte": 100
+              "voteCountGte": 100,
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
@@ -307,7 +330,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "35"
+              "withGenres": "35",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -328,7 +352,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "27"
+              "withGenres": "27",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -343,7 +368,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "53"
+              "withGenres": "53",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -358,7 +384,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "9648"
+              "withGenres": "9648",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -379,7 +406,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "10751"
+              "withGenres": "10751",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -394,7 +422,8 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "16"
+              "withGenres": "16",
+              "primaryReleaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -409,7 +438,8 @@
             "mediaType": "TV",
             "sortBy": "popularity.desc",
             "filters": {
-              "withGenres": "10762"
+              "withGenres": "10762",
+              "firstAirDateLte": "2026-10-11"
             }
           }
         ]
