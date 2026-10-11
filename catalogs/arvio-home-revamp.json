@@ -1,0 +1,395 @@
+[
+  {
+    "id": "lynsey-discover",
+    "title": "Discover",
+    "folders": [
+      {
+        "id": "new-movies",
+        "title": "What's New — Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "primary_release_date.desc"
+          }
+        ]
+      },
+      {
+        "id": "new-shows",
+        "title": "What's New — Shows",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "first_air_date.desc"
+          }
+        ]
+      },
+      {
+        "id": "anime-trending",
+        "title": "Trending Anime (not daily Top 10)",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "16"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-anime",
+    "title": "Anime Central",
+    "folders": [
+      {
+        "id": "anime-popular",
+        "title": "Popular Anime & Animation",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "16"
+            }
+          }
+        ]
+      },
+      {
+        "id": "anime-rated",
+        "title": "Top Rated Animation",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "vote_average.desc",
+            "filters": {
+              "withGenres": "16"
+            }
+          }
+        ]
+      },
+      {
+        "id": "anime-films",
+        "title": "Anime & Animated Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "16"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-movies",
+    "title": "Movie Night",
+    "folders": [
+      {
+        "id": "movies-new",
+        "title": "New Releases",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "primary_release_date.desc"
+          }
+        ]
+      },
+      {
+        "id": "movies-popular",
+        "title": "Popular Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc"
+          }
+        ]
+      },
+      {
+        "id": "movies-action",
+        "title": "Action & Adventure",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "28"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movies-fantasy",
+        "title": "Fantasy",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "14"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movies-scifi",
+        "title": "Science Fiction",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "878"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-shows",
+    "title": "Binge Worthy",
+    "folders": [
+      {
+        "id": "shows-popular",
+        "title": "Popular Series",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc"
+          }
+        ]
+      },
+      {
+        "id": "shows-rated",
+        "title": "Top Rated Series",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "vote_average.desc"
+          }
+        ]
+      },
+      {
+        "id": "shows-crime",
+        "title": "Crime",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "80"
+            }
+          }
+        ]
+      },
+      {
+        "id": "shows-mystery",
+        "title": "Mystery",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "9648"
+            }
+          }
+        ]
+      },
+      {
+        "id": "shows-scifi",
+        "title": "Sci-Fi & Fantasy",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "10765"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-throwback",
+    "title": "Throwback Vault",
+    "folders": [
+      {
+        "id": "throwback-movies",
+        "title": "Classic Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "vote_average.desc"
+          }
+        ]
+      },
+      {
+        "id": "throwback-tv",
+        "title": "Classic TV",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "vote_average.desc"
+          }
+        ]
+      },
+      {
+        "id": "throwback-comedy",
+        "title": "Comedy Favorites",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "35"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-dark",
+    "title": "After Dark",
+    "folders": [
+      {
+        "id": "dark-horror",
+        "title": "Horror Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "27"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dark-thriller",
+        "title": "Thrillers",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "53"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dark-mystery",
+        "title": "Mystery Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "9648"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lynsey-family",
+    "title": "Family & Kids",
+    "folders": [
+      {
+        "id": "family-movies",
+        "title": "Family Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "10751"
+            }
+          }
+        ]
+      },
+      {
+        "id": "family-animation",
+        "title": "Animated Movies",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "MOVIE",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "16"
+            }
+          }
+        ]
+      },
+      {
+        "id": "family-tv",
+        "title": "Kids Shows",
+        "sources": [
+          {
+            "provider": "tmdb",
+            "tmdbSourceType": "DISCOVER",
+            "mediaType": "TV",
+            "sortBy": "popularity.desc",
+            "filters": {
+              "withGenres": "10762"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
