@@ -15,8 +15,8 @@
             "filters": {
               "year": 2026,
               "voteCountGte": 5,
-              "primaryReleaseDateLte": "2026-10-11",
-              "primaryReleaseDateGte": "2026-07-01"
+              "releaseDateLte": "2026-10-11",
+              "releaseDateGte": "2026-07-01"
             }
           }
         ]
@@ -105,7 +105,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "16",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -128,8 +128,8 @@
             "filters": {
               "year": 2026,
               "voteCountGte": 5,
-              "primaryReleaseDateLte": "2026-10-11",
-              "primaryReleaseDateGte": "2026-07-01"
+              "releaseDateLte": "2026-10-11",
+              "releaseDateGte": "2026-07-01"
             }
           }
         ]
@@ -144,7 +144,7 @@
             "mediaType": "MOVIE",
             "sortBy": "popularity.desc",
             "filters": {
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -160,7 +160,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "28",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -176,7 +176,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "14",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -192,7 +192,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "878",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -299,7 +299,7 @@
             "sortBy": "vote_average.desc",
             "filters": {
               "voteCountGte": 100,
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -331,7 +331,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "35",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -353,7 +353,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "27",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -369,7 +369,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "53",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -385,7 +385,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "9648",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -407,7 +407,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "10751",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
@@ -423,7 +423,7 @@
             "sortBy": "popularity.desc",
             "filters": {
               "withGenres": "16",
-              "primaryReleaseDateLte": "2026-10-11"
+              "releaseDateLte": "2026-10-11"
             }
           }
         ]
