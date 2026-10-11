@@ -11,7 +11,11 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "primary_release_date.desc"
+            "sortBy": "popularity.desc",
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 5
+            }
           }
         ]
       },
@@ -23,7 +27,11 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
-            "sortBy": "first_air_date.desc"
+            "sortBy": "popularity.desc",
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 5
+            }
           }
         ]
       },
@@ -73,7 +81,8 @@
             "mediaType": "TV",
             "sortBy": "vote_average.desc",
             "filters": {
-              "withGenres": "16"
+              "withGenres": "16",
+              "voteCountGte": 100
             }
           }
         ]
@@ -107,7 +116,11 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "primary_release_date.desc"
+            "sortBy": "popularity.desc",
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 5
+            }
           }
         ]
       },
@@ -119,7 +132,8 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "popularity.desc"
+            "sortBy": "popularity.desc",
+            "filters": {}
           }
         ]
       },
@@ -182,7 +196,8 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
-            "sortBy": "popularity.desc"
+            "sortBy": "popularity.desc",
+            "filters": {}
           }
         ]
       },
@@ -194,7 +209,10 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
-            "sortBy": "vote_average.desc"
+            "sortBy": "vote_average.desc",
+            "filters": {
+              "voteCountGte": 100
+            }
           }
         ]
       },
@@ -257,7 +275,10 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "MOVIE",
-            "sortBy": "vote_average.desc"
+            "sortBy": "vote_average.desc",
+            "filters": {
+              "voteCountGte": 100
+            }
           }
         ]
       },
@@ -269,7 +290,10 @@
             "provider": "tmdb",
             "tmdbSourceType": "DISCOVER",
             "mediaType": "TV",
-            "sortBy": "vote_average.desc"
+            "sortBy": "vote_average.desc",
+            "filters": {
+              "voteCountGte": 100
+            }
           }
         ]
       },
