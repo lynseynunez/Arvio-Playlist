@@ -5,6 +5,7 @@ on:
       - diagnose_channels.py
       - review_epg_candidates.py
       - epg_aliases.py
+      - dry_run_epg_aliases.py
       - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
@@ -25,6 +26,8 @@ jobs:
         run: python diagnose_channels.py --timeout 5 --output diagnostics-report.json
       - name: Compare candidate guide schedules
         run: python review_epg_candidates.py --report diagnostics-report.json --output epg-candidate-review.json
+      - name: Dry-run TMZ guide alias without publishing
+        run: python dry_run_epg_aliases.py
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
