@@ -67,8 +67,10 @@ def main():
      continue
     cid=matches[0]
     programmes=[e for e in root.findall("programme") if e.get("channel")==cid]
-    if len(programmes)<4:
-     report[target]={"status":"insufficient_programmes","feed":url,"count":len(programmes)}
+    titles=[(p.findtext("title") or "").strip() for p in programmes]
+    distinct={norm(t) for t in titles if t}
+    if len(programmes)<4 or len(distinct)<2 or distinct <= {norm(target.split(".")[0])}:
+     report[target]={"status":"insufficient_or_placeholder_programmes","feed":url,"count":len(programmes),"distinct_titles":len(distinct)}
      continue
     channel=next(ch for ch in root.findall("channel") if ch.get("id")==cid)
     channel.set("id",target)
