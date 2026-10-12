@@ -9,8 +9,8 @@ from collections import defaultdict
 from pathlib import Path
 
 FEEDS = [
- "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz",
- "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+ "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_guide.xml.gz",
+ "https://vcicio.github.io/US-EPG/merged_epg.xml.gz",
 ]
 TARGETS = {
  "AE.us@East": {"aande","aetv","aandeeast","aetelevision"},
