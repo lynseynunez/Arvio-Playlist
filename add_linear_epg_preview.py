@@ -35,6 +35,15 @@ def main():
    if e.tag in ("programme","channel"): e.clear()
  remaining={k:v for k,v in TARGETS.items() if k not in existing}
  report={}
+ # Record the original playlist stream provider for each unresolved channel.
+ playlist=Path("arvio.m3u")
+ if playlist.exists():
+  lines=playlist.read_text(encoding="utf-8",errors="replace").splitlines()
+  for idx,line in enumerate(lines):
+   if line.startswith("#EXTINF:"):
+    for target in remaining:
+     if f'tvg-id="{target}"' in line:
+      report.setdefault("stream_providers",{})[target]={"metadata":line[:450],"stream":lines[idx+1].split("?")[0][:300] if idx+1<len(lines) else ""}
  additions=[]
  for url in FEEDS:
   if not remaining: break
