@@ -31,7 +31,15 @@ def main():
         count = db.execute("SELECT COUNT(*) FROM programmes WHERE id=?", (target,)).fetchone()[0]
         if result["status"] == "aliased" and count == 0:
             raise RuntimeError(f"Alias created without programmes: {target}")
-    print(json.dumps({"dry_run": True, "guide_unchanged": True, "aliases": results}, indent=2))
+    previews = {}
+    for target in REVIEWED_ALIASES:
+        rows = db.execute("SELECT start, stop, xml FROM programmes WHERE id=? ORDER BY start", (target,)).fetchall()
+        previews[target] = [
+            {"start": start, "stop": stop, "title": ET.fromstring(xml).findtext("title") or ""}
+            for start, stop, xml in rows[:20]
+        ]
+    print(json.dumps({"dry_run": True, "guide_unchanged": True, "aliases": results,
+                      "programme_previews": previews}, indent=2))
 
 if __name__ == "__main__":
     main()
