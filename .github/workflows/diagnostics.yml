@@ -2,7 +2,8 @@ name: Arvio diagnostics (read-only)
 on:
   pull_request:
     paths:
-      - diagnose_channels.py\n      - review_epg_candidates.py
+      - diagnose_channels.py
+      - review_epg_candidates.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
   workflow_dispatch:
@@ -27,5 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arvio-channel-diagnostics
-          path: |\n            diagnostics-report.json\n            epg-candidate-review.json
+          path: |
+            diagnostics-report.json
+            epg-candidate-review.json
           if-no-files-found: warn
