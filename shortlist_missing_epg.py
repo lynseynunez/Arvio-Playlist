@@ -20,7 +20,12 @@ def main():
         if target in covered_by_preview:
             continue
         candidates = sorted(item["candidates"], key=lambda x: (x.get("programme_count", 0)>0, x.get("score", 0)), reverse=True)
+        exact = [x for x in candidates if x.get("programme_count",0)>0 and x.get("score",0)>=0.95]
+        generic = [x for x in exact if x.get("sample_programmes") and len({p.get("title","").strip().casefold() for p in x["sample_programmes"]}) <= 1]
         rows.append({"channel":item["channel"], "tvg_id":target,
+                     "exact_name_candidates": len(exact),
+                     "exact_name_generic_title_candidates": len(generic),
+                     "recommendation": "manual_review_only" if exact else "seek_additional_epg_sources",
                      "candidates_with_programmes":[x for x in candidates if x.get("programme_count", 0)>0],
                      "candidates_without_programmes":[x for x in candidates if not x.get("programme_count", 0)],
                      "requires_stream_verification": True})
