@@ -35,7 +35,7 @@ def main():
    req=urllib.request.Request(url,headers={"User-Agent":"ArvioEPGPreview/1.0"})
    with urllib.request.urlopen(req,timeout=90) as resp:
     guide=resp.read()
-   if guide[:2]==b"\\x1f\\x8b": guide=gzip.decompress(guide)
+   if guide[:2]==bytes((31,139)): guide=gzip.decompress(guide)
    root=ET.fromstring(guide)
    names={}
    for ch in root.findall("channel"):
