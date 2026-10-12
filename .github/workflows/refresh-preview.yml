@@ -1,0 +1,51 @@
+name: Refresh Arvio preview EPG
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 1,7,13,19 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: arvio-preview-publish
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out isolated preview code
+        uses: actions/checkout@v4
+        with:
+          ref: diagnostics/logo-epg-audit
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve latest production guide and playlist
+        run: |
+          curl --fail --location --retry 3 --output epg.xml.gz "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/epg.xml.gz"
+          curl --fail --location --retry 3 --output arvio.m3u "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/arvio.m3u"
+      - name: Build and validate separate preview
+        run: |
+          python build_epg_preview.py
+          python - <<'PY'
+          import gzip, xml.etree.ElementTree as ET
+          from pathlib import Path
+          assert Path("epg-preview.xml.gz").stat().st_size > 1000
+          with gzip.open("epg-preview.xml.gz", "rb") as stream:
+              ET.parse(stream)
+          PY
+      - name: Publish preview branch only
+        run: |
+          mkdir -p /tmp/arvio-preview
+          cp epg-preview.xml.gz /tmp/arvio-preview/
+          cd /tmp/arvio-preview
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b epg-preview
+          git add epg-preview.xml.gz
+          git commit -m 'Refresh isolated preview EPG'
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin epg-preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
