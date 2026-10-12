@@ -27,6 +27,7 @@ jobs:
       - name: Build and validate separate preview
         run: |
           python build_epg_preview.py
+          python add_linear_epg_preview.py
           python - <<'PY'
           import gzip, xml.etree.ElementTree as ET
           from collections import Counter
