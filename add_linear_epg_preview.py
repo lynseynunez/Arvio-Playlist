@@ -40,7 +40,7 @@ def main():
    names={}
    for ch in root.findall("channel"):
     cid=ch.get("id")
-    names[cid]=[norm(x.text or "") for x in ch.findall("display-name")]
+    names[cid]=[norm(x.text or "") for x in ch.findall("display-name")] + [norm(cid or "")]
    for target, accepted in list(remaining.items()):
     matches=[cid for cid,labels in names.items() if any(x in accepted for x in labels)]
     if len(matches)!=1:
