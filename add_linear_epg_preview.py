@@ -16,6 +16,11 @@ TARGETS = {
  "AE.us@East": {"aande","aetv","aandeeast","aetelevision"},
  "E.us@East": {"eentertainment","eentertainmenttelevision","eentertainmenteast"},
  "MTV.us@East": {"mtv","mtveast","mtvusa","mtveastern"},
+ "NickOnline.br@HD": {"nickonlinehd","nickonline"},
+ "PLEXTV.cm@SD": {"plextv","plextvcm"},
+ "SonicTV.us@SD": {"sonictv"},
+ "ToonamiAftermath.us@West": {"toonamiaftermath","toonamiaftermathwest"},
+ "Tooncast.us@SD": {"tooncast"},
 }
 def norm(s):
  return re.sub(r"[^a-z0-9]","",s.lower())
@@ -44,7 +49,8 @@ def main():
    for target, accepted in list(remaining.items()):
     matches=[cid for cid,labels in names.items() if any(x in accepted for x in labels)]
     if len(matches)!=1:
-     report[target]={"status":"ambiguous_or_missing","feed":url,"matches":matches[:8]}
+     candidates=[{"id":cid,"names":[x.text for x in ch.findall("display-name")]} for ch in root.findall("channel") for cid in [ch.get("id")] if any(any(t in n for t in accepted if len(t)>=6) for n in names.get(cid,[]))][:15]
+     report.setdefault(target,{"status":"ambiguous_or_missing","feeds":[]})["feeds"].append({"url":url,"matches":matches[:8],"candidates":candidates})
      continue
     cid=matches[0]
     programmes=[e for e in root.findall("programme") if e.get("channel")==cid]
