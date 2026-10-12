@@ -11,6 +11,7 @@ on:
       - build_epg_preview.py
       - audit_epg_quality.py
       - shortlist_missing_epg.py
+      - add_linear_epg_preview.py
       - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
@@ -41,6 +42,8 @@ jobs:
         run: python compare_epg_coverage.py
       - name: Build isolated preview guide
         run: python build_epg_preview.py
+      - name: Try supplemental linear channel schedules
+        run: python add_linear_epg_preview.py
       - name: Audit guide freshness and schedule gaps
         run: python audit_epg_quality.py
       - name: Upload report
@@ -54,6 +57,7 @@ jobs:
             epg-preview.xml.gz
             epg-quality-report.json
             epg-missing-shortlist.json
+            epg-extra-source-report.json
           if-no-files-found: warn
 
       - name: Publish preview guide to isolated branch
