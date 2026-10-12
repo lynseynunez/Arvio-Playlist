@@ -1,0 +1,79 @@
+name: Scheduled Arvio preview EPG refresh
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */3 * * *'
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: diagnostics/logo-epg-audit
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check EPG integration syntax
+        run: python -m py_compile merge_epg.py epg_aliases.py dry_run_epg_aliases.py
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Run diagnostic against checked-in playlist and guide
+        run: python diagnose_channels.py --timeout 5 --output diagnostics-report.json
+      - name: Compare candidate guide schedules
+        run: python review_epg_candidates.py --report diagnostics-report.json --output epg-candidate-review.json
+      - name: Shortlist candidates for remaining missing channels
+        run: python shortlist_missing_epg.py
+      - name: Dry-run TMZ guide alias without publishing
+        run: python dry_run_epg_aliases.py
+      - name: Compare EPG coverage with provisional alias
+        run: python compare_epg_coverage.py
+      - name: Build isolated preview guide
+        run: python build_epg_preview.py
+      - name: Try supplemental linear channel schedules
+        run: python add_linear_epg_preview.py
+      - name: Generate Toonami Aftermath upstream XMLTV
+        continue-on-error: true
+        run: |
+          git clone --depth 1 https://github.com/chris102994/toonamiaftermath-cli.git /tmp/toonamiaftermath-cli
+          cd /tmp/toonamiaftermath-cli
+          go build -o /tmp/toonami-cli .
+          cd "$GITHUB_WORKSPACE"
+          timeout 90 /tmp/toonami-cli run --xmltv-output toonami.xml --m3u-output /tmp/toonami.m3u
+      - name: Integrate verified Toonami West schedules
+        run: python add_toonami_epg_preview.py
+      - name: Audit guide freshness and schedule gaps
+        run: python audit_epg_quality.py
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arvio-channel-diagnostics
+          path: |
+            diagnostics-report.json
+            epg-candidate-review.json
+            epg-preview.xml.gz
+            epg-quality-report.json
+            epg-missing-shortlist.json
+            epg-extra-source-report.json
+            toonami-integration-report.json
+          if-no-files-found: warn
+
+      - name: Publish preview guide to isolated branch
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+        run: |
+          test -s epg-preview.xml.gz
+          mkdir -p /tmp/arvio-preview
+          cp epg-preview.xml.gz /tmp/arvio-preview/
+          cd /tmp/arvio-preview
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b epg-preview
+          git add epg-preview.xml.gz
+          git commit -m 'Publish isolated EPG test guide'
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin epg-preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
