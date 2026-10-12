@@ -9,8 +9,8 @@ from collections import defaultdict
 from pathlib import Path
 
 FEEDS = [
- "https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml",
- "https://iptv-org.github.io/epg/guides/us/tvtv.us.epg.xml",
+ "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz",
+ "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
 ]
 TARGETS = {
  "AE.us@East": {"aande","aetv","aandeeast","aetelevision"},
