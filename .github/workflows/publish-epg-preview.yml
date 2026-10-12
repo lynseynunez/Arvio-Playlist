@@ -1,0 +1,47 @@
+name: Publish optional Arvio EPG preview
+on:
+  push:
+    branches:
+      - diagnostics/logo-epg-audit
+    paths:
+      - build_epg_preview.py
+      - epg_aliases.py
+      - .github/workflows/publish-epg-preview.yml
+  schedule:
+    - cron: '20 1,7,13,19 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate and validate optional guide
+        run: |
+          python build_epg_preview.py
+          python - <<'PY'
+          import gzip, xml.etree.ElementTree as ET
+          with gzip.open("epg-preview.xml.gz", "rb") as f:
+              ET.parse(f)
+          PY
+      - name: Publish to separate preview branch only
+        run: |
+          mkdir -p /tmp/arvio-preview
+          cp epg-preview.xml.gz /tmp/arvio-preview/epg-preview.xml.gz
+          cd /tmp/arvio-preview
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b epg-preview
+          git add epg-preview.xml.gz
+          git commit -m 'Publish isolated test EPG preview'
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin epg-preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
