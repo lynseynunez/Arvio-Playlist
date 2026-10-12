@@ -12,6 +12,7 @@ on:
       - audit_epg_quality.py
       - shortlist_missing_epg.py
       - add_linear_epg_preview.py
+      - add_toonami_epg_preview.py
       - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
@@ -44,6 +45,16 @@ jobs:
         run: python build_epg_preview.py
       - name: Try supplemental linear channel schedules
         run: python add_linear_epg_preview.py
+      - name: Generate Toonami Aftermath upstream XMLTV
+        continue-on-error: true
+        run: |
+          git clone --depth 1 https://github.com/chris102994/toonamiaftermath-cli.git /tmp/toonamiaftermath-cli
+          cd /tmp/toonamiaftermath-cli
+          go build -o /tmp/toonami-cli .
+          cd "$GITHUB_WORKSPACE"
+          timeout 90 /tmp/toonami-cli run --xmltv-output toonami.xml --m3u-output /tmp/toonami.m3u
+      - name: Integrate verified Toonami West schedules
+        run: python add_toonami_epg_preview.py
       - name: Audit guide freshness and schedule gaps
         run: python audit_epg_quality.py
       - name: Upload report
@@ -58,6 +69,7 @@ jobs:
             epg-quality-report.json
             epg-missing-shortlist.json
             epg-extra-source-report.json
+            toonami-integration-report.json
           if-no-files-found: warn
 
       - name: Publish preview guide to isolated branch
