@@ -11,9 +11,11 @@ from pathlib import Path
 FEEDS = [
  "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_guide.xml.gz",
  "https://vcicio.github.io/US-EPG/merged_epg.xml.gz",
+ "https://iptv-org.github.io/epg/guides/us/tvguide.com.epg.xml.gz",
+ "https://iptv-org.github.io/epg/guides/us-az/tvtv.us.epg.xml",
 ]
 TARGETS = {
- "AE.us@East": {"aande","aetv","aandeeast","aetelevision"},
+ "AE.us@East": {"aande","aetv","aandeeast","aetelevision","aeeast","ae"},
  "E.us@East": {"eentertainment","eentertainmenttelevision","eentertainmenteast"},
  "MTV.us@East": {"mtv","mtveast","mtvusa","mtveastern"},
  "NickOnline.br@HD": {"nickonlinehd","nickonline"},
