@@ -8,6 +8,7 @@ on:
       - dry_run_epg_aliases.py
       - merge_epg.py
       - compare_epg_coverage.py
+      - build_epg_preview.py
       - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
@@ -34,6 +35,8 @@ jobs:
         run: python dry_run_epg_aliases.py
       - name: Compare EPG coverage with provisional alias
         run: python compare_epg_coverage.py
+      - name: Build isolated preview guide
+        run: python build_epg_preview.py
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
@@ -42,4 +45,5 @@ jobs:
           path: |
             diagnostics-report.json
             epg-candidate-review.json
+            epg-preview.xml.gz
           if-no-files-found: warn
