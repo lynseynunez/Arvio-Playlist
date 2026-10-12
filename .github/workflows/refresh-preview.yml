@@ -29,10 +29,21 @@ jobs:
           python build_epg_preview.py
           python - <<'PY'
           import gzip, xml.etree.ElementTree as ET
+          from collections import Counter
           from pathlib import Path
+          from epg_aliases import REVIEWED_ALIASES
           assert Path("epg-preview.xml.gz").stat().st_size > 1000
+          counts = Counter()
           with gzip.open("epg-preview.xml.gz", "rb") as stream:
-              ET.parse(stream)
+              for _, node in ET.iterparse(stream, events=("end",)):
+                  if node.tag == "programme":
+                      counts[node.get("channel", "")] += 1
+                  if node.tag in ("programme", "channel"):
+                      node.clear()
+          missing = [target for target in REVIEWED_ALIASES if counts[target] == 0]
+          if missing:
+              raise SystemExit(f"Refusing to publish preview missing aliases: {missing}")
+          print("Validated alias programme counts:", {k: counts[k] for k in REVIEWED_ALIASES})
           PY
       - name: Publish preview branch only
         run: |
