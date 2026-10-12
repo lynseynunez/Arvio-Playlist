@@ -61,7 +61,8 @@ def audit(guide, wanted):
                             "future_programmes": future, "max_gap_hours": max(gaps, default=0),
                             "most_common_title": titles.most_common(1)[0][0] if titles else "",
                             "flags": reasons})
-    return {"playlist_ids": len(wanted), "playlist_ids_with_programmes": len(by_channel),
+    expired = sorted(({"channel_id": cid, "last_stop_utc": datetime.fromtimestamp(max(stop for _, stop, _ in entries), timezone.utc).isoformat(), "programme_count": len(entries)} for cid, entries in by_channel.items() if entries and max(stop for _, stop, _ in entries) <= now), key=lambda x:x["channel_id"])
+    return {"expired_channels": expired, "playlist_ids": len(wanted), "playlist_ids_with_programmes": len(by_channel),
             "playlist_ids_without_programmes": sorted(wanted - set(by_channel)),
             "generated_utc": datetime.now(timezone.utc).isoformat(),
             "channels_with_programmes": len(by_channel),
