@@ -14,7 +14,7 @@ on:
       - .github/workflows/diagnostics.yml
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -47,3 +47,21 @@ jobs:
             epg-candidate-review.json
             epg-preview.xml.gz
           if-no-files-found: warn
+
+      - name: Publish preview guide to isolated branch
+        if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'workflow_dispatch'
+        run: |
+          test -s epg-preview.xml.gz
+          mkdir -p /tmp/arvio-preview
+          cp epg-preview.xml.gz /tmp/arvio-preview/
+          cd /tmp/arvio-preview
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b epg-preview
+          git add epg-preview.xml.gz
+          git commit -m 'Publish isolated EPG test guide'
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin epg-preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
