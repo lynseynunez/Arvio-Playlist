@@ -2,7 +2,7 @@ name: Arvio diagnostics (read-only)
 on:
   pull_request:
     paths:
-      - diagnose_channels.py
+      - diagnose_channels.py\n      - review_epg_candidates.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
   workflow_dispatch:
@@ -20,10 +20,12 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_diagnose_channels.py' -v
       - name: Run diagnostic against checked-in playlist and guide
         run: python diagnose_channels.py --timeout 5 --output diagnostics-report.json
+      - name: Compare candidate guide schedules
+        run: python review_epg_candidates.py --report diagnostics-report.json --output epg-candidate-review.json
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: arvio-channel-diagnostics
-          path: diagnostics-report.json
+          path: |\n            diagnostics-report.json\n            epg-candidate-review.json
           if-no-files-found: warn
