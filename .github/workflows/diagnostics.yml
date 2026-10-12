@@ -17,6 +17,9 @@ on:
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
   workflow_dispatch:
+  # Scheduled events run only from the default branch; activate after review/merge.
+  schedule:
+    - cron: '17 */3 * * *'
 permissions:
   contents: write
 jobs:
@@ -24,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: diagnostics/logo-epg-audit
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -73,7 +78,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Publish preview guide to isolated branch
-        if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'workflow_dispatch'
+        if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
           test -s epg-preview.xml.gz
           mkdir -p /tmp/arvio-preview
