@@ -15,7 +15,15 @@ def parse_time(value):
     except (ValueError, TypeError):
         return None
 
-def audit(guide):
+def playlist_ids(path):
+    ids = set()
+    for line in path.read_text(encoding='utf-8-sig').splitlines():
+        if line.startswith('#EXTINF:'):
+            m = re.search(r'tvg-id="([^"]+)"', line)
+            if m and m.group(1): ids.add(m.group(1))
+    return ids
+
+def audit(guide, wanted):
     by_channel = defaultdict(list)
     with gzip.open(guide, "rb") as stream:
         for _, el in ET.iterparse(stream, events=("end",)):
@@ -23,7 +31,7 @@ def audit(guide):
                 cid = el.get("channel", "")
                 start, stop = parse_time(el.get("start")), parse_time(el.get("stop"))
                 title = (el.findtext("title") or "").strip()
-                if start is not None and stop is not None and stop > start:
+                if cid in wanted and start is not None and stop is not None and stop > start:
                     by_channel[cid].append((start, stop, title))
                 el.clear()
             elif el.tag == "channel":
@@ -47,7 +55,9 @@ def audit(guide):
                             "future_programmes": future, "max_gap_hours": max(gaps, default=0),
                             "most_common_title": titles.most_common(1)[0][0] if titles else "",
                             "flags": reasons})
-    return {"generated_utc": datetime.now(timezone.utc).isoformat(),
+    return {"playlist_ids": len(wanted), "playlist_ids_with_programmes": len(by_channel),
+            "playlist_ids_without_programmes": sorted(wanted - set(by_channel)),
+            "generated_utc": datetime.now(timezone.utc).isoformat(),
             "channels_with_programmes": len(by_channel),
             "flagged_count": len(flagged),
             "flagged": sorted(flagged, key=lambda x: x["channel_id"]),
@@ -57,7 +67,8 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--guide", type=Path, default=Path(__file__).resolve().parent / "epg-preview.xml.gz")
     p.add_argument("--output", type=Path, default=Path("epg-quality-report.json"))
+    p.add_argument("--playlist", type=Path, default=Path(__file__).resolve().parent / "arvio.m3u")
     a = p.parse_args()
-    report = audit(a.guide)
+    report = audit(a.guide, playlist_ids(a.playlist))
     a.output.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k:v for k,v in report.items() if k != "flagged"}, indent=2))
