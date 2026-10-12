@@ -38,6 +38,7 @@ def audit(guide, wanted):
                 el.clear()
     now = datetime.now(timezone.utc).timestamp()
     flagged = []
+    flag_counts = Counter()
     for cid, entries in by_channel.items():
         entries.sort()
         titles = Counter(x[2].casefold() for x in entries if x[2])
@@ -51,6 +52,7 @@ def audit(guide, wanted):
         if len(entries) >= 5 and titles and titles.most_common(1)[0][1] / len(entries) >= .8:
             reasons.append("repetitive_titles")
         if reasons:
+            flag_counts.update(reasons)
             flagged.append({"channel_id": cid, "programmes": len(entries),
                             "future_programmes": future, "max_gap_hours": max(gaps, default=0),
                             "most_common_title": titles.most_common(1)[0][0] if titles else "",
@@ -60,6 +62,7 @@ def audit(guide, wanted):
             "generated_utc": datetime.now(timezone.utc).isoformat(),
             "channels_with_programmes": len(by_channel),
             "flagged_count": len(flagged),
+            "flag_counts": dict(flag_counts),
             "flagged": sorted(flagged, key=lambda x: x["channel_id"]),
             "note": "Guide-only heuristic; no live stream playback verification."}
 
