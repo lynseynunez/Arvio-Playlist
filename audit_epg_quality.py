@@ -12,7 +12,7 @@ from pathlib import Path
 def parse_time(value):
     try:
         base = datetime.strptime(value[:14], "%Y%m%d%H%M%S")
-        match = re.search(r"([+-])(\\d{2})(\\d{2})$", (value or "").strip())
+        match = re.search(r"([+-])(\d{2})(\d{2})$", (value or "").strip())
         offset = timedelta(hours=int(match.group(2)), minutes=int(match.group(3))) if match else timedelta()
         if match and match.group(1) == "-": offset = -offset
         return base.replace(tzinfo=timezone(offset)).timestamp()
