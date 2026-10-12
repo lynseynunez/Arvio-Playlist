@@ -5,6 +5,9 @@ import xml.etree.ElementTree as ET
 # Keep disabled by default. Enable only after confirming schedule alignment.
 REVIEWED_ALIASES = {
     "TMZ.us@SD": "USBD70000213",
+    "GameShowNetwork.us@East": "Game.Show.Network.HD.us2",
+    "IONPlus.us@East": "USBD300003LK",
+    "WipeoutXtra.us@SD": "USBB4400018LR",
 }
 
 def apply_aliases(db, aliases):
