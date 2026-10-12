@@ -9,6 +9,7 @@ on:
       - merge_epg.py
       - compare_epg_coverage.py
       - build_epg_preview.py
+      - audit_epg_quality.py
       - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
@@ -37,6 +38,8 @@ jobs:
         run: python compare_epg_coverage.py
       - name: Build isolated preview guide
         run: python build_epg_preview.py
+      - name: Audit guide freshness and schedule gaps
+        run: python audit_epg_quality.py
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
@@ -46,6 +49,7 @@ jobs:
             diagnostics-report.json
             epg-candidate-review.json
             epg-preview.xml.gz
+            epg-quality-report.json
           if-no-files-found: warn
 
       - name: Publish preview guide to isolated branch
