@@ -19,7 +19,7 @@ def main():
         for ch in root.findall("channel"):
             names = [n.text or "" for n in ch.findall("display-name")]
             label = " ".join([ch.get("id") or ""] + names).lower()
-            if re.search(r"(^|[^a-z])(west|pacific|pst)([^a-z]|$)", label):
+            if "toonami aftermath" in label and re.search(r"(^|[^a-z])(west|pacific|pst)([^a-z]|$)", label):
                 candidates.append((ch, names))
         report["candidate_channels"] = [{"id":ch.get("id"),"names":names} for ch,names in candidates]
         if len(candidates) == 1:
