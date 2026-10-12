@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build one compact XMLTV guide containing only channels in our Arvio playlist."""
 import gzip
+import os
+from epg_aliases import REVIEWED_ALIASES, apply_aliases
 import json
 import sqlite3
 import re
@@ -76,6 +78,9 @@ def main():
                 if required:
                     raise RuntimeError(f"Required {name} EPG unavailable; preserving old guide") from exc
                 print(f"Skipping optional {name}: {exc}", flush=True)
+        alias_audit = {"status": "disabled"}
+        if os.environ.get("ARVIO_ENABLE_EPG_ALIASES") == "1":
+            alias_audit = apply_aliases(db, REVIEWED_ALIASES)
         programmes = db.execute("SELECT COUNT(*) FROM programmes").fetchone()[0]
         if programmes < 100:
             raise RuntimeError("Guide too small; preserving previous guide")
@@ -121,6 +126,7 @@ def main():
             "programmes": programmes,
             "total_guide_channels": db.execute("SELECT COUNT(*) FROM channels").fetchone()[0],
             "sources": source_status,
+            "epg_aliases": alias_audit,
             "missing_channel_candidates": candidates,
             "without_guide": [name for cid, name in wanted.items() if cid not in covered],
         }
