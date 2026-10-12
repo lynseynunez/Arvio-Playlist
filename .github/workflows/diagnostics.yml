@@ -4,6 +4,8 @@ on:
     paths:
       - diagnose_channels.py
       - review_epg_candidates.py
+      - epg_aliases.py
+      - tests/test_epg_aliases.py
       - tests/test_diagnose_channels.py
       - .github/workflows/diagnostics.yml
   workflow_dispatch:
@@ -18,7 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run offline tests
-        run: python -m unittest discover -s tests -p 'test_diagnose_channels.py' -v
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Run diagnostic against checked-in playlist and guide
         run: python diagnose_channels.py --timeout 5 --output diagnostics-report.json
       - name: Compare candidate guide schedules
