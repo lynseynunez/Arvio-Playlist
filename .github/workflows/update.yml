@@ -77,3 +77,15 @@ jobs:
           if [ -n "$pr" ]; then
             gh pr merge "$pr" --squash || gh pr merge "$pr" --auto --squash
           fi
+
+      - name: Verify production publish
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr=$(gh pr list --head automation/refresh-arvio-playlist --base main --state open --json number --jq '.[0].number // empty')
+          if [ -n "$pr" ]; then
+            echo "::error::Refresh PR #$pr remains open; playlist was not published"
+            exit 1
+          fi
+          echo "No pending refresh PR; publish check passed"
