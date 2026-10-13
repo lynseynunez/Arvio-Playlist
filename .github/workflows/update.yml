@@ -33,6 +33,27 @@ jobs:
           PY
       - name: Build compact combined EPG
         run: python merge_epg.py
+      - name: Validate generated guide and coverage
+        run: |
+          python - <<'PY'
+          import gzip, json, xml.etree.ElementTree as ET
+          from pathlib import Path
+          audit = json.loads(Path('epg-audit.json').read_text())
+          total = audit.get('playlist_channels', 0)
+          covered = audit.get('channels_with_programmes', 0)
+          assert total >= 100, f'Unexpected channel count: {total}'
+          assert covered >= 200, f'EPG coverage fell below safe floor: {covered}'
+          assert covered / total >= 0.90, f'EPG coverage dropped: {covered}/{total}'
+          assert Path('epg.xml.gz').stat().st_size > 10000
+          programmes = 0
+          with gzip.open('epg.xml.gz', 'rb') as stream:
+              for _, element in ET.iterparse(stream, events=('end',)):
+                  if element.tag == 'programme':
+                      programmes += 1
+                  element.clear()
+          assert programmes >= 1000, f'Too few programmes: {programmes}'
+          print(f'Guide validated: {covered}/{total} channels')
+          PY
       - name: Publish playlist through pull request
         uses: peter-evans/create-pull-request@v7
         with:
@@ -54,5 +75,5 @@ jobs:
         run: |
           pr=$(gh pr list --head automation/refresh-arvio-playlist --base main --state open --json number --jq '.[0].number // empty')
           if [ -n "$pr" ]; then
-            gh pr merge "$pr" --auto --squash
+            gh pr merge "$pr" --squash || gh pr merge "$pr" --auto --squash
           fi
