@@ -6,6 +6,9 @@ on:
 permissions:
   contents: write
   pull-requests: write
+concurrency:
+  group: arvio-playlist-update
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -16,6 +19,18 @@ jobs:
           python-version: '3.12'
       - name: Build playlist and audit
         run: python build.py
+      - name: Validate generated playlist
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('arvio.m3u')
+          lines = p.read_text(encoding='utf-8-sig').splitlines()
+          channels = sum(line.startswith('#EXTINF:') for line in lines)
+          urls = sum(line.startswith(('http://', 'https://')) for line in lines)
+          print(f'Generated {channels} channels and {urls} URLs')
+          if not lines or lines[0].strip() != '#EXTM3U' or channels < 100 or urls < channels:
+              raise SystemExit('Refusing to publish incomplete playlist')
+          PY
       - name: Build compact combined EPG
         run: python merge_epg.py
       - name: Publish playlist through pull request
@@ -32,3 +47,12 @@ jobs:
           delete-branch: true
           title: 'Refresh Arvio playlist'
           body: 'Automated playlist and EPG refresh. Protected main requires a pull request.'
+      - name: Enable automatic merge of refresh PR
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr=$(gh pr list --head automation/refresh-arvio-playlist --base main --state open --json number --jq '.[0].number // empty')
+          if [ -n "$pr" ]; then
+            gh pr merge "$pr" --auto --squash
+          fi
