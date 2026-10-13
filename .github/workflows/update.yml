@@ -45,10 +45,13 @@ jobs:
           assert covered >= 200, f'EPG coverage fell below safe floor: {covered}'
           assert covered / total >= 0.90, f'EPG coverage dropped: {covered}/{total}'
           assert Path('epg.xml.gz').stat().st_size > 10000
+          programmes = 0
           with gzip.open('epg.xml.gz', 'rb') as stream:
-              root = ET.parse(stream).getroot()
-          assert root.tag == 'tv'
-          assert len(root.findall('programme')) >= 1000
+              for _, element in ET.iterparse(stream, events=('end',)):
+                  if element.tag == 'programme':
+                      programmes += 1
+                  element.clear()
+          assert programmes >= 1000, f'Too few programmes: {programmes}'
           print(f'Guide validated: {covered}/{total} channels')
           PY
       - name: Publish playlist through pull request
