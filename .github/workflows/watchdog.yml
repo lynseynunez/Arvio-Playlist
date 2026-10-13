@@ -1,0 +1,21 @@
+name: Arvio production watchdog
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 2,8,14,20 * * *'
+permissions:
+  contents: read
+  actions: read
+  issues: write
+concurrency:
+  group: arvio-production-watchdog
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check published playlist, EPG, and refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python watchdog.py
