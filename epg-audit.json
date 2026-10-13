@@ -1,32 +1,32 @@
 {
   "playlist_channels": 228,
   "channels_with_programmes": 216,
-  "programmes": 218988,
-  "total_guide_channels": 3472,
+  "programmes": 224381,
+  "total_guide_channels": 3473,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5046
+      "new_programmes": 5030
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8701
+      "new_programmes": 8817
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 66419
+      "new_programmes": 66729
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 42677
+      "new_programmes": 47302
     },
     "EPGShare US Alt": {
       "status": "ok",
-      "new_programmes": 79959
+      "new_programmes": 80675
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 16186
+      "new_programmes": 15828
     }
   },
   "missing_channel_candidates": {
