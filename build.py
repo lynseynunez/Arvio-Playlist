@@ -35,6 +35,8 @@ def category_for(category, requested):
     if requested in ("Pluto TV Horror", "Pluto TV Thrillers", "FilmRise Horror",
                      "The Asylum", "FreeTV Horror"):
         return "Horror"
+    if requested in ("Ani-Monsters", "Yu-Gi-Oh!"):
+        return "Anime & Animation"
     if category == "Other":
         lower = requested.casefold()
         if any(term in lower for term in NEWS_TERMS):
@@ -162,6 +164,8 @@ def main():
     wanted = {
         "Sonic TV": ("sonic tv",),
         "Toonami Aftermath West": ("toonami aftermath west",),
+        "Toonami Aftermath East": ("toonami aftermath east",),
+        "Toonami Aftermath Movies": ("toonami aftermath movies",),
         "NickOnline HD": ("nickonline hd", "nickonline"),
         "Tooncast": ("tooncast",),
     }
@@ -247,7 +251,9 @@ def main():
     for label, channel in extra_found.items():
         if norm(label) in seen:
             continue
-        group = "Anime & Animation" if label in ("Sonic TV", "Toonami Aftermath West") else "Kids & Family"
+        group = ("Anime & Animation" if label in ("Sonic TV", "Toonami Aftermath West",
+                                                   "Toonami Aftermath East", "Toonami Aftermath Movies")
+                 else "Kids & Family")
         output.extend([set_group(channel["extinf"], group), channel["url"]])
         seen.add(norm(label))
         published += 1
