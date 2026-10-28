@@ -22,6 +22,47 @@ SOURCES = [
     ("EPGShare Brazil", "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz", False),
 ]
 
+# Third-party guides used only to fill channels that none of SOURCES cover. Each playlist
+# tvg-id is mapped to one reviewed guide channel; rows are copied under the playlist ID.
+SUPPLEMENTAL = [
+    ("EPGTalk US", "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_guide.xml.gz"),
+    ("EPGTalk FreeTV", "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/FreeTV_guide.xml.gz"),
+]
+ALIASES = {
+    "AE.us@East": "I265.10035.schedulesdirect.org",
+    "E.us@East": "I236.10989.schedulesdirect.org",
+    "MTV.us@East": "I160.10986.gracenote.com",
+    "GameShowNetwork.us@East": "I233.14909.schedulesdirect.org",
+    "IONPlus.us@East": "117518.SamsungTVPlus",
+    "WipeoutXtra.us@SD": "113735.SamsungTVPlus",
+    "692090": "128388.Plex",  # FilmRise Horror
+}
+
+def apply_aliases(db, aliases):
+    """Copy a guide channel's rows under the playlist tvg-id when that ID has no programmes."""
+    results = {}
+    for target, source in aliases.items():
+        if db.execute("SELECT 1 FROM programmes WHERE id=? LIMIT 1", (target,)).fetchone():
+            results[target] = {"status": "already_covered"}
+            continue
+        row = db.execute("SELECT xml FROM channels WHERE id=?", (source,)).fetchone()
+        entries = db.execute("SELECT start, stop, xml FROM programmes WHERE id=?", (source,)).fetchall()
+        if row is None or not entries:
+            results[target] = {"status": "source_missing", "source": source}
+            continue
+        channel = ET.fromstring(row[0])
+        channel.set("id", target)
+        db.execute("INSERT OR IGNORE INTO channels VALUES (?, ?)",
+                   (target, ET.tostring(channel, encoding="utf-8")))
+        for start, stop, xml in entries:
+            programme = ET.fromstring(xml)
+            programme.set("channel", target)
+            db.execute("INSERT OR IGNORE INTO programmes VALUES (?, ?, ?, ?)",
+                       (target, start, stop, ET.tostring(programme, encoding="utf-8")))
+        results[target] = {"status": "aliased", "source": source, "programmes": len(entries)}
+    db.commit()
+    return results
+
 def playlist_channels():
     result = {}
     for line in (ROOT / "arvio.m3u").read_text(encoding="utf-8").splitlines():
@@ -32,7 +73,7 @@ def playlist_channels():
             result[match.group(1)] = line.rsplit(",", 1)[-1].strip()
     return result
 
-def read_source(url, db):
+def read_source(url, db, keep=None):
     req = Request(url, headers={"User-Agent": "ArvioPlaylistEPG/1.0"})
     with urlopen(req, timeout=120) as response:
         with tempfile.TemporaryFile() as tmp:
@@ -47,7 +88,10 @@ def read_source(url, db):
             stream = gzip.GzipFile(fileobj=tmp) if magic == bytes((31, 139)) else tmp
             added = 0
             for _, elem in ET.iterparse(stream, events=("end",)):
-                if elem.tag == "channel" and elem.get("id"):
+                if keep is not None and elem.tag in ("channel", "programme") and \
+                        (elem.get("id") if elem.tag == "channel" else elem.get("channel")) not in keep:
+                    pass
+                elif elem.tag == "channel" and elem.get("id"):
                     db.execute("INSERT OR IGNORE INTO channels VALUES (?, ?)",
                                (elem.get("id"), ET.tostring(elem, encoding="utf-8")))
                 elif elem.tag == "programme" and elem.get("channel"):
@@ -77,6 +121,16 @@ def main():
                 if required:
                     raise RuntimeError(f"Required {name} EPG unavailable; preserving old guide") from exc
                 print(f"Skipping optional {name}: {exc}", flush=True)
+        wanted_sources = set(ALIASES.values())
+        for name, url in SUPPLEMENTAL:
+            try:
+                count = read_source(url, db, keep=wanted_sources)
+                source_status[name] = {"status": "ok", "new_programmes": count}
+                print(f"{name}: {count} new programmes", flush=True)
+            except Exception as exc:
+                source_status[name] = {"status": "unavailable", "reason": str(exc)[:180]}
+                print(f"Skipping supplemental {name}: {exc}", flush=True)
+        alias_results = apply_aliases(db, {t: s for t, s in ALIASES.items() if t in wanted})
         programmes = db.execute("SELECT COUNT(*) FROM programmes").fetchone()[0]
         if programmes < 100:
             raise RuntimeError("Guide too small; preserving previous guide")
@@ -134,6 +188,7 @@ def main():
             "programmes": exported_programmes,
             "total_guide_channels": db.execute("SELECT COUNT(*) FROM channels").fetchone()[0],
             "sources": source_status,
+            "aliases": alias_results,
             "missing_channel_candidates": candidates,
             "without_guide": [name for cid, name in wanted.items() if cid not in covered],
         }
