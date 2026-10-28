@@ -1,8 +1,8 @@
 {
-  "playlist_channels": 229,
-  "channels_with_programmes": 216,
-  "programmes": 4197,
-  "total_guide_channels": 3485,
+  "playlist_channels": 230,
+  "channels_with_programmes": 223,
+  "programmes": 5279,
+  "total_guide_channels": 3499,
   "sources": {
     "Samsung": {
       "status": "ok",
@@ -27,44 +27,69 @@
     "EPGShare Brazil": {
       "status": "ok",
       "new_programmes": 15635
+    },
+    "EPGTalk US": {
+      "status": "ok",
+      "new_programmes": 939
+    },
+    "EPGTalk FreeTV": {
+      "status": "ok",
+      "new_programmes": 172
+    }
+  },
+  "aliases": {
+    "AE.us@East": {
+      "status": "aliased",
+      "source": "I265.10035.schedulesdirect.org",
+      "programmes": 243
+    },
+    "E.us@East": {
+      "status": "aliased",
+      "source": "I236.10989.schedulesdirect.org",
+      "programmes": 154
+    },
+    "MTV.us@East": {
+      "status": "aliased",
+      "source": "I160.10986.gracenote.com",
+      "programmes": 246
+    },
+    "GameShowNetwork.us@East": {
+      "status": "aliased",
+      "source": "I233.14909.schedulesdirect.org",
+      "programmes": 296
+    },
+    "IONPlus.us@East": {
+      "status": "aliased",
+      "source": "117518.SamsungTVPlus",
+      "programmes": 70
+    },
+    "WipeoutXtra.us@SD": {
+      "status": "aliased",
+      "source": "113735.SamsungTVPlus",
+      "programmes": 63
+    },
+    "692090": {
+      "status": "aliased",
+      "source": "128388.Plex",
+      "programmes": 39
     }
   },
   "missing_channel_candidates": {
-    "FilmRise Horror": [
-      {
-        "id": "6a1610bebdf296985fd95603-66ea09a39502c5778b828d43",
-        "names": [
-          "FilmRise Horror"
-        ],
-        "has_programmes": false
-      }
-    ],
     "Sonic TV (720p)": [],
     "Toonami Aftermath West (480p)": [],
     "NickOnline HD (720p)": [],
     "Tooncast (1080p)": [],
-    "A&E (720p)": [],
-    "E! East (1080p)": [],
-    "Game Show Network (720p) [Not 24/7]": [],
-    "ION Plus (1080p)": [],
-    "MTV (United States) (1080p)": [],
+    "Toonami Aftermath East (480p)": [],
     "PLEX TV": [],
-    "TMZ (720p)": [],
-    "Wipeout Xtra (1080p)": []
+    "TMZ (720p)": []
   },
   "without_guide": [
-    "FilmRise Horror",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
     "Tooncast (1080p)",
-    "A&E (720p)",
-    "E! East (1080p)",
-    "Game Show Network (720p) [Not 24/7]",
-    "ION Plus (1080p)",
-    "MTV (United States) (1080p)",
+    "Toonami Aftermath East (480p)",
     "PLEX TV",
-    "TMZ (720p)",
-    "Wipeout Xtra (1080p)"
+    "TMZ (720p)"
   ]
 }
