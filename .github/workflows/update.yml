@@ -31,6 +31,13 @@ jobs:
           if not lines or not lines[0].lstrip().startswith('#EXTM3U') or channels < 100 or urls < channels:
               raise SystemExit('Refusing to publish incomplete playlist')
           PY
+      - name: Generate Toonami Aftermath guide (optional)
+        continue-on-error: true
+        run: |
+          rm -f toonami.xml
+          git clone --depth 1 https://github.com/chris102994/toonamiaftermath-cli.git /tmp/toonamiaftermath-cli
+          (cd /tmp/toonamiaftermath-cli && go build -o /tmp/toonami-cli .)
+          timeout 90 /tmp/toonami-cli run --xmltv-output toonami.xml --m3u-output /tmp/toonami.m3u
       - name: Build compact combined EPG
         run: python merge_epg.py
       - name: Validate generated guide and coverage

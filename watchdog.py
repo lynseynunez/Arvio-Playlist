@@ -32,6 +32,22 @@ try:
 except Exception as exc:
     errors.append(f"Cannot check workflow: {exc}")
 
+# Pluto stream URLs carry session tokens that expire after about a day; the separate pluto-tv
+# repo regenerates them every six hours. If it stalls, Pluto channels silently stop playing.
+PLUTO_REPO = "lynseynunez/pluto-tv"
+try:
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{PLUTO_REPO}/commits?path=output/plutotv_us.m3u8&per_page=1",
+        headers=headers)
+    with urllib.request.urlopen(req, timeout=30) as res:
+        latest = json.loads(res.read())[0]["commit"]["committer"]["date"]
+    pluto_age = (datetime.now(timezone.utc) - datetime.fromisoformat(latest.replace("Z", "+00:00"))).total_seconds() / 3600
+    if pluto_age > 14:
+        errors.append(f"{PLUTO_REPO} Pluto stream URLs are {pluto_age:.1f} hours old (expected refresh every 6 hours); "
+                      "Pluto channels will stop playing when the tokens expire")
+except Exception as exc:
+    errors.append(f"Cannot check {PLUTO_REPO} freshness: {exc}")
+
 raw = f"https://raw.githubusercontent.com/{repo}/main/"
 try:
     with urllib.request.urlopen(raw + "arvio.m3u", timeout=30) as res:
