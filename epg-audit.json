@@ -1,41 +1,50 @@
 {
-  "playlist_channels": 228,
+  "playlist_channels": 229,
   "channels_with_programmes": 216,
-  "programmes": 228064,
-  "total_guide_channels": 3472,
+  "programmes": 4194,
+  "total_guide_channels": 3485,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5082
+      "new_programmes": 4994
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8714
+      "new_programmes": 8869
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 66657
+      "new_programmes": 65536
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 51800
+      "new_programmes": 32716
     },
     "EPGShare US Alt": {
       "status": "ok",
-      "new_programmes": 80014
+      "new_programmes": 82980
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 15797
+      "new_programmes": 15635
     }
   },
   "missing_channel_candidates": {
+    "FilmRise Horror": [
+      {
+        "id": "6a1610bebdf296985fd95603-66ea09a39502c5778b828d43",
+        "names": [
+          "FilmRise Horror"
+        ],
+        "has_programmes": false
+      }
+    ],
     "Sonic TV (720p)": [],
     "Toonami Aftermath West (480p)": [],
     "NickOnline HD (720p)": [],
     "Tooncast (1080p)": [],
     "A&E (720p)": [],
-    "E! (United States) East (1080p)": [],
+    "E! East (1080p)": [],
     "Game Show Network (720p) [Not 24/7]": [],
     "ION Plus (1080p)": [],
     "MTV (United States) (1080p)": [],
@@ -44,12 +53,13 @@
     "Wipeout Xtra (1080p)": []
   },
   "without_guide": [
+    "FilmRise Horror",
     "Sonic TV (720p)",
     "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
     "Tooncast (1080p)",
     "A&E (720p)",
-    "E! (United States) East (1080p)",
+    "E! East (1080p)",
     "Game Show Network (720p) [Not 24/7]",
     "ION Plus (1080p)",
     "MTV (United States) (1080p)",
