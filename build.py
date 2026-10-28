@@ -3,6 +3,7 @@
 import json
 import re
 import unicodedata
+from difflib import SequenceMatcher
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -61,6 +62,36 @@ def norm(value):
     value = unicodedata.normalize("NFKD", value.casefold())
     return "".join(c for c in value if c.isascii() and c.isalnum())
 
+def resolve_curated(keep, source_names):
+    """Map approved names onto the live Pluto feed.
+
+    Returns (resolved keep list, renamed {old: new}, skipped [old]). A missing
+    name is only followed to a new name when the match is unambiguous (the old
+    and new names contain one another, or are near-identical) and the new name
+    is not already approved; otherwise it is skipped rather than aborting.
+    """
+    present = set(source_names)
+    claimed = set(keep) & present
+    resolved, renamed, skipped = [], {}, []
+    for name in keep:
+        if name in present:
+            resolved.append(name)
+            continue
+        target = norm(name)
+        found = []
+        for cand in sorted(present - claimed):
+            c = norm(cand)
+            if target and c and (target in c or c in target or
+                                 SequenceMatcher(None, target, c).ratio() >= 0.9):
+                found.append(cand)
+        if len(found) == 1:
+            renamed[name] = found[0]
+            claimed.add(found[0])
+            resolved.append(found[0])
+        else:
+            skipped.append(name)
+    return resolved, renamed, skipped
+
 def parse(text, provider):
     lines = text.splitlines()
     channels = []
@@ -80,7 +111,7 @@ def main():
     selections = json.loads((ROOT / "selections.json").read_text(encoding="utf-8"))
     aliases = json.loads((ROOT / "aliases.json").read_text(encoding="utf-8"))
     curation = json.loads((ROOT / "pluto-curation.json").read_text(encoding="utf-8"))
-    approved = set(curation["keep"])
+    keep = curation["keep"]
     index = {}
     counts = {}
     for provider, feed in FEEDS.items():
@@ -99,6 +130,19 @@ def main():
     source_names = {channel["name"] for channel in curated_source}
     if len(source_names) < 300:
         raise RuntimeError("Pluto source looks incomplete; preserving the previous playlist")
+    keep, renamed, skipped = resolve_curated(keep, source_names)
+    for old, new in renamed.items():
+        print(f"WARNING: approved Pluto channel renamed upstream: {old!r} -> {new!r}; "
+              "update pluto-curation.json")
+    for old in skipped:
+        print(f"WARNING: approved Pluto channel not found upstream, skipping: {old!r}; "
+              "update pluto-curation.json")
+    approved = set(keep)
+    curation_issues = ([{"category": "Approved Pluto", "requested": old, "status": "renamed",
+                         "matched": new, "provider": "Pluto Direct", "tvg_id": None}
+                        for old, new in renamed.items()] +
+                       [{"category": "Approved Pluto", "requested": old, "status": "missing-upstream",
+                         "matched": None, "provider": None, "tvg_id": None} for old in skipped])
     excluded_names = {norm(name) for name in source_names - approved}
     # Drop all nonapproved Pluto names, including copies offered by other providers.
     for name in list(index):
@@ -109,9 +153,10 @@ def main():
             # Prefer direct, freshly generated Pluto URLs over third-party Pluto redirects.
             channel["provider"] = "Pluto Direct"
             index.setdefault(norm(channel["name"]), []).append(channel)
-    counts["Curated Pluto"] = sum(c["name"] in approved for c in curated_source)
-    if counts["Curated Pluto"] != len(approved):
-        raise RuntimeError("Curated Pluto source incomplete; preserving previous playlist")
+    counts["Curated Pluto"] = len({c["name"] for c in curated_source if c["name"] in approved})
+    if len(skipped) > max(5, len(curation["keep"]) // 10):
+        raise RuntimeError(f"Too many approved Pluto channels missing ({len(skipped)}); "
+                           "preserving previous playlist")
 
     # Import only the independently tested IPTV-org channels; leave Pluto intact.
     wanted = {
@@ -173,10 +218,10 @@ def main():
                            ", ".join(set(entertainment_wanted) - set(entertainment_found)))
 
     output = ['#EXTM3U url-tvg="' + ",".join(EPGS) + '"']
-    audit = []
+    audit = list(curation_issues)
     seen = set()
     published = 0
-    selections["Approved Pluto"] = "; ".join(curation["keep"])
+    selections["Approved Pluto"] = "; ".join(keep)
     for category, text in selections.items():
         for requested in text.split("; "):
             target = aliases.get(requested, requested)
@@ -225,7 +270,7 @@ def main():
                       "provider": "IPTV-org Entertainment", "tvg_id": channel["tvg_id"]})
     if published < 100:
         raise RuntimeError(f"Only {published} matches; refusing to replace previous playlist")
-    missing_curated = [name for name in curation["keep"] if norm(name) not in seen]
+    missing_curated = [name for name in keep if norm(name) not in seen]
     if missing_curated:
         raise RuntimeError("Approved Pluto channels missing: " + "; ".join(missing_curated))
     (ROOT / "arvio.m3u").write_text("\n".join(output) + "\n", encoding="utf-8")
