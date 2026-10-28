@@ -1,24 +1,24 @@
 {
   "playlist_channels": 230,
   "channels_with_programmes": 225,
-  "programmes": 5427,
+  "programmes": 5498,
   "total_guide_channels": 3501,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 5015
+      "new_programmes": 5027
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8869
+      "new_programmes": 8852
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65536
+      "new_programmes": 65603
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 32716
+      "new_programmes": 47387
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -26,7 +26,7 @@
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 15635
+      "new_programmes": 31909
     },
     "EPGTalk US": {
       "status": "ok",
@@ -34,7 +34,7 @@
     },
     "EPGTalk FreeTV": {
       "status": "ok",
-      "new_programmes": 172
+      "new_programmes": 173
     },
     "Toonami Aftermath": {
       "status": "ok",
@@ -78,7 +78,7 @@
     "692090": {
       "status": "aliased",
       "source": "128388.Plex",
-      "programmes": 39
+      "programmes": 40
     }
   },
   "missing_channel_candidates": {
