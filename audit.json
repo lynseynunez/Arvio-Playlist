@@ -2360,6 +2360,22 @@
     "tvg_id": "Tooncast.us@SD"
   },
   {
+    "category": "IPTV-org additions",
+    "requested": "Toonami Aftermath East",
+    "status": "exact",
+    "matched": "Toonami Aftermath East (480p)",
+    "provider": "IPTV-org",
+    "tvg_id": "ToonamiAftermath.us@East"
+  },
+  {
+    "category": "IPTV-org additions",
+    "requested": "Toonami Aftermath Movies",
+    "status": "exact",
+    "matched": "Toonami Aftermath Movies (540p)",
+    "provider": "IPTV-org",
+    "tvg_id": ""
+  },
+  {
     "category": "IPTV-org Entertainment additions",
     "requested": "A&E",
     "status": "exact",
