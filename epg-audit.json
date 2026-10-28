@@ -1,8 +1,8 @@
 {
   "playlist_channels": 230,
-  "channels_with_programmes": 223,
-  "programmes": 5279,
-  "total_guide_channels": 3499,
+  "channels_with_programmes": 225,
+  "programmes": 5578,
+  "total_guide_channels": 3501,
   "sources": {
     "Samsung": {
       "status": "ok",
@@ -35,6 +35,13 @@
     "EPGTalk FreeTV": {
       "status": "ok",
       "new_programmes": 172
+    },
+    "Toonami Aftermath": {
+      "status": "ok",
+      "programmes": {
+        "ToonamiAftermath.us@East": 150,
+        "ToonamiAftermath.us@West": 150
+      }
     }
   },
   "aliases": {
@@ -76,19 +83,15 @@
   },
   "missing_channel_candidates": {
     "Sonic TV (720p)": [],
-    "Toonami Aftermath West (480p)": [],
     "NickOnline HD (720p)": [],
     "Tooncast (1080p)": [],
-    "Toonami Aftermath East (480p)": [],
     "PLEX TV": [],
     "TMZ (720p)": []
   },
   "without_guide": [
     "Sonic TV (720p)",
-    "Toonami Aftermath West (480p)",
     "NickOnline HD (720p)",
     "Tooncast (1080p)",
-    "Toonami Aftermath East (480p)",
     "PLEX TV",
     "TMZ (720p)"
   ]
