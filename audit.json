@@ -2368,14 +2368,6 @@
     "tvg_id": "ToonamiAftermath.us@East"
   },
   {
-    "category": "IPTV-org additions",
-    "requested": "Toonami Aftermath Movies",
-    "status": "exact",
-    "matched": "Toonami Aftermath Movies (540p)",
-    "provider": "IPTV-org",
-    "tvg_id": ""
-  },
-  {
     "category": "IPTV-org Entertainment additions",
     "requested": "A&E",
     "status": "exact",
