@@ -185,6 +185,22 @@ def main():
                 print(f"IPTV-org channel not found: {label}")
     except Exception as exc:
         print(f"IPTV-org unavailable; preserving existing lineup: {exc}")
+    # The animation category omits some channels (e.g. Toonami East/Movies); fall back to the US list.
+    missing_extra = [label for label in wanted if label not in extra_found]
+    if missing_extra:
+        try:
+            request = Request("https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+                              headers={"User-Agent": "ArvioPlaylist/1.0"})
+            with urlopen(request, timeout=60) as response:
+                us_channels = parse(response.read().decode("utf-8-sig"), "IPTV-org")
+            for label in missing_extra:
+                matches = [c for c in us_channels
+                           if any(norm(c["name"]).startswith(norm(v)) for v in wanted[label])]
+                if matches:
+                    extra_found[label] = matches[0]
+                    print(f"IPTV-org US selected {label}: {matches[0]['name']}")
+        except Exception as exc:
+            print(f"IPTV-org US list unavailable: {exc}")
 
     # Additional channels confirmed playable by the user in IPTV-org Entertainment.
     entertainment_wanted = {
