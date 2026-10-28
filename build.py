@@ -165,7 +165,6 @@ def main():
         "Sonic TV": ("sonic tv",),
         "Toonami Aftermath West": ("toonami aftermath west",),
         "Toonami Aftermath East": ("toonami aftermath east",),
-        "Toonami Aftermath Movies": ("toonami aftermath movies",),
         "NickOnline HD": ("nickonline hd", "nickonline"),
         "Tooncast": ("tooncast",),
     }
@@ -268,7 +267,7 @@ def main():
         if norm(label) in seen:
             continue
         group = ("Anime & Animation" if label in ("Sonic TV", "Toonami Aftermath West",
-                                                   "Toonami Aftermath East", "Toonami Aftermath Movies")
+                                                   "Toonami Aftermath East")
                  else "Kids & Family")
         output.extend([set_group(channel["extinf"], group), channel["url"]])
         seen.add(norm(label))
