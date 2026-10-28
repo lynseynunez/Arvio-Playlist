@@ -50,7 +50,9 @@ def read_toonami(path, db):
     targets = {}
     for channel in root.findall("channel"):
         name = " ".join(n.text or "" for n in channel.findall("display-name")).lower()
-        if "radio" in name:
+        # The generator also emits Snickelodeon (classic sitcoms) and Radio channels whose names
+        # contain East/West; only the Toonami Aftermath channels belong to our playlist IDs.
+        if "toonami aftermath" not in name or "radio" in name:
             continue
         for word, target in TOONAMI_TARGETS.items():
             if word in name:
