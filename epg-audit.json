@@ -1,7 +1,7 @@
 {
   "playlist_channels": 230,
   "channels_with_programmes": 225,
-  "programmes": 5577,
+  "programmes": 5427,
   "total_guide_channels": 3501,
   "sources": {
     "Samsung": {
@@ -39,8 +39,8 @@
     "Toonami Aftermath": {
       "status": "ok",
       "programmes": {
-        "ToonamiAftermath.us@East": 150,
-        "ToonamiAftermath.us@West": 150
+        "ToonamiAftermath.us@East": 75,
+        "ToonamiAftermath.us@West": 75
       }
     }
   },
