@@ -6,6 +6,7 @@ import sqlite3
 import re
 import tempfile
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -79,18 +80,30 @@ def main():
         programmes = db.execute("SELECT COUNT(*) FROM programmes").fetchone()[0]
         if programmes < 100:
             raise RuntimeError("Guide too small; preserving previous guide")
-        # Publish the entire merged guide. Do not restrict to playlist channels.
+        # Export only playlist channels and a bounded, current programme window.
+        # The former unfiltered export was 14 MB / 218k programmes and broke guide loading.
+        now = datetime.now(timezone.utc)
+        cutoff = (now - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
+        horizon = (now + timedelta(days=7)).strftime("%Y%m%d%H%M%S")
+        selected = set(wanted)
+        covered = set()
+        exported_programmes = 0
         path = ROOT / "epg.xml.gz"
         with path.open("wb") as raw:
             with gzip.GzipFile(fileobj=raw, mode="wb", filename="", mtime=0, compresslevel=6) as out:
-                out.write(b'<?xml version="1.0" encoding="UTF-8"?>' + bytes((10,)))
-                out.write(b'<tv generator-info-name="Arvio-Playlist">' + bytes((10,)))
-                for (xml,) in db.execute("SELECT xml FROM channels"):
-                    out.write(xml + bytes((10,)))
-                for (xml,) in db.execute("SELECT xml FROM programmes"):
-                    out.write(xml + bytes((10,)))
-                out.write(b'</tv>' + bytes((10,)))
-        covered = {cid for (cid,) in db.execute("SELECT DISTINCT id FROM programmes")}
+                out.write(b'<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Arvio-Playlist">\n')
+                for cid, xml in db.execute("SELECT id, xml FROM channels"):
+                    if cid in selected:
+                        out.write(xml + b"\n")
+                for cid, start, stop, xml in db.execute("SELECT id, start, stop, xml FROM programmes"):
+                    if cid in selected and start[:14] <= horizon and (not stop or stop[:14] >= cutoff):
+                        out.write(xml + b"\n")
+                        covered.add(cid)
+                        exported_programmes += 1
+                out.write(b"</tv>\n")
+        if exported_programmes < 1000 or len(covered) < 200:
+            path.unlink(missing_ok=True)
+            raise RuntimeError(f"Compact guide incomplete: {len(covered)} channels, {exported_programmes} programmes")
         # Diagnose missing matches against real XMLTV channel IDs and display names.
         missing = {cid: name for cid, name in wanted.items() if cid not in covered}
         candidates = {}
@@ -118,7 +131,7 @@ def main():
         audit = {
             "playlist_channels": len(wanted),
             "channels_with_programmes": sum(cid in covered for cid in wanted),
-            "programmes": programmes,
+            "programmes": exported_programmes,
             "total_guide_channels": db.execute("SELECT COUNT(*) FROM channels").fetchone()[0],
             "sources": source_status,
             "missing_channel_candidates": candidates,
