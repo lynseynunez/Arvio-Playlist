@@ -1,24 +1,24 @@
 {
   "playlist_channels": 230,
   "channels_with_programmes": 225,
-  "programmes": 5257,
+  "programmes": 5492,
   "total_guide_channels": 3498,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4990
+      "new_programmes": 5039
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8955
+      "new_programmes": 8909
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 64665
+      "new_programmes": 64319
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 54742
+      "new_programmes": 43993
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -30,7 +30,7 @@
     },
     "EPGTalk US": {
       "status": "ok",
-      "new_programmes": 939
+      "new_programmes": 945
     },
     "EPGTalk FreeTV": {
       "status": "ok",
@@ -53,12 +53,12 @@
     "E.us@East": {
       "status": "aliased",
       "source": "I236.10989.schedulesdirect.org",
-      "programmes": 154
+      "programmes": 158
     },
     "MTV.us@East": {
       "status": "aliased",
       "source": "I160.10986.gracenote.com",
-      "programmes": 246
+      "programmes": 248
     },
     "GameShowNetwork.us@East": {
       "status": "aliased",
