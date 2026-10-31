@@ -116,11 +116,15 @@ def main():
     keep = curation["keep"]
     index = {}
     counts = {}
+    pluto_redirects = {}
     for provider, feed in FEEDS.items():
         request = Request(feed, headers={"User-Agent": "ArvioPlaylist/1.0"})
         with urlopen(request, timeout=45) as response:
             channels = parse(response.read().decode("utf-8-sig"), provider)
         counts[provider] = len(channels)
+        if provider == "Pluto":
+            # Token-free redirect links that mint a fresh Pluto session at play time.
+            pluto_redirects = {c["tvg_id"]: c["url"] for c in channels if c["tvg_id"]}
         if len(channels) < 50:
             raise RuntimeError(f"{provider} source appears incomplete: {len(channels)} channels")
         for channel in channels:
@@ -150,12 +154,22 @@ def main():
     for name in list(index):
         if name in excluded_names:
             del index[name]
+    durable = 0
     for channel in curated_source:
         if channel["name"] in approved:
-            # Prefer direct, freshly generated Pluto URLs over third-party Pluto redirects.
+            # Keep the curated entry (IDs, logos, numbers) from the Pluto feed, but play it through
+            # the non-expiring redirect. Direct stitcher URLs embed a session token that dies after
+            # 24 hours, so any app that refreshes less often than daily loses every Pluto channel.
+            redirect = pluto_redirects.get(channel["tvg_id"])
+            if redirect:
+                channel["url"] = redirect
+                durable += 1
             channel["provider"] = "Pluto Direct"
             index.setdefault(norm(channel["name"]), []).append(channel)
     counts["Curated Pluto"] = len({c["name"] for c in curated_source if c["name"] in approved})
+    counts["Pluto non-expiring links"] = durable
+    print(f"Pluto channels on non-expiring links: {durable}; on expiring direct links: "
+          f"{counts['Curated Pluto'] - durable}")
     if len(skipped) > max(5, len(curation["keep"]) // 10):
         raise RuntimeError(f"Too many approved Pluto channels missing ({len(skipped)}); "
                            "preserving previous playlist")

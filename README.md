@@ -16,7 +16,7 @@ Set the XMLTV URL as a separate EPG source in Arvio if it does not pick up the p
 
 The **Update Arvio M3U** GitHub Actions workflow runs four times a day (00:45, 06:45, 12:45 and 18:45 UTC), and can be started manually from **Actions → Update Arvio M3U → Run workflow**. It refreshes stream URLs, rebuilds the combined M3U and XMLTV guide, and commits updated `arvio.m3u`, `epg.xml.gz`, `audit.json`, and `epg-audit.json` only after successful generation.
 
-The dedicated `lynseynunez/pluto-tv` repository updates Pluto stream URLs every six hours. The Arvio builder reads its latest output, imports only approved Pluto names, and deduplicates channels by normalized name. Where duplicate names exist, the existing provider priority is Samsung → Pluto → Roku → Tubi → Plex.
+The dedicated `lynseynunez/pluto-tv` repository supplies the curated Pluto channel entries (IDs, logos, numbers). Each approved channel plays through a non-expiring redirect link (`jmp2.uk/plu-<id>.m3u8`), because the direct Pluto links embed a session token that expires after 24 hours. The builder imports only approved Pluto names and deduplicates channels by normalized name. Where duplicate names exist, the existing provider priority is Samsung → Pluto → Roku → Tubi → Plex.
 
 ## Curation
 
@@ -30,7 +30,7 @@ The dedicated `lynseynunez/pluto-tv` repository updates Pluto stream URLs every 
 
 **Guide sources:** the guide combines Samsung, Pluto, Roku, Plex and EPGShare feeds. A few channels with no coverage there are filled from reviewed channels in the EPGTalk guides (`ALIASES` in `merge_epg.py`), and Toonami Aftermath East/West come from `toonamiaftermath-cli` when it runs successfully. Only playlist channels and a −6h/+7d window are published, keeping the file well under 1 MB.
 
-**Health checks:** `watchdog.py` opens a GitHub issue if the refresh fails, the published files are invalid, or the `pluto-tv` repo stops refreshing Pluto stream URLs.
+**Health checks:** `watchdog.py` opens a GitHub issue if the refresh fails, the published files are invalid, or the Pluto redirect links stop returning streams.
 
 **Guide limitations:** Matching EPG IDs does not guarantee programme listings for every new Pluto stream. Check `epg-audit.json` after the next successful run; `without_guide` lists any uncovered channels. The build will preserve the previous guide rather than publish one if required guide feeds fail or there are fewer than 100 programmes.
 
