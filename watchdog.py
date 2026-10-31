@@ -32,23 +32,8 @@ try:
 except Exception as exc:
     errors.append(f"Cannot check workflow: {exc}")
 
-# Pluto stream URLs carry session tokens that expire after about a day; the separate pluto-tv
-# repo regenerates them every six hours. If it stalls, Pluto channels silently stop playing.
-PLUTO_REPO = "lynseynunez/pluto-tv"
-try:
-    req = urllib.request.Request(
-        f"https://api.github.com/repos/{PLUTO_REPO}/commits?path=output/plutotv_us.m3u8&per_page=1",
-        headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as res:
-        latest = json.loads(res.read())[0]["commit"]["committer"]["date"]
-    pluto_age = (datetime.now(timezone.utc) - datetime.fromisoformat(latest.replace("Z", "+00:00"))).total_seconds() / 3600
-    if pluto_age > 14:
-        errors.append(f"{PLUTO_REPO} Pluto stream URLs are {pluto_age:.1f} hours old (expected refresh every 6 hours); "
-                      "Pluto channels will stop playing when the tokens expire")
-except Exception as exc:
-    errors.append(f"Cannot check {PLUTO_REPO} freshness: {exc}")
-
 raw = f"https://raw.githubusercontent.com/{repo}/main/"
+playlist = ""
 try:
     with urllib.request.urlopen(raw + "arvio.m3u", timeout=30) as res:
         playlist = res.read().decode("utf-8-sig")
@@ -57,6 +42,26 @@ try:
         errors.append(f"Published playlist invalid ({count} channels)")
 except Exception as exc:
     errors.append(f"Published playlist inaccessible: {exc}")
+# Pluto channels play through token-free redirect links; make sure the redirect host still
+# hands back a real stream manifest. A couple of failures out of a sample may just be a flaky
+# channel, so only a majority failing is reported.
+try:
+    redirects = [l.strip() for l in playlist.splitlines() if l.startswith("https://jmp2.uk/plu-")]
+    sample = redirects[:: max(1, len(redirects) // 5)][:5]
+    failed = []
+    for link in sample:
+        try:
+            req = urllib.request.Request(link, headers={"User-Agent": "Arvio-Watchdog"})
+            with urllib.request.urlopen(req, timeout=30) as res:
+                if not res.read(200).lstrip().startswith(b"#EXTM3U"):
+                    failed.append(link)
+        except Exception:
+            failed.append(link)
+    if sample and len(failed) * 2 > len(sample):
+        errors.append(f"Pluto redirect links failing ({len(failed)} of {len(sample)} sampled, e.g. {failed[0]}); "
+                      "Pluto channels will not play")
+except Exception as exc:
+    errors.append(f"Cannot check Pluto redirect links: {exc}")
 try:
     with urllib.request.urlopen(raw + "epg.xml.gz", timeout=60) as res:
         guide = gzip.decompress(res.read())
