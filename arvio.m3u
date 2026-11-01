@@ -65,10 +65,10 @@ https://jmp2.uk/stvp-USBA3000041ZP
 https://jmp2.uk/stvp-USBD3500032H0
 #EXTINF:-1 channel-id="USBD3500033U0" tvg-id="USBD3500033U0" tvg-chno="1206" tvg-name="Movie Hub Romance" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3500033U0_20261016T175708SQUARE.png" group-title="Movies",Movie Hub Romance
 https://jmp2.uk/stvp-USBD3500033U0
-#EXTINF:-1 tvg-id="628e685ba3811100070551a8" tvg-logo="https://images.pluto.tv/channels/628e685ba3811100070551a8/colorLogoPNG_1767639054863.png" tvg-chno="2080" group-title="Movies", Hallmark Movies & More
-https://jmp2.uk/plu-628e685ba3811100070551a8.m3u8
-#EXTINF:-1 tvg-id="63335b193583440007c859fb" tvg-logo="https://images.pluto.tv/channels/63335b193583440007c859fb/colorLogoPNG_1767722325837.png" tvg-chno="2070" group-title="Movies", Lifetime Movie Favorites
-https://jmp2.uk/plu-63335b193583440007c859fb.m3u8
+#EXTINF:-1 channel-id="USBD270001633" tvg-id="USBD270001633" tvg-chno="1220" tvg-name="Hallmark Movies & More" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD270001633_20261023T223552SQUARE.png" group-title="Movies",Hallmark Movies & More
+https://jmp2.uk/stvp-USBD270001633
+#EXTINF:-1 channel-id="USBB5200019FO" tvg-id="USBB5200019FO" tvg-chno="1225" tvg-name="Lifetime Movie Favorites" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB5200019FO_20261001T230758SQUARE.png" group-title="Movies",Lifetime Movie Favorites
+https://jmp2.uk/stvp-USBB5200019FO
 #EXTINF:-1 channel-id="USBB320000397" tvg-id="USBB320000397" tvg-chno="1600" tvg-name="21 Jump Street" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB320000397_20241105T024257SQUARE.png" group-title="TV Shows & Classics",21 Jump Street
 https://jmp2.uk/stvp-USBB320000397
 #EXTINF:-1 tvg-id="5c6eeb85c05dfc257e5a50c4" tvg-logo="https://images.pluto.tv/channels/5c6eeb85c05dfc257e5a50c4/colorLogoPNG_1777484317786.png" tvg-chno="1170" group-title="TV Shows & Classics", Degrassi
@@ -245,8 +245,6 @@ https://jmp2.uk/plu-5f4d863b98b41000076cd061.m3u8
 https://jmp2.uk/plu-58e55b14ad8e9c364d55f717.m3u8
 #EXTINF:-1 tvg-id="5c665db3e6c01b72c4977bc2" tvg-logo="https://images.pluto.tv/channels/5c665db3e6c01b72c4977bc2/colorLogoPNG.png" tvg-chno="250" group-title="Gaming & Entertainment", Pluto TV Cult Films
 https://jmp2.uk/plu-5c665db3e6c01b72c4977bc2.m3u8
-#EXTINF:-1 tvg-id="6ab165fdeae99d62d7e541ff" tvg-logo="https://images.pluto.tv/channels/6ab165fdeae99d62d7e541ff/colorLogoPNG_1790715914846.png" tvg-chno="274" group-title="Gaming & Entertainment", Pluto TV Halloween
-https://jmp2.uk/plu-6ab165fdeae99d62d7e541ff.m3u8
 #EXTINF:-1 tvg-id="69d7ebb726eeec84158e28cb" tvg-logo="https://images.pluto.tv/channels/69d7ebb726eeec84158e28cb/colorLogoPNG_1777587473079.png" tvg-chno="857" group-title="Gaming & Entertainment", Pluto TV Adventure
 https://jmp2.uk/plu-69d7ebb726eeec84158e28cb.m3u8
 #EXTINF:-1 tvg-id="6a2b0d669465b98649cd0ba1" tvg-logo="https://images.pluto.tv/channels/6a2b0d669465b98649cd0ba1/colorLogoPNG_1782946583491.png" tvg-chno="859" group-title="Gaming & Entertainment", Charmed
@@ -347,6 +345,8 @@ https://jmp2.uk/plu-5dae0b4841a7d0000938ddbd.m3u8
 https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8
 #EXTINF:-1 tvg-id="65453f30085df200085883d8" tvg-logo="https://images.pluto.tv/channels/65453f30085df200085883d8/colorLogoPNG.png" tvg-chno="2060" group-title="Gaming & Entertainment", ION
 https://jmp2.uk/plu-65453f30085df200085883d8.m3u8
+#EXTINF:-1 tvg-id="628e685ba3811100070551a8" tvg-logo="https://images.pluto.tv/channels/628e685ba3811100070551a8/colorLogoPNG_1793556772258.png" tvg-chno="2080" group-title="Gaming & Entertainment", Hallmark Movies & More Holiday Favorites
+https://jmp2.uk/plu-628e685ba3811100070551a8.m3u8
 #EXTINF:-1 tvg-id="5dc0c78281eddb0009a02d5e" tvg-logo="https://images.pluto.tv/channels/5dc0c78281eddb0009a02d5e/colorLogoPNG.png" tvg-chno="2185" group-title="Gaming & Entertainment", ET
 https://jmp2.uk/plu-5dc0c78281eddb0009a02d5e.m3u8
 #EXTINF:-1 tvg-id="649ddbfb6f29ec000874ca9e" tvg-logo="https://images.pluto.tv/channels/649ddbfb6f29ec000874ca9e/colorLogoPNG.png" tvg-chno="2320" group-title="Gaming & Entertainment", Supermarket Sweep
