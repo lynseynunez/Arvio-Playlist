@@ -1,24 +1,24 @@
 {
   "playlist_channels": 230,
-  "channels_with_programmes": 225,
-  "programmes": 5011,
-  "total_guide_channels": 3500,
+  "channels_with_programmes": 224,
+  "programmes": 5060,
+  "total_guide_channels": 3524,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4825
+      "new_programmes": 4892
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 8746
+      "new_programmes": 9219
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 64406
+      "new_programmes": 64566
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 32054
+      "new_programmes": 48607
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -26,7 +26,7 @@
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 19867
+      "new_programmes": 16300
     },
     "EPGTalk US": {
       "status": "ok",
@@ -82,6 +82,7 @@
     }
   },
   "missing_channel_candidates": {
+    "Pluto TV Halloween": [],
     "Sonic TV (720p)": [],
     "NickOnline HD (720p)": [],
     "Tooncast (1080p)": [],
@@ -89,6 +90,7 @@
     "TMZ (720p)": []
   },
   "without_guide": [
+    "Pluto TV Halloween",
     "Sonic TV (720p)",
     "NickOnline HD (720p)",
     "Tooncast (1080p)",
