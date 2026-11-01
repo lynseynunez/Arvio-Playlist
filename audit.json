@@ -1,5 +1,29 @@
 [
   {
+    "category": "Approved Pluto",
+    "requested": "Hallmark Movies & More",
+    "status": "renamed",
+    "matched": "Hallmark Movies & More Holiday Favorites",
+    "provider": "Pluto Direct",
+    "tvg_id": null
+  },
+  {
+    "category": "Approved Pluto",
+    "requested": "Pluto TV Halloween",
+    "status": "missing-upstream",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
+  },
+  {
+    "category": "Approved Pluto",
+    "requested": "Lifetime Movie Favorites",
+    "status": "missing-upstream",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
+  },
+  {
     "category": "Anime",
     "requested": "Naruto",
     "status": "exact",
@@ -284,16 +308,16 @@
     "requested": "Hallmark Movies & More",
     "status": "exact",
     "matched": "Hallmark Movies & More",
-    "provider": "Pluto Direct",
-    "tvg_id": "628e685ba3811100070551a8"
+    "provider": "Samsung",
+    "tvg_id": "USBD270001633"
   },
   {
     "category": "Movies",
     "requested": "Lifetime Movie Favorites",
     "status": "exact",
     "matched": "Lifetime Movie Favorites",
-    "provider": "Pluto Direct",
-    "tvg_id": "63335b193583440007c859fb"
+    "provider": "Samsung",
+    "tvg_id": "USBB5200019FO"
   },
   {
     "category": "Movies",
@@ -1153,14 +1177,6 @@
   },
   {
     "category": "Approved Pluto",
-    "requested": "Pluto TV Halloween",
-    "status": "exact",
-    "matched": "Pluto TV Halloween",
-    "provider": "Pluto Direct",
-    "tvg_id": "6ab165fdeae99d62d7e541ff"
-  },
-  {
-    "category": "Approved Pluto",
     "requested": "Pluto TV Adventure",
     "status": "exact",
     "matched": "Pluto TV Adventure",
@@ -1793,17 +1809,9 @@
   },
   {
     "category": "Approved Pluto",
-    "requested": "Lifetime Movie Favorites",
+    "requested": "Hallmark Movies & More Holiday Favorites",
     "status": "exact",
-    "matched": "Lifetime Movie Favorites",
-    "provider": "Pluto Direct",
-    "tvg_id": "63335b193583440007c859fb"
-  },
-  {
-    "category": "Approved Pluto",
-    "requested": "Hallmark Movies & More",
-    "status": "exact",
-    "matched": "Hallmark Movies & More",
+    "matched": "Hallmark Movies & More Holiday Favorites",
     "provider": "Pluto Direct",
     "tvg_id": "628e685ba3811100070551a8"
   },

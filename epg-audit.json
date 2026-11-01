@@ -1,24 +1,24 @@
 {
   "playlist_channels": 230,
   "channels_with_programmes": 224,
-  "programmes": 5060,
-  "total_guide_channels": 3524,
+  "programmes": 5053,
+  "total_guide_channels": 3522,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4892
+      "new_programmes": 4897
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 9219
+      "new_programmes": 9278
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 64566
+      "new_programmes": 64570
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 48607
+      "new_programmes": 54653
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -82,7 +82,15 @@
     }
   },
   "missing_channel_candidates": {
-    "Pluto TV Halloween": [],
+    "FilmRise Free Movies": [
+      {
+        "id": "6a1610bebdf296985fd95603-66ea085d9502c5778b828d41",
+        "names": [
+          "FilmRise Free Movies"
+        ],
+        "has_programmes": false
+      }
+    ],
     "Sonic TV (720p)": [],
     "NickOnline HD (720p)": [],
     "Tooncast (1080p)": [],
@@ -90,7 +98,7 @@
     "TMZ (720p)": []
   },
   "without_guide": [
-    "Pluto TV Halloween",
+    "FilmRise Free Movies",
     "Sonic TV (720p)",
     "NickOnline HD (720p)",
     "Tooncast (1080p)",
