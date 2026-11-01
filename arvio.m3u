@@ -52,11 +52,11 @@ https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 #EXTINF:-1 channel-id="d6f71998860459eca1bed73db5988330" tvg-id="d6f71998860459eca1bed73db5988330" tvg-chno="1316" tvg-name="FilmRise Free Movies" tvg-logo="https://images.sr.roku.com/idType/roku-trc/context/trc/id/d6f71998860459eca1bed73db5988330/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1766001381678_RokuChannel_FilmRiseFreeMovies_HUD_Logo_260x147.png" group-title="Movies",FilmRise Free Movies
 https://jmp2.uk/rok-d6f71998860459eca1bed73db5988330.m3u8
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-66ea0504c24d95b51b7cd189" tvg-id="6a1610bebdf296985fd95603-66ea0504c24d95b51b7cd189" tvg-chno="" tvg-name="FilmRise Action" tvg-logo="https://provider-static.plex.tv/epg/cms/production/1965c90b-04e6-4124-bfc0-7a6226a8f0ab/FilmRise_Action_1500x1000_Light_Logo.png" group-title="Movies",FilmRise Action
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-66ea0504c24d95b51b7cd189/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-66ea0504c24d95b51b7cd189/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 tvg-id="692090" tvg-logo="https://canvas-lb.tubitv.com/opts/-0YnftAlhsdv5Q==/534a2575-8a54-472d-ac96-d71cbd6cb0cf/CHgQeDoFMS4xLjlAAQ==" group-title="Horror",FilmRise Horror
 https://live-manifest.production-public.tubi.io/live/4c82889c-7b9c-4f06-bc61-8f18fd23a49a/playlist.m3u8
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-6449369eb3ff17382cae580d" tvg-id="6a1610bebdf296985fd95603-6449369eb3ff17382cae580d" tvg-chno="" tvg-name="FilmRise Sci-Fi" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c7722363-8b90-4f9b-a037-5306a5d194c8/FilmRise_SciFi_1500x1000_Light_Logo.png" group-title="Movies",FilmRise Sci-Fi
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-6449369eb3ff17382cae580d/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-6449369eb3ff17382cae580d/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 channel-id="USAJ17000014C" tvg-id="USAJ17000014C" tvg-chno="3070" tvg-name="The Asylum" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAJ17000014C_20260421T141813SQUARE.png" group-title="Horror",The Asylum
 https://jmp2.uk/stvp-USAJ17000014C
 #EXTINF:-1 channel-id="USBA3000041ZP" tvg-id="USBA3000041ZP" tvg-chno="1200" tvg-name="Movie Hub" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA3000041ZP_20261016T224558SQUARE.png" group-title="Movies",Movie Hub
@@ -208,15 +208,15 @@ https://jmp2.uk/stvp-US2000016LF
 #EXTINF:-1 channel-id="USBA3800005NI" tvg-id="USBA3800005NI" tvg-chno="3520" tvg-name="Clarity 4K" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA3800005NI_20260721T032814SQUARE.png" group-title="Science & Nature",Clarity 4K
 https://jmp2.uk/stvp-USBA3800005NI
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-686452b8fbd6d9b449de2be3" tvg-id="6a1610bebdf296985fd95603-686452b8fbd6d9b449de2be3" tvg-chno="" tvg-name="Anime 24/7" tvg-logo="https://provider-static.plex.tv/epg/cms/production/aa882b26-2283-430c-8e7f-8468227ad362/anime247_logo_dark_-_Jason_Hwang.png" group-title="Anime & Animation",Anime 24/7
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-686452b8fbd6d9b449de2be3/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-686452b8fbd6d9b449de2be3/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 channel-id="US400002PS" tvg-id="US400002PS" tvg-chno="2605" tvg-name="Animation+" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US400002PS_20250902T225851SQUARE.png" group-title="Anime & Animation",Animation+
 https://jmp2.uk/stvp-US400002PS
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a" tvg-id="6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a" tvg-chno="" tvg-name="FilmRise Comedy" tvg-logo="https://provider-static.plex.tv/epg/cms/production/91ac7a3c-8224-439f-83e9-f6c37eb186da/FilmRise_Comedy_1500x1000_Dark_Logo.png" group-title="Comedy",FilmRise Comedy
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-68db6a852be6c4ceb7947b9a/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3" tvg-id="6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3" tvg-chno="" tvg-name="FreeTV Horror" tvg-logo="https://provider-static.plex.tv/epg/cms/production/420ddff5-f7d5-4ac5-8a43-722d3c940ed0/FreeTVHorror_Circle_1500x1000_-_Ralph_Campillo_WHITE_ATTRIBUTIONRDX__1_.png" group-title="Horror",FreeTV Horror
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-69727a4631b12b32a91db6b3/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 channel-id="6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d" tvg-id="6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d" tvg-chno="" tvg-name="Shout! Movies" tvg-logo="https://provider-static.plex.tv/epg/cms/production/8baf6922-b7a2-45c8-9b38-394487e67a32/SM_Stacked_WHITEandRED_-_Paige_ShermanRDX.png" group-title="Movies",Shout! Movies
-https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d/?X-Plex-Token=b676eoTngS5Ec_CLiyvr
+https://epg.provider.plex.tv/library/parts/6a1610bebdf296985fd95603-67ddc2c01d30518241f9249d/?X-Plex-Token=sxqadGJkqvy2SMB-s6iR
 #EXTINF:-1 channel-id="USBD1200021JM" tvg-id="USBD1200021JM" tvg-chno="1460" tvg-name="Shout! TV" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD1200021JM_20250401T004834SQUARE.png" group-title="Movies",Shout! TV
 https://jmp2.uk/stvp-USBD1200021JM
 #EXTINF:-1 tvg-id="5ba3fb9c4b078e0f37ad34e8" tvg-logo="https://images.pluto.tv/channels/5ba3fb9c4b078e0f37ad34e8/colorLogoPNG.png" tvg-chno="10" group-title="Gaming & Entertainment", Pluto TV Spotlight
