@@ -1,24 +1,24 @@
 {
-  "playlist_channels": 230,
-  "channels_with_programmes": 225,
-  "programmes": 5569,
-  "total_guide_channels": 3536,
+  "playlist_channels": 228,
+  "channels_with_programmes": 223,
+  "programmes": 5524,
+  "total_guide_channels": 3535,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4913
+      "new_programmes": 4981
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 9304
+      "new_programmes": 9348
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65550
+      "new_programmes": 65822
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 45552
+      "new_programmes": 50309
     },
     "EPGShare US Alt": {
       "status": "ok",
@@ -26,7 +26,7 @@
     },
     "EPGShare Brazil": {
       "status": "ok",
-      "new_programmes": 16393
+      "new_programmes": 18028
     },
     "EPGTalk US": {
       "status": "ok",
@@ -34,7 +34,7 @@
     },
     "EPGTalk FreeTV": {
       "status": "ok",
-      "new_programmes": 173
+      "new_programmes": 175
     },
     "Toonami Aftermath": {
       "status": "ok",
@@ -73,7 +73,7 @@
     "WipeoutXtra.us@SD": {
       "status": "aliased",
       "source": "113735.SamsungTVPlus",
-      "programmes": 63
+      "programmes": 65
     },
     "692090": {
       "status": "aliased",
