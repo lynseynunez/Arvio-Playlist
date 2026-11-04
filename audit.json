@@ -308,16 +308,16 @@
     "requested": "Hallmark Movies & More",
     "status": "exact",
     "matched": "Hallmark Movies & More",
-    "provider": "Samsung",
-    "tvg_id": "USBD270001633"
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-6244cf3c742b0d58cd4f2514"
   },
   {
     "category": "Movies",
     "requested": "Lifetime Movie Favorites",
-    "status": "exact",
-    "matched": "Lifetime Movie Favorites",
-    "provider": "Samsung",
-    "tvg_id": "USBB5200019FO"
+    "status": "missing",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
   },
   {
     "category": "Movies",
@@ -762,10 +762,10 @@
   {
     "category": "Music",
     "requested": "Stingray Greatest Hits",
-    "status": "exact",
-    "matched": "Stingray Greatest Hits",
-    "provider": "Samsung",
-    "tvg_id": "USBD3500022DN"
+    "status": "missing",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
   },
   {
     "category": "Music",
