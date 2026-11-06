@@ -322,10 +322,10 @@
   {
     "category": "Movies",
     "requested": "Christmas Plus",
-    "status": "missing",
-    "matched": null,
-    "provider": null,
-    "tvg_id": null
+    "status": "exact",
+    "matched": "Christmas Plus",
+    "provider": "Plex",
+    "tvg_id": "6a1610bebdf296985fd95603-634700569d64afa6830d1521"
   },
   {
     "category": "TV shows & classics",
