@@ -1,28 +1,28 @@
 {
   "playlist_channels": 229,
   "channels_with_programmes": 224,
-  "programmes": 5282,
+  "programmes": 5603,
   "total_guide_channels": 3548,
   "sources": {
     "Samsung": {
       "status": "ok",
-      "new_programmes": 4939
+      "new_programmes": 4983
     },
     "Pluto": {
       "status": "ok",
-      "new_programmes": 9268
+      "new_programmes": 9233
     },
     "Roku": {
       "status": "ok",
-      "new_programmes": 65058
+      "new_programmes": 65205
     },
     "Plex": {
       "status": "ok",
-      "new_programmes": 52312
+      "new_programmes": 47083
     },
     "EPGShare US Alt": {
       "status": "ok",
-      "new_programmes": 81793
+      "new_programmes": 82077
     },
     "EPGShare Brazil": {
       "status": "ok",
@@ -30,7 +30,7 @@
     },
     "EPGTalk US": {
       "status": "ok",
-      "new_programmes": 1067
+      "new_programmes": 1083
     },
     "EPGTalk FreeTV": {
       "status": "ok",
@@ -48,22 +48,22 @@
     "AE.us@East": {
       "status": "aliased",
       "source": "I265.10035.schedulesdirect.org",
-      "programmes": 253
+      "programmes": 251
     },
     "E.us@East": {
       "status": "aliased",
       "source": "I236.10989.schedulesdirect.org",
-      "programmes": 234
+      "programmes": 248
     },
     "MTV.us@East": {
       "status": "aliased",
       "source": "I160.10986.gracenote.com",
-      "programmes": 284
+      "programmes": 287
     },
     "GameShowNetwork.us@East": {
       "status": "aliased",
       "source": "I233.14909.schedulesdirect.org",
-      "programmes": 296
+      "programmes": 297
     },
     "IONPlus.us@East": {
       "status": "aliased",
