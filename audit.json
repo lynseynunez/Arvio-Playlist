@@ -17,6 +17,14 @@
   },
   {
     "category": "Approved Pluto",
+    "requested": "Forever Kids",
+    "status": "missing-upstream",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
+  },
+  {
+    "category": "Approved Pluto",
     "requested": "Lifetime Movie Favorites",
     "status": "missing-upstream",
     "matched": null,
@@ -444,7 +452,7 @@
     "requested": "Forever Kids",
     "status": "exact",
     "matched": "Forever Kids",
-    "provider": "Pluto Direct",
+    "provider": "Pluto",
     "tvg_id": "56171fafada51f8004c4b40f"
   },
   {
@@ -1438,14 +1446,6 @@
     "matched": "Kartoon Channel!",
     "provider": "Pluto Direct",
     "tvg_id": "60fb040d4795a6000762fe8f"
-  },
-  {
-    "category": "Approved Pluto",
-    "requested": "Forever Kids",
-    "status": "exact",
-    "matched": "Forever Kids",
-    "provider": "Pluto Direct",
-    "tvg_id": "56171fafada51f8004c4b40f"
   },
   {
     "category": "Approved Pluto",
