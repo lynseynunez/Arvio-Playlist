@@ -450,10 +450,10 @@
   {
     "category": "Kids & family",
     "requested": "Forever Kids",
-    "status": "exact",
-    "matched": "Forever Kids",
-    "provider": "Pluto",
-    "tvg_id": "56171fafada51f8004c4b40f"
+    "status": "missing",
+    "matched": null,
+    "provider": null,
+    "tvg_id": null
   },
   {
     "category": "Kids & family",
