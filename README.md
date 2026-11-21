@@ -14,7 +14,7 @@ Set the XMLTV URL as a separate EPG source in Arvio if it does not pick up the p
 
 ## Automatic updates
 
-The **Update Arvio M3U** GitHub Actions workflow runs four times a day (00:45, 06:45, 12:45 and 18:45 UTC), and can be started manually from **Actions → Update Arvio M3U → Run workflow**. It refreshes stream URLs, rebuilds the combined M3U and XMLTV guide, and commits updated `arvio.m3u`, `epg.xml.gz`, `audit.json`, and `epg-audit.json` only after successful generation.
+**Automatic runs are turned off.** No workflow in this repo runs on a schedule (they were failing and retrying, using up Actions minutes), so the playlist and guide only change when you start **Actions → Update Arvio M3U → Run workflow** by hand. The published `arvio.m3u` and `epg.xml.gz` stay as they were at the last successful run, and links in them may expire (see below). To turn the schedule back on, add a `schedule:` block with a `cron:` line under `on:` in `.github/workflows/update.yml` (and `watchdog.yml` for health alerts). When run, it refreshes stream URLs, rebuilds the combined M3U and XMLTV guide, and commits updated `arvio.m3u`, `epg.xml.gz`, `audit.json`, and `epg-audit.json` only after successful generation.
 
 The dedicated `lynseynunez/pluto-tv` repository supplies the curated Pluto channel entries (IDs, logos, numbers). Each approved channel plays through a non-expiring redirect link (`jmp2.uk/plu-<id>.m3u8`), because the direct Pluto links embed a session token that expires after 24 hours. The builder imports only approved Pluto names and deduplicates channels by normalized name. Where duplicate names exist, the existing provider priority is Samsung → Pluto → Roku → Tubi → Plex.
 
